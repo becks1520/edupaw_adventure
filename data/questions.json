@@ -1,0 +1,14 @@
+{
+    "easy": [
+        { "q": "Berapakah 5 + 7?", "options": ["10", "11", "12", "13"], "answer": 2, "hint": "Gunakan jari, hitung maju 7 dari angka 5." },
+        { "q": "Hewan apa yang menghasilkan madu?", "options": ["Kucing", "Lebah", "Katak", "Burung"], "answer": 1, "hint": "Hewan ini suka terbang di sekitar bunga." }
+    ],
+    "medium": [
+        { "q": "Berapakah 12 x 8?", "options": ["84", "96", "108", "112"], "answer": 1, "hint": "10 x 8 adalah 80, ditambah 2 x 8." },
+        { "q": "Planet terdekat dengan matahari adalah?", "options": ["Bumi", "Venus", "Merkurius", "Mars"], "answer": 2, "hint": "Ukurannya paling kecil di tata surya kita." }
+    ],
+    "hard": [
+        { "q": "Berapa akar kuadrat dari 144?", "options": ["10", "12", "14", "16"], "answer": 1, "hint": "Angka ini jika dikalikan dirinya sendiri hasilnya 144." },
+        { "q": "Siapa penemu gaya gravitasi?", "options": ["Albert Einstein", "Nikola Tesla", "Isaac Newton", "Galileo"], "answer": 2, "hint": "Legenda mengatakan dia kejatuhan apel." }
+    ]
+}
