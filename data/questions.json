@@ -282,5 +282,463 @@
       "answer": 1,
       "hint": "Beliau juga seorang wartawan dan pemain biola."
     }
+    {
+  "new_questions": [
+    {
+      "id": "mat-e3",
+      "subject": "matematika",
+      "level": "easy",
+      "q": "10 + 15 = ?",
+      "options": ["20", "25", "30", "35"],
+      "answer": 1,
+      "hint": "Jumlahkan angka puluhan dan satuannya."
+    },
+    {
+      "id": "mat-e4",
+      "subject": "matematika",
+      "level": "easy",
+      "q": "20 - 9 = ?",
+      "options": ["9", "10", "11", "12"],
+      "answer": 2,
+      "hint": "Kurangi 10 dari 20, lalu tambahkan 1."
+    },
+    {
+      "id": "mat-e5",
+      "subject": "matematika",
+      "level": "easy",
+      "q": "Angka berapakah yang muncul setelah 19?",
+      "options": ["18", "20", "21", "29"],
+      "answer": 1,
+      "hint": "Angka genap setelah belasan berakhir."
+    },
+    {
+      "id": "mat-m3",
+      "subject": "matematika",
+      "level": "medium",
+      "q": "8 x 8 = ?",
+      "options": ["56", "62", "64", "72"],
+      "answer": 2,
+      "hint": "Hasilnya adalah kuadrat dari 8."
+    },
+    {
+      "id": "mat-m4",
+      "subject": "matematika",
+      "level": "medium",
+      "q": "50 : 5 = ?",
+      "options": ["5", "10", "15", "55"],
+      "answer": 1,
+      "hint": "Angka berapa yang jika dikalikan 5 hasilnya 50?"
+    },
+    {
+      "id": "mat-m5",
+      "subject": "matematika",
+      "level": "medium",
+      "q": "Pecahan 1/2 sama nilainya dengan berapa persen?",
+      "options": ["20%", "25%", "50%", "100%"],
+      "answer": 2,
+      "hint": "Setengah dari 100 persen."
+    },
+    {
+      "id": "mat-h3",
+      "subject": "matematika",
+      "level": "hard",
+      "q": "25 + 5 x 4 = ?",
+      "options": ["45", "120", "100", "50"],
+      "answer": 0,
+      "hint": "Ingat aturan KaBaTaKu (Kali Bagi Tambah Kurang)."
+    },
+    {
+      "id": "mat-h4",
+      "subject": "matematika",
+      "level": "hard",
+      "q": "Berapa luas persegi panjang dengan panjang 10 cm dan lebar 5 cm?",
+      "options": ["15 cm persegi", "30 cm persegi", "50 cm persegi", "100 cm persegi"],
+      "answer": 2,
+      "hint": "Luas = panjang x lebar."
+    },
+    {
+      "id": "mat-h5",
+      "subject": "matematika",
+      "level": "hard",
+      "q": "100 - (20 + 30) = ?",
+      "options": ["40", "50", "60", "110"],
+      "answer": 1,
+      "hint": "Kerjakan angka di dalam kurung terlebih dahulu."
+    },
+    {
+      "id": "mat-h6",
+      "subject": "matematika",
+      "level": "hard",
+      "q": "0.5 + 0.2 = ?",
+      "options": ["0.3", "0.52", "0.7", "0.07"],
+      "answer": 2,
+      "hint": "Jumlahkan angka di belakang koma secara sejajar."
+    },
+
+    {
+      "id": "ipa-e3",
+      "subject": "ipa",
+      "level": "easy",
+      "q": "Hewan pemakan daging disebut kelompok?",
+      "options": ["Herbivora", "Karnivora", "Omnivora", "Insektivora"],
+      "answer": 1,
+      "hint": "Harimau dan singa adalah contohnya."
+    },
+    {
+      "id": "ipa-e4",
+      "subject": "ipa",
+      "level": "easy",
+      "q": "Sumber energi panas dan cahaya terbesar bagi Bumi adalah?",
+      "options": ["Bulan", "Bintang", "Matahari", "Api"],
+      "answer": 2,
+      "hint": "Terbit di pagi hari, tenggelam di sore hari."
+    },
+    {
+      "id": "ipa-e5",
+      "subject": "ipa",
+      "level": "easy",
+      "q": "Ikan bernapas di dalam air menggunakan?",
+      "options": ["Paru-paru", "Trakea", "Kulit", "Insang"],
+      "answer": 3,
+      "hint": "Terletak di sisi kiri dan kanan kepala ikan."
+    },
+    {
+      "id": "ipa-m3",
+      "subject": "ipa",
+      "level": "medium",
+      "q": "Perubahan wujud dari cair menjadi padat disebut?",
+      "options": ["Mencair", "Membeku", "Menguap", "Menyublim"],
+      "answer": 1,
+      "hint": "Proses yang terjadi saat air dimasukkan ke dalam freezer."
+    },
+    {
+      "id": "ipa-m4",
+      "subject": "ipa",
+      "level": "medium",
+      "q": "Bunyi tidak dapat merambat melalui?",
+      "options": ["Benda padat", "Benda cair", "Udara", "Ruang hampa"],
+      "answer": 3,
+      "hint": "Tempat yang tidak memiliki partikel udara sama sekali."
+    },
+    {
+      "id": "ipa-m5",
+      "subject": "ipa",
+      "level": "medium",
+      "q": "Pusat dari tata surya kita adalah?",
+      "options": ["Bumi", "Matahari", "Bulan", "Jupiter"],
+      "answer": 1,
+      "hint": "Semua planet mengelilinginya."
+    },
+    {
+      "id": "ipa-h3",
+      "subject": "ipa",
+      "level": "hard",
+      "q": "Enzim di mulut yang berfungsi mengubah zat tepung menjadi gula adalah?",
+      "options": ["Amilase", "Pepsin", "Renin", "Lipase"],
+      "answer": 0,
+      "hint": "Dikenal juga dengan sebutan enzim ptialin."
+    },
+    {
+      "id": "ipa-h4",
+      "subject": "ipa",
+      "level": "hard",
+      "q": "Proses perubahan uap air menjadi titik-titik air di awan disebut?",
+      "options": ["Evaporasi", "Presipitasi", "Kondensasi", "Transpirasi"],
+      "answer": 2,
+      "hint": "Istilah lainnya adalah pengembunan."
+    },
+    {
+      "id": "ipa-h5",
+      "subject": "ipa",
+      "level": "hard",
+      "q": "Hubungan antara lebah dan bunga termasuk jenis simbiosis?",
+      "options": ["Parasitisme", "Komensalisme", "Mutualisme", "Amensalisme"],
+      "answer": 2,
+      "hint": "Keduanya sama-sama mendapatkan keuntungan."
+    },
+    {
+      "id": "ipa-h6",
+      "subject": "ipa",
+      "level": "hard",
+      "q": "Planet di tata surya yang terkenal memiliki cincin yang sangat jelas adalah?",
+      "options": ["Uranus", "Saturnus", "Neptunus", "Mars"],
+      "answer": 1,
+      "hint": "Planet terbesar kedua setelah Jupiter."
+    },
+
+    {
+      "id": "ind-e3",
+      "subject": "indonesia",
+      "level": "easy",
+      "q": "Antonim (lawan kata) dari kata 'siang' adalah?",
+      "options": ["Pagi", "Sore", "Malam", "Petang"],
+      "answer": 2,
+      "hint": "Waktu ketika matahari sudah terbenam."
+    },
+    {
+      "id": "ind-e4",
+      "subject": "indonesia",
+      "level": "easy",
+      "q": "Tempat pemberhentian untuk menaikkan dan menurunkan penumpang kereta api disebut?",
+      "options": ["Terminal", "Bandara", "Pelabuhan", "Stasiun"],
+      "answer": 3,
+      "hint": "Diawali dengan huruf S."
+    },
+    {
+      "id": "ind-e5",
+      "subject": "indonesia",
+      "level": "easy",
+      "q": "Bentuk jamak dari kata 'buku' adalah?",
+      "options": ["Buku-buku", "Para buku", "Banyak buku-buku", "Segala buku"],
+      "answer": 0,
+      "hint": "Pengulangan kata dasar sering digunakan untuk bentuk jamak."
+    },
+    {
+      "id": "ind-m3",
+      "subject": "indonesia",
+      "level": "medium",
+      "q": "Sinonim (persamaan kata) dari kata 'pintar' adalah?",
+      "options": ["Rajin", "Pandai", "Cekatan", "Bodoh"],
+      "answer": 1,
+      "hint": "Kata ini memiliki arti cerdas atau lekas mengerti."
+    },
+    {
+      "id": "ind-m4",
+      "subject": "indonesia",
+      "level": "medium",
+      "q": "Puisi lama yang bersajak a-b-a-b disebut?",
+      "options": ["Syair", "Gurindam", "Pantun", "Karmina"],
+      "answer": 2,
+      "hint": "Terdiri dari sampiran dan isi."
+    },
+    {
+      "id": "ind-m5",
+      "subject": "indonesia",
+      "level": "medium",
+      "q": "Orang yang pekerjaannya mengemudikan pesawat terbang disebut?",
+      "options": ["Masinis", "Nahkoda", "Sopir", "Pilot"],
+      "answer": 3,
+      "hint": "Bekerja di udara."
+    },
+    {
+      "id": "ind-h3",
+      "subject": "indonesia",
+      "level": "hard",
+      "q": "Kalimat yang bertujuan menanyakan sesuatu selalu diakhiri dengan tanda?",
+      "options": ["Titik (.)", "Koma (,)", "Seru (!)", "Tanya (?)"],
+      "answer": 3,
+      "hint": "Bentuknya seperti kail pancing."
+    },
+    {
+      "id": "ind-h4",
+      "subject": "indonesia",
+      "level": "hard",
+      "q": "Kata dasar dari kata berimbuhan 'berlari' adalah?",
+      "options": ["Berla", "Lari", "Ari", "Ber"],
+      "answer": 1,
+      "hint": "Hilangkan awalan 'ber-'."
+    },
+    {
+      "id": "ind-h5",
+      "subject": "indonesia",
+      "level": "hard",
+      "q": "Majas yang mengumpamakan benda mati seolah-olah hidup dan bertingkah seperti manusia disebut?",
+      "options": ["Personifikasi", "Metafora", "Hiperbola", "Ironi"],
+      "answer": 0,
+      "hint": "Berasal dari kata 'person' (orang)."
+    },
+    {
+      "id": "ind-h6",
+      "subject": "indonesia",
+      "level": "hard",
+      "q": "Karangan pendek yang menceritakan sebagian kehidupan tokohnya disebut?",
+      "options": ["Novel", "Biografi", "Cerpen", "Drama"],
+      "answer": 2,
+      "hint": "Singkatan dari cerita pendek."
+    },
+
+    {
+      "id": "eng-e3",
+      "subject": "inggris",
+      "level": "easy",
+      "q": "Apa bahasa Inggris dari 'Buku'?",
+      "options": ["Pen", "Pencil", "Book", "Bag"],
+      "answer": 2,
+      "hint": "Terdiri dari 4 huruf, diawali huruf B."
+    },
+    {
+      "id": "eng-e4",
+      "subject": "inggris",
+      "level": "easy",
+      "q": "Apa arti dari kalimat 'Good morning'?",
+      "options": ["Selamat malam", "Selamat siang", "Selamat sore", "Selamat pagi"],
+      "answer": 3,
+      "hint": "Diucapkan saat matahari baru terbit."
+    },
+    {
+      "id": "eng-e5",
+      "subject": "inggris",
+      "level": "easy",
+      "q": "Apa bahasa Indonesianya 'Cat'?",
+      "options": ["Anjing", "Kucing", "Burung", "Tikus"],
+      "answer": 1,
+      "hint": "Hewan yang suka mengeong."
+    },
+    {
+      "id": "eng-m3",
+      "subject": "inggris",
+      "level": "medium",
+      "q": "He ___ reading a book right now.",
+      "options": ["is", "am", "are", "do"],
+      "answer": 0,
+      "hint": "To be untuk subjek He, She, It dalam present continuous."
+    },
+    {
+      "id": "eng-m4",
+      "subject": "inggris",
+      "level": "medium",
+      "q": "I ___ to the market yesterday.",
+      "options": ["go", "going", "went", "gone"],
+      "answer": 2,
+      "hint": "Bentuk lampau (past tense) dari kata 'go'."
+    },
+    {
+      "id": "eng-m5",
+      "subject": "inggris",
+      "level": "medium",
+      "q": "What day comes after Monday?",
+      "options": ["Sunday", "Tuesday", "Wednesday", "Friday"],
+      "answer": 1,
+      "hint": "Hari kedua dalam seminggu."
+    },
+    {
+      "id": "eng-h3",
+      "subject": "inggris",
+      "level": "hard",
+      "q": "She has ___ in this house for two years.",
+      "options": ["live", "lives", "living", "lived"],
+      "answer": 3,
+      "hint": "Present perfect tense memerlukan Verb 3 (Past Participle)."
+    },
+    {
+      "id": "eng-h4",
+      "subject": "inggris",
+      "level": "hard",
+      "q": "A person whose job is to teach students is called a?",
+      "options": ["Doctor", "Farmer", "Teacher", "Engineer"],
+      "answer": 2,
+      "hint": "Bekerja di sekolah."
+    },
+    {
+      "id": "eng-h5",
+      "subject": "inggris",
+      "level": "hard",
+      "q": "What is the plural form of the word 'child'?",
+      "options": ["Childs", "Children", "Childes", "Childrens"],
+      "answer": 1,
+      "hint": "Bentuk jamak tidak beraturan (irregular plural)."
+    },
+    {
+      "id": "eng-h6",
+      "subject": "inggris",
+      "level": "hard",
+      "q": "What is the opposite of 'expensive'?",
+      "options": ["Cheap", "Rich", "Poor", "Costly"],
+      "answer": 0,
+      "hint": "Sesuatu yang harganya murah."
+    },
+
+    {
+      "id": "umum-e3",
+      "subject": "umum",
+      "level": "easy",
+      "q": "Ibukota negara Republik Indonesia saat ini adalah?",
+      "options": ["Surabaya", "Bandung", "Jakarta", "Medan"],
+      "answer": 2,
+      "hint": "Terdapat Monumen Nasional (Monas) di kota ini."
+    },
+    {
+      "id": "umum-e4",
+      "subject": "umum",
+      "level": "easy",
+      "q": "Mata uang resmi negara Indonesia adalah?",
+      "options": ["Ringgit", "Rupiah", "Dollar", "Baht"],
+      "answer": 1,
+      "hint": "Sering disingkat dengan simbol Rp."
+    },
+    {
+      "id": "umum-e5",
+      "subject": "umum",
+      "level": "easy",
+      "q": "Siapakah nama Presiden Pertama Republik Indonesia?",
+      "options": ["B.J. Habibie", "Soeharto", "Joko Widodo", "Ir. Soekarno"],
+      "answer": 3,
+      "hint": "Dikenal juga sebagai Bapak Proklamator."
+    },
+    {
+      "id": "umum-m3",
+      "subject": "umum",
+      "level": "medium",
+      "q": "Candi bercorak Buddha terbesar di Indonesia adalah?",
+      "options": ["Prambanan", "Borobudur", "Mendut", "Muara Takus"],
+      "answer": 1,
+      "hint": "Terletak di Magelang, Jawa Tengah."
+    },
+    {
+      "id": "umum-m4",
+      "subject": "umum",
+      "level": "medium",
+      "q": "Benua terbesar di dunia adalah?",
+      "options": ["Eropa", "Afrika", "Asia", "Amerika"],
+      "answer": 2,
+      "hint": "Benua tempat negara Indonesia berada."
+    },
+    {
+      "id": "umum-m5",
+      "subject": "umum",
+      "level": "medium",
+      "q": "Gunung tertinggi di dunia adalah?",
+      "options": ["Gunung Fuji", "Gunung Kilimanjaro", "Gunung Everest", "Gunung Jayawijaya"],
+      "answer": 2,
+      "hint": "Terletak di pegunungan Himalaya."
+    },
+    {
+      "id": "umum-h3",
+      "subject": "umum",
+      "level": "hard",
+      "q": "Organisasi perhimpunan negara-negara di kawasan Asia Tenggara disebut?",
+      "options": ["PBB", "ASEAN", "OPEC", "WHO"],
+      "answer": 1,
+      "hint": "Didirikan melalui Deklarasi Bangkok."
+    },
+    {
+      "id": "umum-h4",
+      "subject": "umum",
+      "level": "hard",
+      "q": "Kota manakah yang merupakan ibukota negara Jepang?",
+      "options": ["Seoul", "Beijing", "Kyoto", "Tokyo"],
+      "answer": 3,
+      "hint": "Terdapat menara komunikasi terkenal bernama Skytree."
+    },
+    {
+      "id": "umum-h5",
+      "subject": "umum",
+      "level": "hard",
+      "q": "Siapakah ilmuwan penemu bola lampu pijar yang paling terkenal?",
+      "options": ["Albert Einstein", "Isaac Newton", "Thomas Alva Edison", "Nikola Tesla"],
+      "answer": 2,
+      "hint": "Ia melakukan ribuan percobaan sebelum berhasil."
+    },
+    {
+      "id": "umum-h6",
+      "subject": "umum",
+      "level": "hard",
+      "q": "Pada tahun berapakah organisasi ASEAN didirikan?",
+      "options": ["1945", "1967", "1975", "1990"],
+      "answer": 1,
+      "hint": "Dua tahun setelah peristiwa G30S di Indonesia."
+    }
+  ]
+}
   ]
 }
