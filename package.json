@@ -1,0 +1,14 @@
+{
+  "name": "edupaw-adventure",
+  "version": "1.0.0",
+  "description": "EduPaw Adventure - game edukasi 2D (Phaser 3) dengan multiplayer LAN",
+  "private": true,
+  "scripts": {
+    "lan": "node lan-server.js",
+    "format": "npx prettier --write ."
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "peer": "^1.0.2"
+  }
+}

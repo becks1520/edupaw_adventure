@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#7ad7ff" />
+    <title>EduPaw Adventure</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div id="wrap">
+      <!-- Canvas Phaser -->
+      <div id="game"></div>
+
+      <!-- HUD -->
+      <div id="hud" class="hidden">
+        <div class="hud-left">
+          <span class="chip" id="hud-level">Level</span>
+          <span class="chip">🪙 <b id="hud-coins">0</b></span>
+          <span class="chip" id="hud-keys-chip">🔑 <b id="hud-keys">0</b>/3</span>
+          <span class="chip">⭐ <b id="hud-score">0</b></span>
+        </div>
+        <div class="hud-right">
+          <button id="btn-home" class="chip btn-mini" aria-label="Keluar ke menu">🏠</button>
+        </div>
+        <div id="boss-bar" class="hidden">
+          <span>👑</span>
+          <div class="bar"><i id="boss-fill"></i></div>
+        </div>
+      </div>
+
+      <div id="race-panel" class="hidden"></div>
+
+      <!-- Kontrol sentuh (mobile) -->
+      <div id="touch" class="hidden">
+        <div class="dpad">
+          <button id="t-left" aria-label="Kiri">◀</button>
+          <button id="t-right" aria-label="Kanan">▶</button>
+        </div>
+        <button id="t-jump" aria-label="Lompat">⤒</button>
+      </div>
+
+      <!-- Tombol ability / Action Paw -->
+      <button id="ability" class="hidden" aria-label="Skill karakter (E / Shift)">
+        <span id="ab-emoji">🐾</span>
+        <span id="ab-name"></span>
+        <span id="ab-cd"></span>
+      </button>
+
+      <!-- Pop-up kuis, menu, hasil -->
+      <div id="quiz" class="hidden"></div>
+      <div id="toast"></div>
+      <div id="menu" class="hidden"></div>
+      <div id="result" class="hidden"></div>
+
+      <!-- Layar loading -->
+      <div id="boot">
+        <div class="spinner">🐾</div>
+        <p id="boot-text">Memuat EduPaw Adventure...</p>
+      </div>
+    </div>
+
+    <script>
+      /* Memuat library: file lokal di /libs lebih dulu (mode offline LAN),
+         jika tidak ada otomatis memakai CDN. */
+      function loadScript(src) {
+        return new Promise(function (resolve, reject) {
+          var s = document.createElement("script");
+          s.src = src;
+          s.onload = resolve;
+          s.onerror = function () {
+            reject(new Error("Gagal memuat " + src));
+          };
+          document.head.appendChild(s);
+        });
+      }
+
+      async function loadLib(local, cdn) {
+        try {
+          await loadScript(local);
+        } catch (err) {
+          await loadScript(cdn);
+        }
+      }
+
+      (async function boot() {
+        await loadLib(
+          "libs/phaser.min.js",
+          "https://cdn.jsdelivr.net/npm/phaser@3.80.1/dist/phaser.min.js"
+        );
+        try {
+          await loadLib("libs/peerjs.min.js", "https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js");
+        } catch (err) {
+          console.warn("PeerJS tidak termuat, mode multiplayer dinonaktifkan.");
+        }
+        var files = ["js/config.js", "js/network.js", "js/ui.js", "js/game.js"];
+        for (var i = 0; i < files.length; i++) {
+          await loadScript(files[i]);
+        }
+      })().catch(function (err) {
+        document.getElementById("boot-text").textContent =
+          "Gagal memuat game: " + err.message + ". Periksa koneksi internet atau folder /libs.";
+      });
+    </script>
+  </body>
+</html>

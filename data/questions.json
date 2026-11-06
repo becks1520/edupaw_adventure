@@ -1,0 +1,286 @@
+{
+  "version": 1,
+  "subjects": [
+    { "id": "matematika", "name": "Matematika", "emoji": "➗" },
+    { "id": "ipa", "name": "IPA", "emoji": "🔬" },
+    { "id": "indonesia", "name": "Bahasa Indonesia", "emoji": "📖" },
+    { "id": "inggris", "name": "Bahasa Inggris", "emoji": "🔤" },
+    { "id": "umum", "name": "Pengetahuan Umum", "emoji": "🌏" }
+  ],
+  "questions": [
+    {
+      "id": "mat-e1",
+      "subject": "matematika",
+      "level": "easy",
+      "q": "7 + 5 = ?",
+      "options": ["10", "11", "12", "13"],
+      "answer": 2,
+      "hint": "Mulai dari 7, lalu hitung maju 5 kali."
+    },
+    {
+      "id": "mat-e2",
+      "subject": "matematika",
+      "level": "easy",
+      "q": "15 - 8 = ?",
+      "options": ["6", "7", "8", "9"],
+      "answer": 1,
+      "hint": "Mundur 8 langkah dari 15."
+    },
+    {
+      "id": "mat-m1",
+      "subject": "matematika",
+      "level": "medium",
+      "q": "6 x 7 = ?",
+      "options": ["36", "42", "48", "49"],
+      "answer": 1,
+      "hint": "6 x 7 = 6 x 6 + 6."
+    },
+    {
+      "id": "mat-m2",
+      "subject": "matematika",
+      "level": "medium",
+      "q": "Berapa 3/4 dari 20?",
+      "options": ["10", "12", "15", "18"],
+      "answer": 2,
+      "hint": "Bagi 20 menjadi 4 bagian (5), lalu ambil 3 bagian."
+    },
+    {
+      "id": "mat-h1",
+      "subject": "matematika",
+      "level": "hard",
+      "q": "144 : 12 + 8 x 3 = ?",
+      "options": ["32", "36", "40", "48"],
+      "answer": 1,
+      "hint": "Kerjakan perkalian dan pembagian dulu."
+    },
+    {
+      "id": "mat-h2",
+      "subject": "matematika",
+      "level": "hard",
+      "q": "Keliling persegi dengan sisi 9 cm adalah?",
+      "options": ["18 cm", "27 cm", "36 cm", "81 cm"],
+      "answer": 2,
+      "hint": "Keliling persegi = 4 x sisi."
+    },
+
+    {
+      "id": "ipa-e1",
+      "subject": "ipa",
+      "level": "easy",
+      "q": "Hewan yang berkembang biak dengan bertelur disebut?",
+      "options": ["Vivipar", "Ovipar", "Herbivora", "Karnivora"],
+      "answer": 1,
+      "hint": "Ayam dan bebek termasuk golongan ini."
+    },
+    {
+      "id": "ipa-e2",
+      "subject": "ipa",
+      "level": "easy",
+      "q": "Bagian tumbuhan yang menyerap air dari tanah adalah?",
+      "options": ["Daun", "Batang", "Bunga", "Akar"],
+      "answer": 3,
+      "hint": "Bagian ini berada di dalam tanah."
+    },
+    {
+      "id": "ipa-m1",
+      "subject": "ipa",
+      "level": "medium",
+      "q": "Proses tumbuhan membuat makanan dengan bantuan cahaya matahari disebut?",
+      "options": ["Respirasi", "Fotosintesis", "Evaporasi", "Transpirasi"],
+      "answer": 1,
+      "hint": "Foto = cahaya, sintesis = membuat."
+    },
+    {
+      "id": "ipa-m2",
+      "subject": "ipa",
+      "level": "medium",
+      "q": "Planet terdekat dari Matahari adalah?",
+      "options": ["Venus", "Bumi", "Merkurius", "Mars"],
+      "answer": 2,
+      "hint": "Planet terkecil di tata surya."
+    },
+    {
+      "id": "ipa-h1",
+      "subject": "ipa",
+      "level": "hard",
+      "q": "Gas yang paling banyak terdapat di atmosfer Bumi adalah?",
+      "options": ["Oksigen", "Nitrogen", "Karbon dioksida", "Hidrogen"],
+      "answer": 1,
+      "hint": "Jumlahnya sekitar 78%."
+    },
+    {
+      "id": "ipa-h2",
+      "subject": "ipa",
+      "level": "hard",
+      "q": "Satuan gaya dalam sistem SI adalah?",
+      "options": ["Joule", "Watt", "Newton", "Pascal"],
+      "answer": 2,
+      "hint": "Dinamai dari ilmuwan yang melihat apel jatuh."
+    },
+
+    {
+      "id": "ind-e1",
+      "subject": "indonesia",
+      "level": "easy",
+      "q": "Lawan kata dari 'besar' adalah?",
+      "options": ["Tinggi", "Kecil", "Panjang", "Lebar"],
+      "answer": 1,
+      "hint": "Semut itu ...?"
+    },
+    {
+      "id": "ind-e2",
+      "subject": "indonesia",
+      "level": "easy",
+      "q": "Kalimat yang benar penulisannya adalah?",
+      "options": ["saya makan nasi.", "Saya makan nasi.", "saya Makan nasi", "Saya makan Nasi"],
+      "answer": 1,
+      "hint": "Awal kalimat memakai huruf kapital dan diakhiri titik."
+    },
+    {
+      "id": "ind-m1",
+      "subject": "indonesia",
+      "level": "medium",
+      "q": "Sinonim kata 'indah' adalah?",
+      "options": ["Cantik", "Buruk", "Kotor", "Suram"],
+      "answer": 0,
+      "hint": "Kata yang artinya sama."
+    },
+    {
+      "id": "ind-m2",
+      "subject": "indonesia",
+      "level": "medium",
+      "q": "Kata baku yang benar adalah?",
+      "options": ["Apotik", "Apotek", "Apotk", "Appotek"],
+      "answer": 1,
+      "hint": "Tempat menjual obat."
+    },
+    {
+      "id": "ind-h1",
+      "subject": "indonesia",
+      "level": "hard",
+      "q": "Majas yang membandingkan dua hal dengan kata 'seperti' atau 'bagai' adalah?",
+      "options": ["Metafora", "Hiperbola", "Simile", "Personifikasi"],
+      "answer": 2,
+      "hint": "Disebut juga majas perumpamaan."
+    },
+    {
+      "id": "ind-h2",
+      "subject": "indonesia",
+      "level": "hard",
+      "q": "Imbuhan pada kata 'bermain' adalah?",
+      "options": ["me-", "ber-", "ter-", "di-"],
+      "answer": 1,
+      "hint": "Perhatikan awalan sebelum kata dasar 'main'."
+    },
+
+    {
+      "id": "eng-e1",
+      "subject": "inggris",
+      "level": "easy",
+      "q": "What color is the sky on a clear day?",
+      "options": ["Red", "Green", "Blue", "Black"],
+      "answer": 2,
+      "hint": "Look up on a sunny day."
+    },
+    {
+      "id": "eng-e2",
+      "subject": "inggris",
+      "level": "easy",
+      "q": "'Apple' dalam bahasa Indonesia adalah?",
+      "options": ["Jeruk", "Apel", "Pisang", "Mangga"],
+      "answer": 1,
+      "hint": "Buah merah atau hijau yang renyah."
+    },
+    {
+      "id": "eng-m1",
+      "subject": "inggris",
+      "level": "medium",
+      "q": "She ___ to school every day.",
+      "options": ["go", "goes", "going", "gone"],
+      "answer": 1,
+      "hint": "Subjek 'She' memakai verb + s/es."
+    },
+    {
+      "id": "eng-m2",
+      "subject": "inggris",
+      "level": "medium",
+      "q": "The opposite of 'hot' is?",
+      "options": ["Warm", "Cold", "Cool", "Boil"],
+      "answer": 1,
+      "hint": "Ice is ...?"
+    },
+    {
+      "id": "eng-h1",
+      "subject": "inggris",
+      "level": "hard",
+      "q": "Past tense of 'buy' is?",
+      "options": ["Buyed", "Boughted", "Bought", "Buys"],
+      "answer": 2,
+      "hint": "Kata kerja tak beraturan."
+    },
+    {
+      "id": "eng-h2",
+      "subject": "inggris",
+      "level": "hard",
+      "q": "If it rains, we ___ at home.",
+      "options": ["stay", "stayed", "will stay", "staying"],
+      "answer": 2,
+      "hint": "Conditional type 1: If + present, will + verb."
+    },
+
+    {
+      "id": "umum-e1",
+      "subject": "umum",
+      "level": "easy",
+      "q": "Bendera Indonesia berwarna?",
+      "options": ["Merah Putih", "Putih Merah", "Merah Biru", "Hijau Putih"],
+      "answer": 0,
+      "hint": "Merah di atas, putih di bawah."
+    },
+    {
+      "id": "umum-e2",
+      "subject": "umum",
+      "level": "easy",
+      "q": "Hewan yang dijuluki raja hutan adalah?",
+      "options": ["Gajah", "Singa", "Kelinci", "Zebra"],
+      "answer": 1,
+      "hint": "Memiliki surai di lehernya."
+    },
+    {
+      "id": "umum-m1",
+      "subject": "umum",
+      "level": "medium",
+      "q": "Samudra terluas di dunia adalah?",
+      "options": ["Atlantik", "Hindia", "Arktik", "Pasifik"],
+      "answer": 3,
+      "hint": "Namanya berarti 'damai'."
+    },
+    {
+      "id": "umum-m2",
+      "subject": "umum",
+      "level": "medium",
+      "q": "Pulau terbesar di Indonesia adalah?",
+      "options": ["Jawa", "Sumatra", "Kalimantan", "Sulawesi"],
+      "answer": 2,
+      "hint": "Dikenal sebagai Borneo."
+    },
+    {
+      "id": "umum-h1",
+      "subject": "umum",
+      "level": "hard",
+      "q": "Sumpah Pemuda diikrarkan pada tahun?",
+      "options": ["1908", "1928", "1945", "1950"],
+      "answer": 1,
+      "hint": "Terjadi pada tanggal 28 Oktober."
+    },
+    {
+      "id": "umum-h2",
+      "subject": "umum",
+      "level": "hard",
+      "q": "Siapa pencipta lagu kebangsaan 'Indonesia Raya'?",
+      "options": ["Ismail Marzuki", "W.R. Supratman", "Ibu Sud", "C. Simanjuntak"],
+      "answer": 1,
+      "hint": "Beliau juga seorang wartawan dan pemain biola."
+    }
+  ]
+}
