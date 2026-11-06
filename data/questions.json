@@ -738,7 +738,191 @@
       "answer": 1,
       "hint": "Dua tahun setelah peristiwa G30S di Indonesia."
     }
-  ]
-}
+    {
+  "fun_questions": [
+    {
+      "id": "mat-f1",
+      "subject": "matematika",
+      "level": "easy",
+      "q": "Jika kamu berlari menyalip orang yang berada di posisi kedua dalam sebuah balapan, di posisi berapakah kamu sekarang?",
+      "options": ["Pertama", "Kedua", "Ketiga", "Keempat"],
+      "answer": 1,
+      "hint": "Kamu baru saja mengambil alih tempatnya, bukan tempat orang pertama."
+    },
+    {
+      "id": "mat-f2",
+      "subject": "matematika",
+      "level": "easy",
+      "q": "Berapa banyak bulan dalam setahun yang memiliki 28 hari?",
+      "options": ["1 bulan", "6 bulan", "12 bulan", "Tergantung tahun kabisat"],
+      "answer": 2,
+      "hint": "Semua bulan dari Januari sampai Desember pasti memiliki tanggal 1 sampai 28."
+    },
+    {
+      "id": "mat-f3",
+      "subject": "matematika",
+      "level": "medium",
+      "q": "Jika 5 kucing butuh 5 menit untuk menangkap 5 tikus, butuh berapa menit untuk 1 kucing menangkap 1 tikus?",
+      "options": ["1 menit", "5 menit", "10 menit", "25 menit"],
+      "answer": 1,
+      "hint": "Semua kucing tersebut menangkap tikus secara bersamaan."
+    },
+    {
+      "id": "mat-f4",
+      "subject": "matematika",
+      "level": "hard",
+      "q": "Angka berapakah yang menjadi satu-satunya angka tanpa representasi huruf Romawi?",
+      "options": ["0", "1", "10", "1000"],
+      "answer": 0,
+      "hint": "Angka yang melambangkan ketiadaan atau kekosongan."
+    },
+
+    {
+      "id": "ipa-f1",
+      "subject": "ipa",
+      "level": "easy",
+      "q": "Hewan mamalia apa yang bisa terbang secara aktif di udara?",
+      "options": ["Tupai terbang", "Pinguin", "Burung hantu", "Kelelawar"],
+      "answer": 3,
+      "hint": "Suka tidur dengan posisi terbalik di siang hari."
+    },
+    {
+      "id": "ipa-f2",
+      "subject": "ipa",
+      "level": "medium",
+      "q": "Bagian tubuh manusia manakah yang tidak pernah berhenti tumbuh seumur hidup?",
+      "options": ["Mata dan lidah", "Telinga dan hidung", "Tulang rusuk", "Gigi dan kuku (kerangka)"],
+      "answer": 1,
+      "hint": "Karena itulah wajah orang lanjut usia terlihat sedikit berbeda di bagian tertentu."
+    },
+    {
+      "id": "ipa-f3",
+      "subject": "ipa",
+      "level": "medium",
+      "q": "Buah apakah yang unik karena bijinya berada di luar daging buahnya?",
+      "options": ["Semangka", "Nanas", "Stroberi", "Delima"],
+      "answer": 2,
+      "hint": "Buah berwarna merah yang memiliki bintik-bintik kecil menyebar di kulitnya."
+    },
+    {
+      "id": "ipa-f4",
+      "subject": "ipa",
+      "level": "hard",
+      "q": "Otot terkuat di tubuh manusia (berdasarkan tekanan ukurannya) terdapat pada bagian?",
+      "options": ["Paha", "Lengan", "Jantung", "Rahang (Masseter)"],
+      "answer": 3,
+      "hint": "Kamu menggunakan otot ini setiap kali sedang makan atau menggigit."
+    },
+
+    {
+      "id": "ind-f1",
+      "subject": "indonesia",
+      "level": "easy",
+      "q": "Benda apakah yang mempunyai 'mata' tetapi tidak bisa melihat sama sekali?",
+      "options": ["Pintu", "Jarum", "Paku", "Jendela"],
+      "answer": 1,
+      "hint": "Bagian 'mata' benda ini biasanya dimasukkan benang."
+    },
+    {
+      "id": "ind-f2",
+      "subject": "indonesia",
+      "level": "medium",
+      "q": "Kata manakah yang merupakan bentuk palindrom (dibaca dari depan maupun belakang bunyinya sama)?",
+      "options": ["Makan", "Tidur", "Katak", "Bebek"],
+      "answer": 2,
+      "hint": "Nama hewan amfibi yang suka melompat."
+    },
+    {
+      "id": "ind-f3",
+      "subject": "indonesia",
+      "level": "medium",
+      "q": "Apa arti kiasan dari ungkapan 'Dibawa ke meja hijau'?",
+      "options": ["Diperiksa dokter", "Dibawa ke pengadilan", "Diajak bermain biliar", "Disuruh makan sayur"],
+      "answer": 1,
+      "hint": "Berhubungan dengan hukum dan persidangan."
+    },
+    {
+      "id": "ind-f4",
+      "subject": "indonesia",
+      "level": "hard",
+      "q": "Istilah 'Sinetron' di televisi Indonesia sebenarnya adalah singkatan dari?",
+      "options": ["Sinema Elektronik", "Seni Teater Romantis", "Siaran Netral Nasional", "Sinema Tontonan Rutin"],
+      "answer": 0,
+      "hint": "Gabungan dari kata yang bermakna 'film' dan 'perangkat listrik/TV'."
+    },
+
+    {
+      "id": "eng-f1",
+      "subject": "inggris",
+      "level": "easy",
+      "q": "Which letter of the alphabet has the most water?",
+      "options": ["A", "C", "O", "W"],
+      "answer": 1,
+      "hint": "The pronunciation of this letter sounds just like the ocean."
+    },
+    {
+      "id": "eng-f2",
+      "subject": "inggris",
+      "level": "medium",
+      "q": "I am tall when I am young, and I am short when I am old. What am I?",
+      "options": ["A tree", "A pencil", "A candle", "A building"],
+      "answer": 2,
+      "hint": "It melts down while giving you light in the dark."
+    },
+    {
+      "id": "eng-f3",
+      "subject": "inggris",
+      "level": "medium",
+      "q": "What has to be broken before you can use it?",
+      "options": ["A glass", "A coconut", "An egg", "A door"],
+      "answer": 2,
+      "hint": "You usually crack its shell to fry it for breakfast."
+    },
+    {
+      "id": "eng-f4",
+      "subject": "inggris",
+      "level": "hard",
+      "q": "What does the English idiom 'A piece of cake' mean?",
+      "options": ["Very easy", "Delicious", "Hard work", "A small portion"],
+      "answer": 0,
+      "hint": "When a task requires almost no effort to complete."
+    },
+
+    {
+      "id": "umum-f1",
+      "subject": "umum",
+      "level": "easy",
+      "q": "Dalam permainan catur, bidak manakah yang pergerakannya melompat menyerupai huruf 'L'?",
+      "options": ["Benteng", "Kuda", "Menteri / Ratu", "Pion / Bidak"],
+      "answer": 1,
+      "hint": "Bidak ini berbentuk kepala hewan bertelinga tajam."
+    },
+    {
+      "id": "umum-f2",
+      "subject": "umum",
+      "level": "medium",
+      "q": "Tokoh pahlawan super Marvel manakah yang memiliki tameng atau perisai yang terbuat dari bahan Vibranium?",
+      "options": ["Iron Man", "Thor", "Captain America", "Hulk"],
+      "answer": 2,
+      "hint": "Memakai kostum dengan motif bintang dan bendera Amerika."
+    },
+    {
+      "id": "umum-f3",
+      "subject": "umum",
+      "level": "medium",
+      "q": "Negara manakah di Benua Eropa yang daratannya terlihat sangat mirip dengan bentuk sepatu bot berhak tinggi di peta?",
+      "options": ["Prancis", "Spanyol", "Yunani", "Italia"],
+      "answer": 3,
+      "hint": "Negara asal makanan pizza dan pasta."
+    },
+    {
+      "id": "umum-f4",
+      "subject": "umum",
+      "level": "hard",
+      "q": "Siapakah nama seniman jenius yang melukis karya fenomenal 'Monalisa'?",
+      "options": ["Vincent van Gogh", "Pablo Picasso", "Leonardo da Vinci", "Claude Monet"],
+      "answer": 2,
+      "hint": "Seorang polimatik dan penemu asal Italia di masa Renaisans."
+    }
   ]
 }
