@@ -342,9 +342,66 @@
     ],
   };
 
+  const DEFAULT_SUBJECTS = [
+    { id: "matematika", name: "Matematika", emoji: "➗" },
+    { id: "ipa", name: "IPA", emoji: "🔬" },
+    { id: "indonesia", name: "Bahasa Indonesia", emoji: "📖" },
+    { id: "inggris", name: "Bahasa Inggris", emoji: "🔤" },
+    { id: "umum", name: "Pengetahuan Umum", emoji: "🌏" },
+  ];
+
+  const LEVELS = ["easy", "medium", "hard"];
+
+  /** Apakah item ini soal yang valid? Mengembalikan pesan error atau null. */
+  function checkQuestion(q) {
+    if (!q || typeof q.q !== "string" || !q.q.trim()) return "teks soal (q) kosong";
+    if (!Array.isArray(q.options) || q.options.length < 2) return "options minimal 2 pilihan";
+    if (!Number.isInteger(q.answer) || q.answer < 0 || q.answer >= q.options.length) {
+      return "answer harus angka indeks pilihan (mulai dari 0)";
+    }
+    if (!LEVELS.includes(q.level)) return 'level harus "easy", "medium", atau "hard"';
+    if (!q.subject) return "subject kosong";
+    return null;
+  }
+
+  /**
+   * Membaca bank soal. Semua properti berupa array soal digabung, jadi nama
+   * kuncinya bebas ("questions", "new_questions", "fun_questions", dst.).
+   */
   E.setQuestions = function (data) {
-    E.subjects = data.subjects || [];
-    E.questions = data.questions || [];
+    const seen = new Set();
+    const all = [];
+    Object.keys(data).forEach((key) => {
+      if (key === "subjects" || !Array.isArray(data[key])) return;
+      data[key].forEach((q, i) => {
+        const problem = checkQuestion(q);
+        if (problem) {
+          console.warn(
+            `[EduPaw] Soal dilewati: ${key}[${i}] ${q && q.id ? `(${q.id})` : ""} - ${problem}`
+          );
+          return;
+        }
+        if (q.id && seen.has(q.id)) {
+          console.warn(`[EduPaw] ID ganda dilewati: ${q.id}`);
+          return;
+        }
+        if (q.id) seen.add(q.id);
+        all.push(q);
+      });
+    });
+
+    E.questions = all;
+    E.subjects =
+      Array.isArray(data.subjects) && data.subjects.length ? data.subjects : DEFAULT_SUBJECTS;
+    console.info(`[EduPaw] ${all.length} soal dimuat.`);
+  };
+
+  /** Apakah data memuat minimal satu array soal? */
+  E.hasQuestions = function (data) {
+    return (
+      !!data &&
+      Object.keys(data).some((k) => k !== "subjects" && Array.isArray(data[k]) && data[k].length)
+    );
   };
 
   /* ---------------------------------------------------------------------

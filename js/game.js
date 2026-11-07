@@ -586,8 +586,10 @@
     create() {
       makeTextures(this);
       const data = !E.loadFailed && this.cache.json.get("questions");
-      E.setQuestions(data && data.questions ? data : E.FALLBACK);
-      if (!data) UI.Toast.show("questions.json tidak termuat, memakai soal cadangan.", 3500);
+      E.setQuestions(E.hasQuestions(data) ? data : E.FALLBACK);
+      if (!E.hasQuestions(data)) {
+        UI.Toast.show("questions.json tidak termuat, memakai soal cadangan.", 3500);
+      }
       document.getElementById("boot").classList.add("gone");
       UI.init();
       this.scene.stop();

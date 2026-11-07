@@ -13,14 +13,7 @@
   const esc = (s) =>
     String(s).replace(
       /[&<>"']/g,
-      (c) =>
-        ({
-          "&": "&amp;",
-          "<": "&lt;",
-          ">": "&gt;",
-          '"': "&quot;",
-          "'": "&#39;",
-        })[c],
+      (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]
     );
 
   const shuffle = (arr) => {
@@ -107,7 +100,7 @@
       el.innerHTML = list
         .map(
           (p) =>
-            `<div class="row ${p.me ? "me" : ""}"><span>${esc(p.name)}</span><span>${esc(p.label)}</span></div>`,
+            `<div class="row ${p.me ? "me" : ""}"><span>${esc(p.name)}</span><span>${esc(p.label)}</span></div>`
         )
         .join("");
     },
@@ -131,15 +124,10 @@
     const enable = () => {
       T.enabled = true;
       document.body.classList.add("touch");
-      if (!$("#hud").classList.contains("hidden"))
-        $("#touch").classList.remove("hidden");
+      if (!$("#hud").classList.contains("hidden")) $("#touch").classList.remove("hidden");
     };
 
-    if (
-      window.matchMedia("(pointer: coarse)").matches ||
-      "ontouchstart" in window
-    )
-      enable();
+    if (window.matchMedia("(pointer: coarse)").matches || "ontouchstart" in window) enable();
     else window.addEventListener("touchstart", enable, { once: true });
 
     const bind = (selector, onDown, onUp) => {
@@ -155,20 +143,18 @@
         el.classList.remove("pressed");
       };
       el.addEventListener("pointerdown", down);
-      ["pointerup", "pointercancel", "pointerleave"].forEach((ev) =>
-        el.addEventListener(ev, up),
-      );
+      ["pointerup", "pointercancel", "pointerleave"].forEach((ev) => el.addEventListener(ev, up));
     };
 
     bind(
       "#t-left",
       () => (T.left = true),
-      () => (T.left = false),
+      () => (T.left = false)
     );
     bind(
       "#t-right",
       () => (T.right = true),
-      () => (T.right = false),
+      () => (T.right = false)
     );
     bind(
       "#t-jump",
@@ -176,7 +162,7 @@
         T.jump = true;
         T.jumpQueued = true;
       },
-      () => (T.jump = false),
+      () => (T.jump = false)
     );
     bind("#ability", () => (T.actionQueued = true));
   }
@@ -222,7 +208,7 @@
                   eliminated.includes(idx) ? "disabled" : ""
                 }>
                   <span class="k">${letters[pos]}</span><span>${esc(q.options[idx])}</span>
-                </button>`,
+                </button>`
                 )
                 .join("")}
             </div>
@@ -276,7 +262,7 @@
         };
 
         el.querySelectorAll(".opt").forEach((b) =>
-          b.addEventListener("click", () => finish(Number(b.dataset.i), false)),
+          b.addEventListener("click", () => finish(Number(b.dataset.i), false))
         );
         window.addEventListener("keydown", onKey);
 
@@ -308,9 +294,7 @@
     show(o) {
       const el = $("#result");
       const stars =
-        o.stars != null
-          ? "⭐".repeat(o.stars) + "☆".repeat(Math.max(0, 3 - o.stars))
-          : "";
+        o.stars != null ? "⭐".repeat(o.stars) + "☆".repeat(Math.max(0, 3 - o.stars)) : "";
       el.innerHTML = `
         <div class="result-card">
           <h2>${esc(o.title)}</h2>
@@ -336,7 +320,7 @@
       el.innerHTML = list
         .map(
           (p, i) =>
-            `<div>${["🥇", "🥈", "🥉"][i] || `${i + 1}.`} ${esc(p.name)} — ${esc(p.label)}</div>`,
+            `<div>${["🥇", "🥈", "🥉"][i] || `${i + 1}.`} ${esc(p.name)} — ${esc(p.label)}</div>`
         )
         .join("");
     },
@@ -485,8 +469,7 @@
 
     show(screen) {
       if (screen) this.screen = screen;
-      if (!E.Save.data.starterChosen && this.screen === "home")
-        this.screen = "starter";
+      if (!E.Save.data.starterChosen && this.screen === "home") this.screen = "starter";
       $("#menu").classList.remove("hidden");
       this.render();
       $("#menu").scrollTop = 0;
@@ -530,7 +513,7 @@
           </div>
         </form>
         <div class="mascot">${E.avatar(d.selected)}</div>
-                <div class="lfoot"><b>Edupaw Adventure</b><br>Dikembangkan oleh Kuslan Wawan © 2026</div>`;
+        <p class="copy">EduPaw Adventure © 2026</p>`;
     },
 
     screen_home() {
@@ -591,7 +574,7 @@
       const last = this.page === HOWTO.length - 1;
       const dots = HOWTO.map(
         (h, i) =>
-          `<button class="dot ${i === this.page ? "on" : ""}" data-act="howGo" data-i="${i}" aria-label="Halaman ${i + 1}"></button>`,
+          `<button class="dot ${i === this.page ? "on" : ""}" data-act="howGo" data-i="${i}" aria-label="Halaman ${i + 1}"></button>`
       ).join("");
       return `
         <h1 class="heading small">📖 Cara Bermain</h1>
@@ -612,9 +595,7 @@
       const cards = E.LEVELS.map((lv, i) => {
         const done = d.levels[i];
         const locked = i > 0 && !d.levels[i - 1];
-        const stars = done
-          ? "⭐".repeat(done.stars) + "☆".repeat(3 - done.stars)
-          : "☆☆☆";
+        const stars = done ? "⭐".repeat(done.stars) + "☆".repeat(3 - done.stars) : "☆☆☆";
         return `
         <div class="card ${locked ? "locked" : ""}">
           <div class="em">${lv.boss ? "👑" : i === 0 ? "🌳" : "💎"}</div>
@@ -649,8 +630,7 @@
             actions += `<button class="btn small alt" data-act="upgrade" data-id="${id}" ${d.coins < cost ? "disabled" : ""}>⬆ Lv${lv + 1} (🪙${cost})</button>`;
           }
         } else {
-          if (ach)
-            req = `🏆 ${ach.title}: ${ach.desc} (${ach.progress(d.stats)})`;
+          if (ach) req = `🏆 ${ach.title}: ${ach.desc} (${ach.progress(d.stats)})`;
           actions += `<button class="btn small alt" data-act="buyChar" data-id="${id}" ${d.coins < c.price ? "disabled" : ""}>Beli 🪙${c.price}</button>`;
         }
 
@@ -694,10 +674,7 @@
 
     screen_settings() {
       const d = E.Save.data;
-      const subjects = [
-        { id: "mixed", name: "Campuran", emoji: "📚" },
-        ...(E.subjects || []),
-      ];
+      const subjects = [{ id: "mixed", name: "Campuran", emoji: "📚" }, ...(E.subjects || [])];
       return `
         ${this.header("Pengaturan")}
         <div class="panel">
@@ -740,10 +717,7 @@
     screen_lobby() {
       const net = E.net;
       const players = Object.values(net.players || {});
-      const subjects = [
-        { id: "mixed", name: "Campuran", emoji: "📚" },
-        ...(E.subjects || []),
-      ];
+      const subjects = [{ id: "mixed", name: "Campuran", emoji: "📚" }, ...(E.subjects || [])];
       const host = net.isHost;
       const l = this.lan;
       const controls = host
@@ -760,7 +734,7 @@
                  ${E.LEVELS.slice(0, 2)
                    .map(
                      (lv, i) =>
-                       `<option value="${i}" ${Number(l.level) === i ? "selected" : ""}>Level ${i + 1}: ${lv.name}</option>`,
+                       `<option value="${i}" ${Number(l.level) === i ? "selected" : ""}>Level ${i + 1}: ${lv.name}</option>`
                    )
                    .join("")}
                </select>`
@@ -942,11 +916,7 @@
           break;
 
         case "resetSave":
-          if (
-            window.confirm(
-              "Hapus semua progres? Tindakan ini tidak bisa dibatalkan.",
-            )
-          ) {
+          if (window.confirm("Hapus semua progres? Tindakan ini tidak bisa dibatalkan.")) {
             E.Save.reset();
             this.show("home");
           }
@@ -1026,16 +996,9 @@
       };
 
       if (l.mode === "duel") {
-        const pool = E.questions.filter(
-          (q) => l.subject === "mixed" || q.subject === l.subject,
-        );
-        const pick = (lv, n) =>
-          shuffle(pool.filter((q) => q.level === lv)).slice(0, n);
-        let chosen = [
-          ...pick("easy", 3),
-          ...pick("medium", 3),
-          ...pick("hard", 2),
-        ];
+        const pool = E.questions.filter((q) => l.subject === "mixed" || q.subject === l.subject);
+        const pick = (lv, n) => shuffle(pool.filter((q) => q.level === lv)).slice(0, n);
+        let chosen = [...pick("easy", 3), ...pick("medium", 3), ...pick("hard", 2)];
         if (chosen.length < 5) chosen = shuffle(pool).slice(0, 8);
         payload.qids = chosen.map((q) => q.id);
       }
@@ -1049,20 +1012,14 @@
         this.hide();
         E.Duel.start(p);
       } else {
-        E.startGame({
-          level: p.level,
-          mode: "race",
-          seed: p.seed,
-          subject: p.subject,
-        });
+        E.startGame({ level: p.level, mode: "race", seed: p.seed, subject: p.subject });
       }
     },
 
     bindNetwork() {
       const net = E.net;
       net.on("lobby", () => {
-        if (this.screen === "lobby" && !$("#menu").classList.contains("hidden"))
-          this.render();
+        if (this.screen === "lobby" && !$("#menu").classList.contains("hidden")) this.render();
       });
       net.on("start", (p) => this.beginMatch(p));
       net.on("disconnected", () => {
@@ -1070,9 +1027,7 @@
         if (E.game && E.game.scene.isActive("Game")) E.quitToMenu();
         this.show("lan");
       });
-      net.on("error", (err) =>
-        Toast.show(`Jaringan: ${err.type || err.message || err}`, 3000),
-      );
+      net.on("error", (err) => Toast.show(`Jaringan: ${err.type || err.message || err}`, 3000));
     },
   };
 
