@@ -1673,9 +1673,17 @@ kbd {
   }
 
   .tagline,
-  .copy,
-  .lfoot {
+  .copy, {
     display: none;
+   .lfoot {
+    position: fixed;
+    right: 8px;
+    bottom: 6px;
+    max-width: 19vw;
+    margin: 0;
+    font-size: 9px;
+    text-align: right;
+  }
   }
 
   .mascot {
