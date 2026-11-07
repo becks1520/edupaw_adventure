@@ -132,7 +132,12 @@
       "subject": "indonesia",
       "level": "easy",
       "q": "Kalimat yang benar penulisannya adalah?",
-      "options": ["saya makan nasi.", "Saya makan nasi.", "saya Makan nasi", "Saya makan Nasi"],
+      "options": [
+        "saya makan nasi.",
+        "Saya makan nasi.",
+        "saya Makan nasi",
+        "Saya makan Nasi"
+      ],
       "answer": 1,
       "hint": "Awal kalimat memakai huruf kapital dan diakhiri titik."
     },
@@ -278,9 +283,5294 @@
       "subject": "umum",
       "level": "hard",
       "q": "Siapa pencipta lagu kebangsaan 'Indonesia Raya'?",
-      "options": ["Ismail Marzuki", "W.R. Supratman", "Ibu Sud", "C. Simanjuntak"],
+      "options": [
+        "Ismail Marzuki",
+        "W.R. Supratman",
+        "Ibu Sud",
+        "C. Simanjuntak"
+      ],
       "answer": 1,
       "hint": "Beliau juga seorang wartawan dan pemain biola."
+    },
+    {
+      "id": "mat-e101",
+      "subject": "matematika",
+      "level": "easy",
+      "q": "10 + 10 = ?",
+      "options": ["10", "20", "30", "40"],
+      "answer": 1,
+      "hint": "Satu puluhan ditambah satu puluhan."
+    },
+    {
+      "id": "mat-e102",
+      "subject": "matematika",
+      "level": "easy",
+      "q": "20 - 5 = ?",
+      "options": ["10", "15", "20", "25"],
+      "answer": 1,
+      "hint": "Mundur 5 langkah dari 20."
+    },
+    {
+      "id": "mat-e103",
+      "subject": "matematika",
+      "level": "easy",
+      "q": "3 x 3 = ?",
+      "options": ["6", "9", "12", "15"],
+      "answer": 1,
+      "hint": "Tiga dijumlahkan sebanyak tiga kali."
+    },
+    {
+      "id": "mat-e104",
+      "subject": "matematika",
+      "level": "easy",
+      "q": "12 : 2 = ?",
+      "options": ["4", "5", "6", "7"],
+      "answer": 2,
+      "hint": "Setengah dari 12."
+    },
+    {
+      "id": "mat-e105",
+      "subject": "matematika",
+      "level": "easy",
+      "q": "15 + 7 = ?",
+      "options": ["20", "21", "22", "23"],
+      "answer": 2,
+      "hint": "Tambahkan 5 dulu, lalu sisanya 2."
+    },
+    {
+      "id": "mat-e106",
+      "subject": "matematika",
+      "level": "easy",
+      "q": "50 - 25 = ?",
+      "options": ["15", "20", "25", "30"],
+      "answer": 2,
+      "hint": "Setengah dari 50."
+    },
+    {
+      "id": "mat-e107",
+      "subject": "matematika",
+      "level": "easy",
+      "q": "4 x 5 = ?",
+      "options": ["15", "20", "25", "30"],
+      "answer": 1,
+      "hint": "Lima dijumlahkan empat kali."
+    },
+    {
+      "id": "mat-e108",
+      "subject": "matematika",
+      "level": "easy",
+      "q": "20 : 4 = ?",
+      "options": ["3", "4", "5", "6"],
+      "answer": 2,
+      "hint": "Angka yang jika dikali 4 hasilnya 20."
+    },
+    {
+      "id": "mat-e109",
+      "subject": "matematika",
+      "level": "easy",
+      "q": "100 + 50 = ?",
+      "options": ["105", "115", "150", "200"],
+      "answer": 2,
+      "hint": "Seratus ditambah lima puluh."
+    },
+    {
+      "id": "mat-e110",
+      "subject": "matematika",
+      "level": "easy",
+      "q": "30 - 12 = ?",
+      "options": ["16", "18", "20", "22"],
+      "answer": 1,
+      "hint": "Kurangi 10, lalu kurangi 2."
+    },
+    {
+      "id": "mat-e111",
+      "subject": "matematika",
+      "level": "easy",
+      "q": "7 x 2 = ?",
+      "options": ["12", "14", "16", "18"],
+      "answer": 1,
+      "hint": "Tujuh ditambah tujuh."
+    },
+    {
+      "id": "mat-e112",
+      "subject": "matematika",
+      "level": "easy",
+      "q": "16 : 8 = ?",
+      "options": ["1", "2", "3", "4"],
+      "answer": 1,
+      "hint": "Berapa kali 8 agar jadi 16?"
+    },
+    {
+      "id": "mat-e113",
+      "subject": "matematika",
+      "level": "easy",
+      "q": "5 + 5 + 5 = ?",
+      "options": ["10", "15", "20", "25"],
+      "answer": 1,
+      "hint": "Sama dengan 3 dikali 5."
+    },
+    {
+      "id": "mat-e114",
+      "subject": "matematika",
+      "level": "easy",
+      "q": "100 - 1 = ?",
+      "options": ["90", "98", "99", "101"],
+      "answer": 2,
+      "hint": "Angka sebelum 100."
+    },
+    {
+      "id": "mat-m101",
+      "subject": "matematika",
+      "level": "medium",
+      "q": "8 x 9 = ?",
+      "options": ["64", "72", "81", "89"],
+      "answer": 1,
+      "hint": "Kurang 8 dari 80."
+    },
+    {
+      "id": "mat-m102",
+      "subject": "matematika",
+      "level": "medium",
+      "q": "60 : 5 = ?",
+      "options": ["10", "12", "14", "15"],
+      "answer": 1,
+      "hint": "Sama dengan 60 dibagi 10 lalu dikali 2."
+    },
+    {
+      "id": "mat-m103",
+      "subject": "matematika",
+      "level": "medium",
+      "q": "1/2 + 1/4 = ?",
+      "options": ["2/6", "3/4", "1/8", "2/4"],
+      "answer": 1,
+      "hint": "Samakan penyebutnya menjadi 4."
+    },
+    {
+      "id": "mat-m104",
+      "subject": "matematika",
+      "level": "medium",
+      "q": "Kuadrat dari 7 adalah?",
+      "options": ["14", "49", "21", "28"],
+      "answer": 1,
+      "hint": "7 dikali 7."
+    },
+    {
+      "id": "mat-m105",
+      "subject": "matematika",
+      "level": "medium",
+      "q": "Berapa 20% dari 50?",
+      "options": ["5", "10", "15", "20"],
+      "answer": 1,
+      "hint": "Sama dengan 2 kali 10% dari 50."
+    },
+    {
+      "id": "mat-m106",
+      "subject": "matematika",
+      "level": "medium",
+      "q": "15 x 4 = ?",
+      "options": ["45", "50", "60", "75"],
+      "answer": 2,
+      "hint": "15 dikali 2 adalah 30, kalikan 2 lagi."
+    },
+    {
+      "id": "mat-m107",
+      "subject": "matematika",
+      "level": "medium",
+      "q": "Jika x + 5 = 12, berapakah x?",
+      "options": ["5", "6", "7", "8"],
+      "answer": 2,
+      "hint": "Kurangi 12 dengan 5."
+    },
+    {
+      "id": "mat-m108",
+      "subject": "matematika",
+      "level": "medium",
+      "q": "Akar kuadrat dari 81 adalah?",
+      "options": ["7", "8", "9", "10"],
+      "answer": 2,
+      "hint": "Angka yang jika dikalikan dirinya sendiri hasilnya 81."
+    },
+    {
+      "id": "mat-m109",
+      "subject": "matematika",
+      "level": "medium",
+      "q": "0.5 x 100 = ?",
+      "options": ["5", "50", "500", "0.05"],
+      "answer": 1,
+      "hint": "Geser koma dua kali ke kanan."
+    },
+    {
+      "id": "mat-m110",
+      "subject": "matematika",
+      "level": "medium",
+      "q": "120 - (20 + 30) = ?",
+      "options": ["50", "70", "90", "110"],
+      "answer": 1,
+      "hint": "Kerjakan dalam kurung terlebih dahulu."
+    },
+    {
+      "id": "mat-m111",
+      "subject": "matematika",
+      "level": "medium",
+      "q": "3/5 diubah menjadi persen adalah?",
+      "options": ["30%", "50%", "60%", "75%"],
+      "answer": 2,
+      "hint": "Kalikan dengan 100/100."
+    },
+    {
+      "id": "mat-m112",
+      "subject": "matematika",
+      "level": "medium",
+      "q": "Keliling segitiga sama sisi dengan sisi 6 cm?",
+      "options": ["12 cm", "18 cm", "24 cm", "36 cm"],
+      "answer": 1,
+      "hint": "3 kali panjang sisi."
+    },
+    {
+      "id": "mat-m113",
+      "subject": "matematika",
+      "level": "medium",
+      "q": "9 x 6 = ?",
+      "options": ["45", "48", "54", "56"],
+      "answer": 2,
+      "hint": "Gunakan trik jari kelipatan 9."
+    },
+    {
+      "id": "mat-h101",
+      "subject": "matematika",
+      "level": "hard",
+      "q": "2^4 (2 pangkat 4) = ?",
+      "options": ["8", "12", "16", "32"],
+      "answer": 2,
+      "hint": "2 x 2 x 2 x 2."
+    },
+    {
+      "id": "mat-h102",
+      "subject": "matematika",
+      "level": "hard",
+      "q": "Luas lingkaran dengan jari-jari 7 cm? (π=22/7)",
+      "options": ["44 cm²", "154 cm²", "314 cm²", "49 cm²"],
+      "answer": 1,
+      "hint": "Luas = π x r²."
+    },
+    {
+      "id": "mat-h103",
+      "subject": "matematika",
+      "level": "hard",
+      "q": "Jika 3x - 4 = 11, berapakah x?",
+      "options": ["3", "4", "5", "6"],
+      "answer": 2,
+      "hint": "Pindahkan -4 ke kanan jadi +4, lalu bagi 3."
+    },
+    {
+      "id": "mat-h104",
+      "subject": "matematika",
+      "level": "hard",
+      "q": "Akar pangkat tiga dari 64 adalah?",
+      "options": ["2", "4", "8", "16"],
+      "answer": 1,
+      "hint": "Angka yang dikalikan dirinya 3 kali hasilnya 64."
+    },
+    {
+      "id": "mat-h105",
+      "subject": "matematika",
+      "level": "hard",
+      "q": "Volume kubus dengan sisi 5 cm adalah?",
+      "options": ["25 cm³", "100 cm³", "125 cm³", "150 cm³"],
+      "answer": 2,
+      "hint": "Volume = sisi x sisi x sisi."
+    },
+    {
+      "id": "mat-h106",
+      "subject": "matematika",
+      "level": "hard",
+      "q": "25% dari 200 sama dengan berapa persen dari 100?",
+      "options": ["25%", "50%", "75%", "100%"],
+      "answer": 1,
+      "hint": "25% dari 200 adalah 50."
+    },
+    {
+      "id": "mat-h107",
+      "subject": "matematika",
+      "level": "hard",
+      "q": "45 + 15 x 2 - 10 = ?",
+      "options": ["65", "110", "50", "80"],
+      "answer": 0,
+      "hint": "Perkalian dikerjakan terlebih dahulu."
+    },
+    {
+      "id": "mat-h108",
+      "subject": "matematika",
+      "level": "hard",
+      "q": "Sudut siku-siku besarnya adalah?",
+      "options": ["45 derajat", "90 derajat", "180 derajat", "360 derajat"],
+      "answer": 1,
+      "hint": "Sudut tegak lurus."
+    },
+    {
+      "id": "mat-h109",
+      "subject": "matematika",
+      "level": "hard",
+      "q": "2/3 + 1/6 = ?",
+      "options": ["3/9", "5/6", "4/6", "1"],
+      "answer": 1,
+      "hint": "Ubah 2/3 menjadi pecahan berpenyebut 6."
+    },
+    {
+      "id": "mat-h110",
+      "subject": "matematika",
+      "level": "hard",
+      "q": "Peluang muncul angka pada pelemparan 1 koin?",
+      "options": ["1/4", "1/3", "1/2", "1"],
+      "answer": 2,
+      "hint": "Hanya ada 2 sisi pada koin."
+    },
+    {
+      "id": "mat-h111",
+      "subject": "matematika",
+      "level": "hard",
+      "q": "10! (faktorial) diakhiri dengan berapa angka nol?",
+      "options": ["1", "2", "3", "4"],
+      "answer": 1,
+      "hint": "Hitung jumlah pasangan faktor 2 dan 5."
+    },
+    {
+      "id": "mat-h112",
+      "subject": "matematika",
+      "level": "hard",
+      "q": "Nilai mutlak dari |-15 + 5| adalah?",
+      "options": ["-10", "10", "20", "-20"],
+      "answer": 1,
+      "hint": "Nilai mutlak selalu positif."
+    },
+    {
+      "id": "mat-h113",
+      "subject": "matematika",
+      "level": "hard",
+      "q": "0.125 sama dengan pecahan?",
+      "options": ["1/4", "1/5", "1/8", "1/10"],
+      "answer": 2,
+      "hint": "Setengah dari 0.25 (1/4)."
+    },
+
+    {
+      "id": "ipa-e101",
+      "subject": "ipa",
+      "level": "easy",
+      "q": "Benda langit yang mengelilingi Bumi adalah?",
+      "options": ["Matahari", "Bintang", "Bulan", "Komet"],
+      "answer": 2,
+      "hint": "Satelit alami Bumi yang bersinar di malam hari."
+    },
+    {
+      "id": "ipa-e102",
+      "subject": "ipa",
+      "level": "easy",
+      "q": "Hewan yang memakan tumbuhan disebut?",
+      "options": ["Karnivora", "Herbivora", "Omnivora", "Insektivora"],
+      "answer": 1,
+      "hint": "Sapi dan kambing termasuk kelompok ini."
+    },
+    {
+      "id": "ipa-e103",
+      "subject": "ipa",
+      "level": "easy",
+      "q": "Air membeku pada suhu?",
+      "options": [
+        "0 derajat Celcius",
+        "10 derajat Celcius",
+        "50 derajat Celcius",
+        "100 derajat Celcius"
+      ],
+      "answer": 0,
+      "hint": "Titik beku air standar."
+    },
+    {
+      "id": "ipa-e104",
+      "subject": "ipa",
+      "level": "easy",
+      "q": "Alat pernapasan manusia adalah?",
+      "options": ["Insang", "Trakea", "Paru-paru", "Kulit"],
+      "answer": 2,
+      "hint": "Terletak di rongga dada."
+    },
+    {
+      "id": "ipa-e105",
+      "subject": "ipa",
+      "level": "easy",
+      "q": "Rasa manis pada makanan bisa dirasakan oleh?",
+      "options": ["Mata", "Hidung", "Lidah", "Telinga"],
+      "answer": 2,
+      "hint": "Indera pengecap."
+    },
+    {
+      "id": "ipa-e106",
+      "subject": "ipa",
+      "level": "easy",
+      "q": "Benda yang dapat ditarik magnet mengandung?",
+      "options": ["Plastik", "Karet", "Besi", "Kertas"],
+      "answer": 2,
+      "hint": "Logam padat yang kuat."
+    },
+    {
+      "id": "ipa-e107",
+      "subject": "ipa",
+      "level": "easy",
+      "q": "Sumber cahaya utama pada siang hari adalah?",
+      "options": ["Lampu", "Bulan", "Matahari", "Api"],
+      "answer": 2,
+      "hint": "Bintang terdekat dari Bumi."
+    },
+    {
+      "id": "ipa-e108",
+      "subject": "ipa",
+      "level": "easy",
+      "q": "Ular bergerak menggunakan?",
+      "options": ["Kaki", "Sayap", "Otot perut", "Sirip"],
+      "answer": 2,
+      "hint": "Ular adalah hewan melata."
+    },
+    {
+      "id": "ipa-e109",
+      "subject": "ipa",
+      "level": "easy",
+      "q": "Tulang manusia berfungsi untuk?",
+      "options": [
+        "Mengedarkan darah",
+        "Menegakkan tubuh",
+        "Mencerna makanan",
+        "Bernapas"
+      ],
+      "answer": 1,
+      "hint": "Sebagai rangka penopang."
+    },
+    {
+      "id": "ipa-e110",
+      "subject": "ipa",
+      "level": "easy",
+      "q": "Burung berkembang biak dengan cara?",
+      "options": ["Beranak", "Membelah diri", "Bertelur", "Spora"],
+      "answer": 2,
+      "hint": "Istilah biologinya Ovipar."
+    },
+    {
+      "id": "ipa-e111",
+      "subject": "ipa",
+      "level": "easy",
+      "q": "Air yang dipanaskan terus menerus akan?",
+      "options": ["Membeku", "Menyublim", "Menguap", "Mencair"],
+      "answer": 2,
+      "hint": "Berubah menjadi gas."
+    },
+    {
+      "id": "ipa-e112",
+      "subject": "ipa",
+      "level": "easy",
+      "q": "Warna daun umumnya hijau karena mengandung?",
+      "options": ["Air", "Klorofil", "Oksigen", "Tanah"],
+      "answer": 1,
+      "hint": "Zat hijau daun."
+    },
+    {
+      "id": "ipa-e113",
+      "subject": "ipa",
+      "level": "easy",
+      "q": "Kucing adalah contoh hewan?",
+      "options": ["Reptil", "Mamalia", "Amfibi", "Aves"],
+      "answer": 1,
+      "hint": "Hewan yang menyusui anaknya."
+    },
+    {
+      "id": "ipa-e114",
+      "subject": "ipa",
+      "level": "easy",
+      "q": "Akar yang menggantung seperti pada beringin disebut?",
+      "options": ["Akar tunjang", "Akar napas", "Akar gantung", "Akar lekat"],
+      "answer": 2,
+      "hint": "Sesuai dengan posisinya yang menggantung di udara."
+    },
+    {
+      "id": "ipa-m101",
+      "subject": "ipa",
+      "level": "medium",
+      "q": "Planet terbesar di tata surya adalah?",
+      "options": ["Bumi", "Saturnus", "Jupiter", "Neptunus"],
+      "answer": 2,
+      "hint": "Planet urutan kelima dari matahari."
+    },
+    {
+      "id": "ipa-m102",
+      "subject": "ipa",
+      "level": "medium",
+      "q": "Proses perubahan wujud dari padat menjadi gas disebut?",
+      "options": ["Menguap", "Mencair", "Menyublim", "Mengkristal"],
+      "answer": 2,
+      "hint": "Terjadi pada kapur barus."
+    },
+    {
+      "id": "ipa-m103",
+      "subject": "ipa",
+      "level": "medium",
+      "q": "Sel darah merah berfungsi untuk?",
+      "options": [
+        "Membunuh kuman",
+        "Membawa oksigen",
+        "Membekukan darah",
+        "Menyerap nutrisi"
+      ],
+      "answer": 1,
+      "hint": "Mengandung hemoglobin."
+    },
+    {
+      "id": "ipa-m104",
+      "subject": "ipa",
+      "level": "medium",
+      "q": "Alat ukur tekanan udara adalah?",
+      "options": ["Termometer", "Barometer", "Seismograf", "Anemometer"],
+      "answer": 1,
+      "hint": "Diawali huruf B."
+    },
+    {
+      "id": "ipa-m105",
+      "subject": "ipa",
+      "level": "medium",
+      "q": "Cahaya matahari dapat diuraikan menjadi pelangi karena peristiwa?",
+      "options": ["Pemantulan", "Pembiasan", "Perambatan", "Penyerapan"],
+      "answer": 1,
+      "hint": "Disebut juga refraksi dispersi."
+    },
+    {
+      "id": "ipa-m106",
+      "subject": "ipa",
+      "level": "medium",
+      "q": "Tumbuhan paku berkembang biak menggunakan?",
+      "options": ["Biji", "Stek", "Spora", "Tunas"],
+      "answer": 2,
+      "hint": "Serbuk halus di balik daun."
+    },
+    {
+      "id": "ipa-m107",
+      "subject": "ipa",
+      "level": "medium",
+      "q": "Enzim di lambung yang memecah protein adalah?",
+      "options": ["Amilase", "Lipase", "Pepsin", "Tripsin"],
+      "answer": 2,
+      "hint": "Bekerja pada suasana asam."
+    },
+    {
+      "id": "ipa-m108",
+      "subject": "ipa",
+      "level": "medium",
+      "q": "Percepatan gravitasi Bumi secara umum dihitung sebesar?",
+      "options": ["9.8 m/s²", "10.5 m/s²", "12 m/s²", "8.5 m/s²"],
+      "answer": 0,
+      "hint": "Sering dibulatkan menjadi 10 m/s²."
+    },
+    {
+      "id": "ipa-m109",
+      "subject": "ipa",
+      "level": "medium",
+      "q": "Tulang penyusun tengkorak berbentuk?",
+      "options": [
+        "Tulang pipa",
+        "Tulang pipih",
+        "Tulang pendek",
+        "Tulang tak beraturan"
+      ],
+      "answer": 1,
+      "hint": "Bentuknya tipis dan lebar."
+    },
+    {
+      "id": "ipa-m110",
+      "subject": "ipa",
+      "level": "medium",
+      "q": "Hewan yang bisa hidup di air dan di darat disebut?",
+      "options": ["Reptil", "Pisces", "Amfibi", "Mamalia"],
+      "answer": 2,
+      "hint": "Katak adalah salah satu contohnya."
+    },
+    {
+      "id": "ipa-m111",
+      "subject": "ipa",
+      "level": "medium",
+      "q": "Benda yang tidak dapat menghantarkan panas disebut?",
+      "options": ["Konduktor", "Isolator", "Radiator", "Generator"],
+      "answer": 1,
+      "hint": "Contohnya kayu dan karet."
+    },
+    {
+      "id": "ipa-m112",
+      "subject": "ipa",
+      "level": "medium",
+      "q": "Lensa pada mikroskop yang dekat dengan mata pengamat disebut?",
+      "options": ["Objektif", "Okuler", "Fokus", "Kondensor"],
+      "answer": 1,
+      "hint": "Berasal dari kata Oculus (mata)."
+    },
+    {
+      "id": "ipa-m113",
+      "subject": "ipa",
+      "level": "medium",
+      "q": "Gaya yang melawan arah gerak benda disebut?",
+      "options": ["Gaya gravitasi", "Gaya pegas", "Gaya gesek", "Gaya magnet"],
+      "answer": 2,
+      "hint": "Terjadi saat dua permukaan bersentuhan."
+    },
+    {
+      "id": "ipa-h101",
+      "subject": "ipa",
+      "level": "hard",
+      "q": "Unsur kimia dengan simbol Fe adalah?",
+      "options": ["Fluor", "Besi (Ferrum)", "Emas (Aurum)", "Fosfor"],
+      "answer": 1,
+      "hint": "Logam kuat penyusun hemoglobin."
+    },
+    {
+      "id": "ipa-h102",
+      "subject": "ipa",
+      "level": "hard",
+      "q": "Hukum gerak benda yang menyatakan 'Aksi = Reaksi' adalah?",
+      "options": [
+        "Hukum Newton I",
+        "Hukum Newton II",
+        "Hukum Newton III",
+        "Hukum Kepler"
+      ],
+      "answer": 2,
+      "hint": "Hukum ketiga dari Sir Isaac Newton."
+    },
+    {
+      "id": "ipa-h103",
+      "subject": "ipa",
+      "level": "hard",
+      "q": "Bagian sel yang berfungsi sebagai pusat kendali adalah?",
+      "options": ["Mitokondria", "Ribosom", "Membran sel", "Nukleus"],
+      "answer": 3,
+      "hint": "Disebut juga inti sel."
+    },
+    {
+      "id": "ipa-h104",
+      "subject": "ipa",
+      "level": "hard",
+      "q": "Rumus kimia dari Garam Dapur adalah?",
+      "options": ["H2O", "CO2", "NaCl", "HCl"],
+      "answer": 2,
+      "hint": "Natrium Klorida."
+    },
+    {
+      "id": "ipa-h105",
+      "subject": "ipa",
+      "level": "hard",
+      "q": "Hormon yang mengatur kadar gula darah adalah?",
+      "options": ["Adrenalin", "Insulin", "Testosteron", "Tiroksin"],
+      "answer": 1,
+      "hint": "Dihasilkan oleh pankreas."
+    },
+    {
+      "id": "ipa-h106",
+      "subject": "ipa",
+      "level": "hard",
+      "q": "Partikel penyusun atom yang bermuatan negatif adalah?",
+      "options": ["Proton", "Neutron", "Elektron", "Foton"],
+      "answer": 2,
+      "hint": "Berputar mengelilingi inti atom."
+    },
+    {
+      "id": "ipa-h107",
+      "subject": "ipa",
+      "level": "hard",
+      "q": "Lapisan atmosfer Bumi terdalam tempat cuaca terjadi?",
+      "options": ["Stratosfer", "Mesosfer", "Troposfer", "Termosfer"],
+      "answer": 2,
+      "hint": "Lapisan paling dekat dengan permukaan."
+    },
+    {
+      "id": "ipa-h108",
+      "subject": "ipa",
+      "level": "hard",
+      "q": "Jaringan pada tumbuhan yang mengangkut air dari akar ke daun?",
+      "options": ["Floem", "Xilem", "Kambium", "Parenkim"],
+      "answer": 1,
+      "hint": "Sering disebut pembuluh kayu."
+    },
+    {
+      "id": "ipa-h109",
+      "subject": "ipa",
+      "level": "hard",
+      "q": "Frekuensi bunyi yang dapat didengar manusia (audiosonik) berkisar?",
+      "options": ["< 20 Hz", "20 - 20.000 Hz", "> 20.000 Hz", "10 - 100 Hz"],
+      "answer": 1,
+      "hint": "Antara dua puluh hingga dua puluh ribu Hertz."
+    },
+    {
+      "id": "ipa-h110",
+      "subject": "ipa",
+      "level": "hard",
+      "q": "Satuan kuat arus listrik dalam SI adalah?",
+      "options": ["Volt", "Ohm", "Ampere", "Watt"],
+      "answer": 2,
+      "hint": "Singkatannya A."
+    },
+    {
+      "id": "ipa-h111",
+      "subject": "ipa",
+      "level": "hard",
+      "q": "Penyakit akibat kekurangan vitamin C disebut?",
+      "options": ["Anemia", "Sariawan (Skorbut)", "Beri-beri", "Rakitis"],
+      "answer": 1,
+      "hint": "Gusi berdarah adalah salah satu gejalanya."
+    },
+    {
+      "id": "ipa-h112",
+      "subject": "ipa",
+      "level": "hard",
+      "q": "Organel sel tempat terjadinya respirasi seluler?",
+      "options": ["Badan Golgi", "Vakuola", "Mitokondria", "Lisosom"],
+      "answer": 2,
+      "hint": "The powerhouse of the cell."
+    },
+    {
+      "id": "ipa-h113",
+      "subject": "ipa",
+      "level": "hard",
+      "q": "Proses peleburan sel sperma dan sel telur disebut?",
+      "options": ["Ovulasi", "Fertilisasi", "Menstruasi", "Implantasi"],
+      "answer": 1,
+      "hint": "Pembuahan."
+    },
+
+    {
+      "id": "ind-e101",
+      "subject": "indonesia",
+      "level": "easy",
+      "q": "Kata tanya untuk menanyakan waktu adalah?",
+      "options": ["Siapa", "Kapan", "Dimana", "Bagaimana"],
+      "answer": 1,
+      "hint": "Jawabannya biasanya hari, jam, atau tanggal."
+    },
+    {
+      "id": "ind-e102",
+      "subject": "indonesia",
+      "level": "easy",
+      "q": "Lawan kata dari 'panjang' adalah?",
+      "options": ["Besar", "Tinggi", "Pendek", "Sempit"],
+      "answer": 2,
+      "hint": "Penggaris itu tidak panjang, melainkan ..."
+    },
+    {
+      "id": "ind-e103",
+      "subject": "indonesia",
+      "level": "easy",
+      "q": "Orang yang melahirkan kita dipanggil?",
+      "options": ["Ayah", "Paman", "Ibu", "Kakak"],
+      "answer": 2,
+      "hint": "Orang tua perempuan."
+    },
+    {
+      "id": "ind-e104",
+      "subject": "indonesia",
+      "level": "easy",
+      "q": "Benda untuk melindungi diri dari hujan?",
+      "options": ["Sepatu", "Payung", "Topi", "Kacamata"],
+      "answer": 1,
+      "hint": "Bisa dilipat atau dikembangkan."
+    },
+    {
+      "id": "ind-e105",
+      "subject": "indonesia",
+      "level": "easy",
+      "q": "Hewan yang menghasilkan madu?",
+      "options": ["Semut", "Kupu-kupu", "Lebah", "Lalat"],
+      "answer": 2,
+      "hint": "Hewan ini bisa menyengat."
+    },
+    {
+      "id": "ind-e106",
+      "subject": "indonesia",
+      "level": "easy",
+      "q": "Sinonim dari kata 'melihat'?",
+      "options": ["Mendengar", "Meraba", "Menonton", "Berjalan"],
+      "answer": 2,
+      "hint": "Menggunakan mata."
+    },
+    {
+      "id": "ind-e107",
+      "subject": "indonesia",
+      "level": "easy",
+      "q": "Kendaraan yang berjalan di rel?",
+      "options": ["Mobil", "Pesawat", "Kapal", "Kereta Api"],
+      "answer": 3,
+      "hint": "Panjang dan memiliki banyak gerbong."
+    },
+    {
+      "id": "ind-e108",
+      "subject": "indonesia",
+      "level": "easy",
+      "q": "Lawan kata dari 'kaya'?",
+      "options": ["Makmur", "Miskin", "Sombong", "Baik"],
+      "answer": 1,
+      "hint": "Tidak memiliki banyak harta."
+    },
+    {
+      "id": "ind-e109",
+      "subject": "indonesia",
+      "level": "easy",
+      "q": "Huruf kapital digunakan pada?",
+      "options": [
+        "Akhir kalimat",
+        "Awal kalimat",
+        "Tengah kalimat",
+        "Semua kata"
+      ],
+      "answer": 1,
+      "hint": "Huruf pertama saat menulis kalimat baru."
+    },
+    {
+      "id": "ind-e110",
+      "subject": "indonesia",
+      "level": "easy",
+      "q": "Buku yang berisi arti kata-kata?",
+      "options": ["Komik", "Kamus", "Novel", "Majalah"],
+      "answer": 1,
+      "hint": "Disusun berdasarkan abjad."
+    },
+    {
+      "id": "ind-e111",
+      "subject": "indonesia",
+      "level": "easy",
+      "q": "Orang yang mengobati orang sakit?",
+      "options": ["Guru", "Polisi", "Dokter", "Sopir"],
+      "answer": 2,
+      "hint": "Bekerja di rumah sakit atau klinik."
+    },
+    {
+      "id": "ind-e112",
+      "subject": "indonesia",
+      "level": "easy",
+      "q": "Kata dasar dari 'memasak' adalah?",
+      "options": ["Masak", "Ema", "Asak", "Mem"],
+      "answer": 0,
+      "hint": "Hilangkan imbuhan 'me-'."
+    },
+    {
+      "id": "ind-e113",
+      "subject": "indonesia",
+      "level": "easy",
+      "q": "Pesan yang disampaikan dalam dongeng disebut?",
+      "options": ["Tema", "Tokoh", "Amanat", "Alur"],
+      "answer": 2,
+      "hint": "Pesan moral untuk pembaca."
+    },
+    {
+      "id": "ind-e114",
+      "subject": "indonesia",
+      "level": "easy",
+      "q": "Alat tulis yang memiliki penghapus di ujungnya?",
+      "options": ["Spidol", "Pensil", "Pena", "Kapur"],
+      "answer": 1,
+      "hint": "Terbuat dari grafit dan kayu."
+    },
+    {
+      "id": "ind-m101",
+      "subject": "indonesia",
+      "level": "medium",
+      "q": "Paragraf yang kalimat utamanya di awal disebut?",
+      "options": ["Induktif", "Deduktif", "Campuran", "Naratif"],
+      "answer": 1,
+      "hint": "Diawali dengan huruf D."
+    },
+    {
+      "id": "ind-m102",
+      "subject": "indonesia",
+      "level": "medium",
+      "q": "Majas yang melebih-lebihkan suatu kenyataan?",
+      "options": ["Personifikasi", "Metafora", "Hiperbola", "Litotes"],
+      "answer": 2,
+      "hint": "Contoh: Suaranya menggelegar membelah angkasa."
+    },
+    {
+      "id": "ind-m103",
+      "subject": "indonesia",
+      "level": "medium",
+      "q": "Imbuhan 'di-' yang dipisah penulisannya berfungsi sebagai?",
+      "options": [
+        "Awalan kata kerja",
+        "Kata depan penunjuk tempat",
+        "Kata ganti",
+        "Kata sifat"
+      ],
+      "answer": 1,
+      "hint": "Contoh: di sekolah, di rumah."
+    },
+    {
+      "id": "ind-m104",
+      "subject": "indonesia",
+      "level": "medium",
+      "q": "Cerita rakyat asal usul suatu tempat disebut?",
+      "options": ["Mite", "Fabel", "Legenda", "Sage"],
+      "answer": 2,
+      "hint": "Contoh: Tangkuban Perahu."
+    },
+    {
+      "id": "ind-m105",
+      "subject": "indonesia",
+      "level": "medium",
+      "q": "Kata 'Bhinneka' dalam semboyan negara berarti?",
+      "options": ["Satu", "Berbeda-beda", "Bersama", "Kuat"],
+      "answer": 1,
+      "hint": "Bhinneka Tunggal Ika (Berbeda-beda tapi tetap satu)."
+    },
+    {
+      "id": "ind-m106",
+      "subject": "indonesia",
+      "level": "medium",
+      "q": "Kalimat yang subjeknya dikenai pekerjaan disebut?",
+      "options": [
+        "Kalimat aktif",
+        "Kalimat pasif",
+        "Kalimat perintah",
+        "Kalimat majemuk"
+      ],
+      "answer": 1,
+      "hint": "Biasanya predikatnya berawalan 'di-' atau 'ter-'."
+    },
+    {
+      "id": "ind-m107",
+      "subject": "indonesia",
+      "level": "medium",
+      "q": "Arti peribahasa 'Besar pasak dari tiang'?",
+      "options": [
+        "Sangat kuat",
+        "Pengeluaran lebih besar dari pendapatan",
+        "Pendapatan lebih besar dari pengeluaran",
+        "Orang yang tinggi besar"
+      ],
+      "answer": 1,
+      "hint": "Lebih banyak belanja daripada gaji."
+    },
+    {
+      "id": "ind-m108",
+      "subject": "indonesia",
+      "level": "medium",
+      "q": "Penulisan gelar Sarjana Ekonomi yang benar?",
+      "options": ["S.E", "SE.", "S.E.", "SE"],
+      "answer": 2,
+      "hint": "Tanda titik mengakhiri setiap singkatan huruf kapital."
+    },
+    {
+      "id": "ind-m109",
+      "subject": "indonesia",
+      "level": "medium",
+      "q": "Antonim dari kata 'Protokol' adalah?",
+      "options": ["Aturan", "Disiplin", "Pelanggaran", "Bebas"],
+      "answer": 2,
+      "hint": "Tidak mengikuti aturan."
+    },
+    {
+      "id": "ind-m110",
+      "subject": "indonesia",
+      "level": "medium",
+      "q": "Puisi yang terdiri atas empat baris, bersajak a-b-a-b disebut?",
+      "options": ["Gurindam", "Syair", "Pantun", "Puisi bebas"],
+      "answer": 2,
+      "hint": "Baris 1-2 sampiran, 3-4 isi."
+    },
+    {
+      "id": "ind-m111",
+      "subject": "indonesia",
+      "level": "medium",
+      "q": "Tokoh antagonis dalam sebuah cerita adalah?",
+      "options": [
+        "Tokoh baik",
+        "Tokoh penengah",
+        "Tokoh jahat/lawan",
+        "Tokoh pendukung"
+      ],
+      "answer": 2,
+      "hint": "Lawan dari protagonis."
+    },
+    {
+      "id": "ind-m112",
+      "subject": "indonesia",
+      "level": "medium",
+      "q": "Kata baku dari 'Jadwal' yang sering salah dieja adalah?",
+      "options": ["Jadual", "Jadwal", "Jadwaal", "Jadoel"],
+      "answer": 1,
+      "hint": "Menggunakan huruf W."
+    },
+    {
+      "id": "ind-m113",
+      "subject": "indonesia",
+      "level": "medium",
+      "q": "Karangan yang menceritakan pengalaman pribadi penulis secara runtut?",
+      "options": ["Eksposisi", "Argumentasi", "Deskripsi", "Narasi"],
+      "answer": 3,
+      "hint": "Fokus pada urutan waktu/peristiwa."
+    },
+    {
+      "id": "ind-h101",
+      "subject": "indonesia",
+      "level": "hard",
+      "q": "Majas Litotes bertujuan untuk?",
+      "options": [
+        "Menyombongkan diri",
+        "Merendahkan diri",
+        "Menyindir",
+        "Menghidupkan benda mati"
+      ],
+      "answer": 1,
+      "hint": "Mengecil-ngecilkan sesuatu (Cth: Mampirlah ke gubuk saya)."
+    },
+    {
+      "id": "ind-h102",
+      "subject": "indonesia",
+      "level": "hard",
+      "q": "Kata 'Berdikari' merupakan akronim dari?",
+      "options": [
+        "Berdiri diatas kaki sendiri",
+        "Bekerja di kantor sendiri",
+        "Berbuat diam-diam kemarin",
+        "Berani di kala ngeri"
+      ],
+      "answer": 0,
+      "hint": "Dipopulerkan oleh Presiden Soekarno."
+    },
+    {
+      "id": "ind-h103",
+      "subject": "indonesia",
+      "level": "hard",
+      "q": "Imbuhan pe-an pada kata 'Permukiman' bermakna?",
+      "options": ["Proses", "Alat", "Tempat", "Kumpulan"],
+      "answer": 2,
+      "hint": "Tempat orang bermukim."
+    },
+    {
+      "id": "ind-h104",
+      "subject": "indonesia",
+      "level": "hard",
+      "q": "Istilah untuk kalimat yang tidak memiliki makna ganda (ambigu)?",
+      "options": ["Sistematis", "Logis", "Efektif", "Baku"],
+      "answer": 2,
+      "hint": "Kalimat yang lugas dan tepat sasaran."
+    },
+    {
+      "id": "ind-h105",
+      "subject": "indonesia",
+      "level": "hard",
+      "q": "Kata hubung (konjungsi) penanda hubungan kausalitas (sebab akibat)?",
+      "options": [
+        "Dan, serta",
+        "Tetapi, namun",
+        "Oleh karena itu, sehingga",
+        "Lalu, kemudian"
+      ],
+      "answer": 2,
+      "hint": "Berhubungan dengan alasan."
+    },
+    {
+      "id": "ind-h106",
+      "subject": "indonesia",
+      "level": "hard",
+      "q": "Bentuk terikat 'Eks' penulisannya yang benar jika digabung kata dasar?",
+      "options": [
+        "Eks presiden",
+        "Ekspresiden",
+        "Eks-presiden",
+        "Eks. Presiden"
+      ],
+      "answer": 1,
+      "hint": "Bentuk terikat ditulis serangkai dengan kata dasar."
+    },
+    {
+      "id": "ind-h107",
+      "subject": "indonesia",
+      "level": "hard",
+      "q": "Alur cerita yang bergerak bolak-balik dari masa lalu ke masa kini disebut?",
+      "options": [
+        "Alur maju",
+        "Alur mundur",
+        "Alur campuran",
+        "Alur sorot balik (Flashback)"
+      ],
+      "answer": 2,
+      "hint": "Campuran antara maju dan mundur secara berulang."
+    },
+    {
+      "id": "ind-h108",
+      "subject": "indonesia",
+      "level": "hard",
+      "q": "Dalam resensi buku, bagian yang menyoroti kelebihan dan kekurangan disebut?",
+      "options": ["Identitas", "Sinopsis", "Evaluasi", "Kesimpulan"],
+      "answer": 2,
+      "hint": "Penilaian terhadap buku tersebut."
+    },
+    {
+      "id": "ind-h109",
+      "subject": "indonesia",
+      "level": "hard",
+      "q": "Kata serapan dari bahasa asing yang pengucapan dan penulisannya sudah disesuaikan EYD disebut?",
+      "options": ["Adopsi", "Adaptasi", "Terjemahan", "Kreasi"],
+      "answer": 1,
+      "hint": "Menyesuaikan dengan kaidah bahasa Indonesia."
+    },
+    {
+      "id": "ind-h110",
+      "subject": "indonesia",
+      "level": "hard",
+      "q": "Sajak berima a-a-a-a adalah ciri-ciri dari puisi lama yang disebut?",
+      "options": ["Gurindam", "Pantun", "Karmina", "Syair"],
+      "answer": 3,
+      "hint": "Keempat barisnya adalah isi."
+    },
+    {
+      "id": "ind-h111",
+      "subject": "indonesia",
+      "level": "hard",
+      "q": "Kalimat yang predikatnya berupa kata benda (nomina) disebut?",
+      "options": [
+        "Kalimat Verbal",
+        "Kalimat Nominal",
+        "Kalimat Aktif",
+        "Kalimat Tunggal"
+      ],
+      "answer": 1,
+      "hint": "Contoh: Ayahnya seorang guru."
+    },
+    {
+      "id": "ind-h112",
+      "subject": "indonesia",
+      "level": "hard",
+      "q": "Majas Sinisme merupakan bentuk penghalusan dari majas?",
+      "options": ["Sarkasme", "Ironi", "Repetisi", "Metonimia"],
+      "answer": 0,
+      "hint": "Sindiran tajam yang sedikit lebih sopan."
+    },
+    {
+      "id": "ind-h113",
+      "subject": "indonesia",
+      "level": "hard",
+      "q": "Gaya bahasa menyebutkan sebagian untuk menyatakan keseluruhan disebut?",
+      "options": ["Pars pro toto", "Totum pro parte", "Sinekdoke", "Eufemisme"],
+      "answer": 0,
+      "hint": "Contoh: Setiap kepala wajib membayar iuran."
+    },
+
+    {
+      "id": "eng-e101",
+      "subject": "inggris",
+      "level": "easy",
+      "q": "What is the translation of 'Dog'?",
+      "options": ["Kucing", "Anjing", "Babi", "Kuda"],
+      "answer": 1,
+      "hint": "Hewan yang menggonggong."
+    },
+    {
+      "id": "eng-e102",
+      "subject": "inggris",
+      "level": "easy",
+      "q": "Good night in Indonesian means?",
+      "options": [
+        "Selamat pagi",
+        "Selamat malam",
+        "Selamat tidur",
+        "Selamat sore"
+      ],
+      "answer": 1,
+      "hint": "Diucapkan sebelum tidur."
+    },
+    {
+      "id": "eng-e103",
+      "subject": "inggris",
+      "level": "easy",
+      "q": "I have two ___. (Mata)",
+      "options": ["Ears", "Eyes", "Noses", "Hands"],
+      "answer": 1,
+      "hint": "Alat untuk melihat."
+    },
+    {
+      "id": "eng-e104",
+      "subject": "inggris",
+      "level": "easy",
+      "q": "Which number is 'Five'?",
+      "options": ["3", "4", "5", "6"],
+      "answer": 2,
+      "hint": "Jumlah jari di satu tangan."
+    },
+    {
+      "id": "eng-e105",
+      "subject": "inggris",
+      "level": "easy",
+      "q": "The color of milk is?",
+      "options": ["Black", "White", "Red", "Blue"],
+      "answer": 1,
+      "hint": "Warna awan yang cerah."
+    },
+    {
+      "id": "eng-e106",
+      "subject": "inggris",
+      "level": "easy",
+      "q": "I ___ a student.",
+      "options": ["is", "am", "are", "be"],
+      "answer": 1,
+      "hint": "To be untuk subjek 'I'."
+    },
+    {
+      "id": "eng-e107",
+      "subject": "inggris",
+      "level": "easy",
+      "q": "Yesterday was Sunday. Today is?",
+      "options": ["Friday", "Monday", "Tuesday", "Saturday"],
+      "answer": 1,
+      "hint": "Hari pertama masuk sekolah."
+    },
+    {
+      "id": "eng-e108",
+      "subject": "inggris",
+      "level": "easy",
+      "q": "A place where you buy food?",
+      "options": ["Hospital", "Market", "School", "Library"],
+      "answer": 1,
+      "hint": "Tempat berbelanja."
+    },
+    {
+      "id": "eng-e109",
+      "subject": "inggris",
+      "level": "easy",
+      "q": "The opposite of 'Big' is?",
+      "options": ["Large", "Huge", "Small", "Tall"],
+      "answer": 2,
+      "hint": "Sesuatu yang ukurannya kecil."
+    },
+    {
+      "id": "eng-e110",
+      "subject": "inggris",
+      "level": "easy",
+      "q": "My father's brother is my?",
+      "options": ["Uncle", "Aunt", "Cousin", "Grandpa"],
+      "answer": 0,
+      "hint": "Paman dalam bahasa Inggris."
+    },
+    {
+      "id": "eng-e111",
+      "subject": "inggris",
+      "level": "easy",
+      "q": "We ___ football in the yard.",
+      "options": ["play", "plays", "playing", "played"],
+      "answer": 0,
+      "hint": "Simple present tense untuk subjek 'We'."
+    },
+    {
+      "id": "eng-e112",
+      "subject": "inggris",
+      "level": "easy",
+      "q": "A yellow fruit that monkeys love?",
+      "options": ["Apple", "Orange", "Banana", "Grape"],
+      "answer": 2,
+      "hint": "Buah pisang."
+    },
+    {
+      "id": "eng-e113",
+      "subject": "inggris",
+      "level": "easy",
+      "q": "She is crying because she is?",
+      "options": ["Happy", "Sad", "Angry", "Excited"],
+      "answer": 1,
+      "hint": "Perasaan sedih."
+    },
+    {
+      "id": "eng-e114",
+      "subject": "inggris",
+      "level": "easy",
+      "q": "The sun rises in the?",
+      "options": ["West", "North", "South", "East"],
+      "answer": 3,
+      "hint": "Arah timur."
+    },
+    {
+      "id": "eng-m101",
+      "subject": "inggris",
+      "level": "medium",
+      "q": "They ___ watching TV right now.",
+      "options": ["is", "am", "are", "do"],
+      "answer": 2,
+      "hint": "To be untuk plural present continuous."
+    },
+    {
+      "id": "eng-m102",
+      "subject": "inggris",
+      "level": "medium",
+      "q": "What is the past tense of 'Drink'?",
+      "options": ["Drinked", "Drunk", "Drank", "Drinks"],
+      "answer": 2,
+      "hint": "V2 irregular verb."
+    },
+    {
+      "id": "eng-m103",
+      "subject": "inggris",
+      "level": "medium",
+      "q": "Which word is a noun?",
+      "options": ["Beautiful", "Run", "Happiness", "Quickly"],
+      "answer": 2,
+      "hint": "Berakhiran -ness."
+    },
+    {
+      "id": "eng-m104",
+      "subject": "inggris",
+      "level": "medium",
+      "q": "He didn't ___ to the party.",
+      "options": ["go", "goes", "went", "going"],
+      "answer": 0,
+      "hint": "Setelah 'did/didn't' selalu verb 1 murni."
+    },
+    {
+      "id": "eng-m105",
+      "subject": "inggris",
+      "level": "medium",
+      "q": "Plural of 'Mouse' is?",
+      "options": ["Mouses", "Mice", "Meese", "Mouse"],
+      "answer": 1,
+      "hint": "Irregular plural, berakhiran -ce."
+    },
+    {
+      "id": "eng-m106",
+      "subject": "inggris",
+      "level": "medium",
+      "q": "I have been living here ___ 2010.",
+      "options": ["for", "since", "in", "from"],
+      "answer": 1,
+      "hint": "Menunjukkan titik awal waktu."
+    },
+    {
+      "id": "eng-m107",
+      "subject": "inggris",
+      "level": "medium",
+      "q": "She is the ___ girl in the class.",
+      "options": ["smarter", "smart", "smartest", "most smart"],
+      "answer": 2,
+      "hint": "Superlative degree dari 1 suku kata."
+    },
+    {
+      "id": "eng-m108",
+      "subject": "inggris",
+      "level": "medium",
+      "q": "A person who designs buildings is?",
+      "options": ["Mechanic", "Plumber", "Architect", "Dentist"],
+      "answer": 2,
+      "hint": "Berasal dari kata arsitek."
+    },
+    {
+      "id": "eng-m109",
+      "subject": "inggris",
+      "level": "medium",
+      "q": "What is the synonym of 'Start'?",
+      "options": ["End", "Finish", "Begin", "Stop"],
+      "answer": 2,
+      "hint": "B diawali."
+    },
+    {
+      "id": "eng-m110",
+      "subject": "inggris",
+      "level": "medium",
+      "q": "Please turn ___ the light, it is too dark.",
+      "options": ["on", "off", "out", "in"],
+      "answer": 0,
+      "hint": "Menyalakan lampu."
+    },
+    {
+      "id": "eng-m111",
+      "subject": "inggris",
+      "level": "medium",
+      "q": "If I ___ you, I would study harder.",
+      "options": ["am", "was", "were", "be"],
+      "answer": 2,
+      "hint": "Conditional type 2 menggunakan 'were' untuk semua subjek."
+    },
+    {
+      "id": "eng-m112",
+      "subject": "inggris",
+      "level": "medium",
+      "q": "He drives his car very ___.",
+      "options": ["careful", "carefully", "careless", "caring"],
+      "answer": 1,
+      "hint": "Membutuhkan adverb (keterangan cara)."
+    },
+    {
+      "id": "eng-m113",
+      "subject": "inggris",
+      "level": "medium",
+      "q": "The book ___ written by J.K. Rowling.",
+      "options": ["is", "was", "has", "had"],
+      "answer": 1,
+      "hint": "Passive voice past tense."
+    },
+    {
+      "id": "eng-h101",
+      "subject": "inggris",
+      "level": "hard",
+      "q": "By the time you arrive, I ___ finished my homework.",
+      "options": ["will have", "have", "had", "will"],
+      "answer": 0,
+      "hint": "Future perfect tense."
+    },
+    {
+      "id": "eng-h102",
+      "subject": "inggris",
+      "level": "hard",
+      "q": "What does the idiom 'Break a leg' mean?",
+      "options": ["Get injured", "Good luck", "Hurry up", "Be quiet"],
+      "answer": 1,
+      "hint": "Sering diucapkan sebelum pertunjukan."
+    },
+    {
+      "id": "eng-h103",
+      "subject": "inggris",
+      "level": "hard",
+      "q": "Scarcely ___ entered the room when the phone rang.",
+      "options": ["had he", "he had", "has he", "did he"],
+      "answer": 0,
+      "hint": "Inversi (inversion) karena negative adverb di awal kalimat."
+    },
+    {
+      "id": "eng-h104",
+      "subject": "inggris",
+      "level": "hard",
+      "q": "The word 'Meticulous' means?",
+      "options": ["Lazy", "Very careful", "Angry", "Reckless"],
+      "answer": 1,
+      "hint": "Sangat teliti dan hati-hati."
+    },
+    {
+      "id": "eng-h105",
+      "subject": "inggris",
+      "level": "hard",
+      "q": "If he had known, he ___ helped you.",
+      "options": ["will have", "would have", "would", "had"],
+      "answer": 1,
+      "hint": "Conditional type 3."
+    },
+    {
+      "id": "eng-h106",
+      "subject": "inggris",
+      "level": "hard",
+      "q": "It is imperative that she ___ on time.",
+      "options": ["arrive", "arrives", "arrived", "arriving"],
+      "answer": 0,
+      "hint": "Subjunctive mood, verb murni tanpa -s/es."
+    },
+    {
+      "id": "eng-h107",
+      "subject": "inggris",
+      "level": "hard",
+      "q": "The company is looking forward to ___ you.",
+      "options": ["meet", "meets", "meeting", "met"],
+      "answer": 2,
+      "hint": "Setelah 'looking forward to' diikuti Gerund (V-ing)."
+    },
+    {
+      "id": "eng-h108",
+      "subject": "inggris",
+      "level": "hard",
+      "q": "Neither the manager nor the employees ___ happy.",
+      "options": ["is", "are", "was", "has"],
+      "answer": 1,
+      "hint": "Verb mengikuti subjek terdekat (employees)."
+    },
+    {
+      "id": "eng-h109",
+      "subject": "inggris",
+      "level": "hard",
+      "q": "Despite ___ tired, he kept working.",
+      "options": ["be", "is", "being", "was"],
+      "answer": 2,
+      "hint": "Despite diikuti oleh Noun/Gerund."
+    },
+    {
+      "id": "eng-h110",
+      "subject": "inggris",
+      "level": "hard",
+      "q": "He is accustomed ___ sleeping late.",
+      "options": ["for", "with", "to", "in"],
+      "answer": 2,
+      "hint": "Preposisi tetap (fixed preposition) untuk accustomed."
+    },
+    {
+      "id": "eng-h111",
+      "subject": "inggris",
+      "level": "hard",
+      "q": "I'd rather you ___ smoke in here.",
+      "options": ["don't", "didn't", "not", "won't"],
+      "answer": 1,
+      "hint": "Subjunctive form (past tense) setelah would rather jika subjek berbeda."
+    },
+    {
+      "id": "eng-h112",
+      "subject": "inggris",
+      "level": "hard",
+      "q": "Find the correctly spelled word.",
+      "options": ["Accomodate", "Acommodate", "Accommodate", "Acomodate"],
+      "answer": 2,
+      "hint": "Dua huruf C dan dua huruf M."
+    },
+    {
+      "id": "eng-h113",
+      "subject": "inggris",
+      "level": "hard",
+      "q": "What is the antonym of 'Ephemeral'?",
+      "options": ["Short-lived", "Permanent", "Temporary", "Fading"],
+      "answer": 1,
+      "hint": "Sesuatu yang abadi atau permanen."
+    },
+
+    {
+      "id": "umum-e101",
+      "subject": "umum",
+      "level": "easy",
+      "q": "Presiden kedua Indonesia adalah?",
+      "options": ["Soekarno", "Soeharto", "B.J. Habibie", "Megawati"],
+      "answer": 1,
+      "hint": "Presiden yang menjabat paling lama."
+    },
+    {
+      "id": "umum-e102",
+      "subject": "umum",
+      "level": "easy",
+      "q": "Ibukota negara Jepang?",
+      "options": ["Kyoto", "Seoul", "Tokyo", "Beijing"],
+      "answer": 2,
+      "hint": "Kota terpadat di Jepang."
+    },
+    {
+      "id": "umum-e103",
+      "subject": "umum",
+      "level": "easy",
+      "q": "Candi Borobudur terletak di provinsi?",
+      "options": ["Jawa Timur", "Jawa Tengah", "Jawa Barat", "Bali"],
+      "answer": 1,
+      "hint": "Di dekat kota Magelang."
+    },
+    {
+      "id": "umum-e104",
+      "subject": "umum",
+      "level": "easy",
+      "q": "Warna paling atas pada pelangi adalah?",
+      "options": ["Kuning", "Hijau", "Merah", "Ungu"],
+      "answer": 2,
+      "hint": "Warna bendera Indonesia bagian atas."
+    },
+    {
+      "id": "umum-e105",
+      "subject": "umum",
+      "level": "easy",
+      "q": "Alat musik yang dipetik?",
+      "options": ["Gitar", "Suling", "Drum", "Piano"],
+      "answer": 0,
+      "hint": "Memiliki enam senar."
+    },
+    {
+      "id": "umum-e106",
+      "subject": "umum",
+      "level": "easy",
+      "q": "Bulan yang memiliki hari kemerdekaan RI?",
+      "options": ["Juli", "Agustus", "September", "Oktober"],
+      "answer": 1,
+      "hint": "Bulan kedelapan."
+    },
+    {
+      "id": "umum-e107",
+      "subject": "umum",
+      "level": "easy",
+      "q": "Senjata khas dari Jawa Barat adalah?",
+      "options": ["Keris", "Mandau", "Kujang", "Rencong"],
+      "answer": 2,
+      "hint": "Bentuknya melengkung unik."
+    },
+    {
+      "id": "umum-e108",
+      "subject": "umum",
+      "level": "easy",
+      "q": "Mata uang negara Amerika Serikat?",
+      "options": ["Euro", "Yen", "Pound", "Dollar"],
+      "answer": 3,
+      "hint": "Simbolnya $."
+    },
+    {
+      "id": "umum-e109",
+      "subject": "umum",
+      "level": "easy",
+      "q": "Bentuk pemerintahan negara Indonesia?",
+      "options": ["Kerajaan", "Republik", "Serikat", "Kesultanan"],
+      "answer": 1,
+      "hint": "Dipimpin oleh seorang presiden."
+    },
+    {
+      "id": "umum-e110",
+      "subject": "umum",
+      "level": "easy",
+      "q": "Hewan berleher panjang di padang rumput Afrika?",
+      "options": ["Zebra", "Gajah", "Jerapah", "Unta"],
+      "answer": 2,
+      "hint": "Makan daun di pohon tinggi."
+    },
+    {
+      "id": "umum-e111",
+      "subject": "umum",
+      "level": "easy",
+      "q": "Benua terkecil di dunia?",
+      "options": ["Asia", "Eropa", "Australia", "Afrika"],
+      "answer": 2,
+      "hint": "Terletak di selatan Indonesia."
+    },
+    {
+      "id": "umum-e112",
+      "subject": "umum",
+      "level": "easy",
+      "q": "Kendaraan tradisional ditarik kuda?",
+      "options": ["Becak", "Bemo", "Andong/Delman", "Bajaj"],
+      "answer": 2,
+      "hint": "Suaranya tik tak tik tuk."
+    },
+    {
+      "id": "umum-e113",
+      "subject": "umum",
+      "level": "easy",
+      "q": "Rasa air laut adalah?",
+      "options": ["Tawar", "Asin", "Manis", "Asam"],
+      "answer": 1,
+      "hint": "Banyak mengandung garam."
+    },
+    {
+      "id": "umum-e114",
+      "subject": "umum",
+      "level": "easy",
+      "q": "Lampu lalu lintas untuk berhenti berwarna?",
+      "options": ["Hijau", "Kuning", "Merah", "Biru"],
+      "answer": 2,
+      "hint": "Berwarna menyala tanda bahaya."
+    },
+    {
+      "id": "umum-m101",
+      "subject": "umum",
+      "level": "medium",
+      "q": "Organisasi PBB singkatan dari?",
+      "options": [
+        "Perserikatan Bangsa-Bangsa",
+        "Perkumpulan Bangsa Baru",
+        "Pusat Bantuan Bangsa",
+        "Persatuan Bangsa Bebas"
+      ],
+      "answer": 0,
+      "hint": "Organisasi internasional global."
+    },
+    {
+      "id": "umum-m102",
+      "subject": "umum",
+      "level": "medium",
+      "q": "Penemu bola lampu pijar?",
+      "options": [
+        "Albert Einstein",
+        "Thomas Alva Edison",
+        "Nikola Tesla",
+        "Isaac Newton"
+      ],
+      "answer": 1,
+      "hint": "Ilmuwan Amerika."
+    },
+    {
+      "id": "umum-m103",
+      "subject": "umum",
+      "level": "medium",
+      "q": "Lagu daerah 'Ampar-Ampar Pisang' berasal dari?",
+      "options": [
+        "Kalimantan Selatan",
+        "Sulawesi Selatan",
+        "Sumatra Barat",
+        "Jawa Barat"
+      ],
+      "answer": 0,
+      "hint": "Ibukotanya Banjarmasin."
+    },
+    {
+      "id": "umum-m104",
+      "subject": "umum",
+      "level": "medium",
+      "q": "Ibukota provinsi Sumatra Barat?",
+      "options": ["Medan", "Palembang", "Padang", "Pekanbaru"],
+      "answer": 2,
+      "hint": "Terkenal dengan kulinernya."
+    },
+    {
+      "id": "umum-m105",
+      "subject": "umum",
+      "level": "medium",
+      "q": "Sungai terpanjang di dunia adalah?",
+      "options": ["Amazon", "Nil", "Yangtze", "Mississippi"],
+      "answer": 1,
+      "hint": "Terletak di benua Afrika."
+    },
+    {
+      "id": "umum-m106",
+      "subject": "umum",
+      "level": "medium",
+      "q": "Hari Pendidikan Nasional diperingati tanggal?",
+      "options": ["21 April", "1 Juni", "2 Mei", "17 Agustus"],
+      "answer": 2,
+      "hint": "Hari ulang tahun Ki Hajar Dewantara."
+    },
+    {
+      "id": "umum-m107",
+      "subject": "umum",
+      "level": "medium",
+      "q": "Mata uang negara Thailand?",
+      "options": ["Baht", "Ringgit", "Peso", "Kyat"],
+      "answer": 0,
+      "hint": "Negara Gajah Putih."
+    },
+    {
+      "id": "umum-m108",
+      "subject": "umum",
+      "level": "medium",
+      "q": "Olahraga yang dimainkan menggunakan kok (shuttlecock)?",
+      "options": ["Tenis", "Bulu tangkis", "Voli", "Kasti"],
+      "answer": 1,
+      "hint": "Badminton."
+    },
+    {
+      "id": "umum-m109",
+      "subject": "umum",
+      "level": "medium",
+      "q": "Pencipta karakter Mickey Mouse?",
+      "options": ["Stan Lee", "Walt Disney", "Akira Toriyama", "Hanna Barbera"],
+      "answer": 1,
+      "hint": "Pendiri taman hiburan terkenal."
+    },
+    {
+      "id": "umum-m110",
+      "subject": "umum",
+      "level": "medium",
+      "q": "Sila ke-3 Pancasila berbunyi?",
+      "options": [
+        "Ketuhanan yang Maha Esa",
+        "Kemanusiaan yang adil dan beradab",
+        "Persatuan Indonesia",
+        "Keadilan sosial"
+      ],
+      "answer": 2,
+      "hint": "Lambangnya Pohon Beringin."
+    },
+    {
+      "id": "umum-m111",
+      "subject": "umum",
+      "level": "medium",
+      "q": "Gas yang kita hirup saat bernapas?",
+      "options": ["Karbon dioksida", "Nitrogen", "Oksigen", "Helium"],
+      "answer": 2,
+      "hint": "O2."
+    },
+    {
+      "id": "umum-m112",
+      "subject": "umum",
+      "level": "medium",
+      "q": "Kerajaan Islam pertama di Indonesia?",
+      "options": ["Demak", "Samudra Pasai", "Mataram", "Banten"],
+      "answer": 1,
+      "hint": "Berada di pesisir utara Sumatra."
+    },
+    {
+      "id": "umum-m113",
+      "subject": "umum",
+      "level": "medium",
+      "q": "Provinsi paling timur di Indonesia?",
+      "options": ["Maluku", "NTT", "Papua", "Sulawesi Utara"],
+      "answer": 2,
+      "hint": "Berbatasan dengan Papua Nugini."
+    },
+    {
+      "id": "umum-h101",
+      "subject": "umum",
+      "level": "hard",
+      "q": "Siapa penulis buku 'Habis Gelap Terbitlah Terang'?",
+      "options": [
+        "Ki Hajar Dewantara",
+        "R.A. Kartini",
+        "Cut Nyak Dien",
+        "Dewi Sartika"
+      ],
+      "answer": 1,
+      "hint": "Kumpulan surat tokoh pahlawan emansipasi wanita."
+    },
+    {
+      "id": "umum-h102",
+      "subject": "umum",
+      "level": "hard",
+      "q": "Tahun berapakah manusia pertama kali mendarat di Bulan?",
+      "options": ["1959", "1969", "1979", "1989"],
+      "answer": 1,
+      "hint": "Misi Apollo 11."
+    },
+    {
+      "id": "umum-h103",
+      "subject": "umum",
+      "level": "hard",
+      "q": "Semboyan 'Tut Wuri Handayani' dicetuskan oleh?",
+      "options": ["Soekarno", "Moh. Hatta", "Ki Hajar Dewantara", "Soedirman"],
+      "answer": 2,
+      "hint": "Bapak Pendidikan Indonesia."
+    },
+    {
+      "id": "umum-h104",
+      "subject": "umum",
+      "level": "hard",
+      "q": "Organisasi kesehatan dunia (di bawah PBB) disingkat?",
+      "options": ["UNICEF", "WHO", "UNESCO", "WTO"],
+      "answer": 1,
+      "hint": "World Health Organization."
+    },
+    {
+      "id": "umum-h105",
+      "subject": "umum",
+      "level": "hard",
+      "q": "Lukisan terkenal 'Monalisa' dipajang di museum?",
+      "options": ["Louvre", "British Museum", "Metropolitan", "Vatican"],
+      "answer": 0,
+      "hint": "Berada di Paris, Prancis."
+    },
+    {
+      "id": "umum-h106",
+      "subject": "umum",
+      "level": "hard",
+      "q": "Negara terkecil di dunia berdasarkan wilayah dan populasi?",
+      "options": ["Monako", "Vatikan", "Nauru", "San Marino"],
+      "answer": 1,
+      "hint": "Berada di dalam kota Roma."
+    },
+    {
+      "id": "umum-h107",
+      "subject": "umum",
+      "level": "hard",
+      "q": "Siapa penemu benua Amerika pada tahun 1492?",
+      "options": [
+        "Ferdinand Magellan",
+        "James Cook",
+        "Christopher Columbus",
+        "Vasco da Gama"
+      ],
+      "answer": 2,
+      "hint": "Pelaut dari Italia yang berlayar untuk Spanyol."
+    },
+    {
+      "id": "umum-h108",
+      "subject": "umum",
+      "level": "hard",
+      "q": "Istilah untuk hewan purba trilobita dan dinosaurus yang tersimpan di batuan?",
+      "options": ["Artefak", "Fosil", "Relik", "Prasasti"],
+      "answer": 1,
+      "hint": "Sisa-sisa mahluk hidup masa lampau."
+    },
+    {
+      "id": "umum-h109",
+      "subject": "umum",
+      "level": "hard",
+      "q": "Bapak Proklamator Indonesia adalah Soekarno dan?",
+      "options": ["Moh. Yamin", "Moh. Hatta", "Sutan Syahrir", "Soepomo"],
+      "answer": 1,
+      "hint": "Wakil Presiden RI pertama."
+    },
+    {
+      "id": "umum-h110",
+      "subject": "umum",
+      "level": "hard",
+      "q": "Seni bela diri asli Indonesia yang diakui UNESCO?",
+      "options": ["Karate", "Taekwondo", "Pencak Silat", "Wushu"],
+      "answer": 2,
+      "hint": "Menggunakan banyak teknik kembangan."
+    },
+    {
+      "id": "umum-h111",
+      "subject": "umum",
+      "level": "hard",
+      "q": "Zaman batu tua dalam sejarah purba disebut?",
+      "options": ["Megalitikum", "Mesolitikum", "Neolitikum", "Paleolitikum"],
+      "answer": 3,
+      "hint": "Berasal dari kata Paleo."
+    },
+    {
+      "id": "umum-h112",
+      "subject": "umum",
+      "level": "hard",
+      "q": "Tari Kecak yang terkenal dari Bali tidak menggunakan instrumen musik, melainkan?",
+      "options": [
+        "Siulan",
+        "Suara mulut penari",
+        "Gamelan",
+        "Tepuk tangan penonton"
+      ],
+      "answer": 1,
+      "hint": "Koor 'Cak-cak-cak' dari ratusan penari."
+    },
+    {
+      "id": "umum-h113",
+      "subject": "umum",
+      "level": "hard",
+      "q": "Gunung tertinggi di pulau Jawa adalah?",
+      "options": [
+        "Gunung Merapi",
+        "Gunung Bromo",
+        "Gunung Semeru",
+        "Gunung Slamet"
+      ],
+      "answer": 2,
+      "hint": "Memiliki kawah bernama Jonggring Saloko."
+    },
+    
+        {
+          "id": "mat-e1",
+          "subject": "matematika",
+          "level": "easy",
+          "q": "7 + 5 = ?",
+          "options": ["10", "11", "12", "13"],
+          "answer": 2,
+          "hint": "Mulai dari 7, lalu hitung maju 5 kali."
+        },
+        {
+          "id": "mat-e2",
+          "subject": "matematika",
+          "level": "easy",
+          "q": "15 - 8 = ?",
+          "options": ["6", "7", "8", "9"],
+          "answer": 1,
+          "hint": "Mundur 8 langkah dari 15."
+        },
+        {
+          "id": "mat-m1",
+          "subject": "matematika",
+          "level": "medium",
+          "q": "6 x 7 = ?",
+          "options": ["36", "42", "48", "49"],
+          "answer": 1,
+          "hint": "6 x 7 = 6 x 6 + 6."
+        },
+        {
+          "id": "mat-m2",
+          "subject": "matematika",
+          "level": "medium",
+          "q": "Berapa 3/4 dari 20?",
+          "options": ["10", "12", "15", "18"],
+          "answer": 2,
+          "hint": "Bagi 20 menjadi 4 bagian (5), lalu ambil 3 bagian."
+        },
+        {
+          "id": "mat-h1",
+          "subject": "matematika",
+          "level": "hard",
+          "q": "144 : 12 + 8 x 3 = ?",
+          "options": ["32", "36", "40", "48"],
+          "answer": 1,
+          "hint": "Kerjakan perkalian dan pembagian dulu."
+        },
+        {
+          "id": "mat-h2",
+          "subject": "matematika",
+          "level": "hard",
+          "q": "Keliling persegi dengan sisi 9 cm adalah?",
+          "options": ["18 cm", "27 cm", "36 cm", "81 cm"],
+          "answer": 2,
+          "hint": "Keliling persegi = 4 x sisi."
+        },
+        {
+          "id": "ipa-e1",
+          "subject": "ipa",
+          "level": "easy",
+          "q": "Hewan yang berkembang biak dengan bertelur disebut?",
+          "options": ["Vivipar", "Ovipar", "Herbivora", "Karnivora"],
+          "answer": 1,
+          "hint": "Ayam dan bebek termasuk golongan ini."
+        },
+        {
+          "id": "ipa-e2",
+          "subject": "ipa",
+          "level": "easy",
+          "q": "Bagian tumbuhan yang menyerap air dari tanah adalah?",
+          "options": ["Daun", "Batang", "Bunga", "Akar"],
+          "answer": 3,
+          "hint": "Bagian ini berada di dalam tanah."
+        },
+        {
+          "id": "ipa-m1",
+          "subject": "ipa",
+          "level": "medium",
+          "q": "Proses tumbuhan membuat makanan dengan bantuan cahaya matahari disebut?",
+          "options": ["Respirasi", "Fotosintesis", "Evaporasi", "Transpirasi"],
+          "answer": 1,
+          "hint": "Foto = cahaya, sintesis = membuat."
+        },
+        {
+          "id": "ipa-m2",
+          "subject": "ipa",
+          "level": "medium",
+          "q": "Planet terdekat dari Matahari adalah?",
+          "options": ["Venus", "Bumi", "Merkurius", "Mars"],
+          "answer": 2,
+          "hint": "Planet terkecil di tata surya."
+        },
+        {
+          "id": "ipa-h1",
+          "subject": "ipa",
+          "level": "hard",
+          "q": "Gas yang paling banyak terdapat di atmosfer Bumi adalah?",
+          "options": ["Oksigen", "Nitrogen", "Karbon dioksida", "Hidrogen"],
+          "answer": 1,
+          "hint": "Jumlahnya sekitar 78%."
+        },
+        {
+          "id": "ipa-h2",
+          "subject": "ipa",
+          "level": "hard",
+          "q": "Satuan gaya dalam sistem SI adalah?",
+          "options": ["Joule", "Watt", "Newton", "Pascal"],
+          "answer": 2,
+          "hint": "Dinamai dari ilmuwan yang melihat apel jatuh."
+        },
+        {
+          "id": "ind-e1",
+          "subject": "indonesia",
+          "level": "easy",
+          "q": "Lawan kata dari 'besar' adalah?",
+          "options": ["Tinggi", "Kecil", "Panjang", "Lebar"],
+          "answer": 1,
+          "hint": "Semut itu ...?"
+        },
+        {
+          "id": "ind-e2",
+          "subject": "indonesia",
+          "level": "easy",
+          "q": "Kalimat yang benar penulisannya adalah?",
+          "options": [
+            "saya makan nasi.",
+            "Saya makan nasi.",
+            "saya Makan nasi",
+            "Saya makan Nasi"
+          ],
+          "answer": 1,
+          "hint": "Awal kalimat memakai huruf kapital dan diakhiri titik."
+        },
+        {
+          "id": "ind-m1",
+          "subject": "indonesia",
+          "level": "medium",
+          "q": "Sinonim kata 'indah' adalah?",
+          "options": ["Cantik", "Buruk", "Kotor", "Suram"],
+          "answer": 0,
+          "hint": "Kata yang artinya sama."
+        },
+        {
+          "id": "ind-m2",
+          "subject": "indonesia",
+          "level": "medium",
+          "q": "Kata baku yang benar adalah?",
+          "options": ["Apotik", "Apotek", "Apotk", "Appotek"],
+          "answer": 1,
+          "hint": "Tempat menjual obat."
+        },
+        {
+          "id": "ind-h1",
+          "subject": "indonesia",
+          "level": "hard",
+          "q": "Majas yang membandingkan dua hal dengan kata 'seperti' atau 'bagai' adalah?",
+          "options": ["Metafora", "Hiperbola", "Simile", "Personifikasi"],
+          "answer": 2,
+          "hint": "Disebut juga majas perumpamaan."
+        },
+        {
+          "id": "ind-h2",
+          "subject": "indonesia",
+          "level": "hard",
+          "q": "Imbuhan pada kata 'bermain' adalah?",
+          "options": ["me-", "ber-", "ter-", "di-"],
+          "answer": 1,
+          "hint": "Perhatikan awalan sebelum kata dasar 'main'."
+        },
+        {
+          "id": "eng-e1",
+          "subject": "inggris",
+          "level": "easy",
+          "q": "What color is the sky on a clear day?",
+          "options": ["Red", "Green", "Blue", "Black"],
+          "answer": 2,
+          "hint": "Look up on a sunny day."
+        },
+        {
+          "id": "eng-e2",
+          "subject": "inggris",
+          "level": "easy",
+          "q": "'Apple' dalam bahasa Indonesia adalah?",
+          "options": ["Jeruk", "Apel", "Pisang", "Mangga"],
+          "answer": 1,
+          "hint": "Buah merah atau hijau yang renyah."
+        },
+        {
+          "id": "eng-m1",
+          "subject": "inggris",
+          "level": "medium",
+          "q": "She ___ to school every day.",
+          "options": ["go", "goes", "going", "gone"],
+          "answer": 1,
+          "hint": "Subjek 'She' memakai verb + s/es."
+        },
+        {
+          "id": "eng-m2",
+          "subject": "inggris",
+          "level": "medium",
+          "q": "The opposite of 'hot' is?",
+          "options": ["Warm", "Cold", "Cool", "Boil"],
+          "answer": 1,
+          "hint": "Ice is ...?"
+        },
+        {
+          "id": "eng-h1",
+          "subject": "inggris",
+          "level": "hard",
+          "q": "Past tense of 'buy' is?",
+          "options": ["Buyed", "Boughted", "Bought", "Buys"],
+          "answer": 2,
+          "hint": "Kata kerja tak beraturan."
+        },
+        {
+          "id": "eng-h2",
+          "subject": "inggris",
+          "level": "hard",
+          "q": "If it rains, we ___ at home.",
+          "options": ["stay", "stayed", "will stay", "staying"],
+          "answer": 2,
+          "hint": "Conditional type 1: If + present, will + verb."
+        },
+        {
+          "id": "umum-e1",
+          "subject": "umum",
+          "level": "easy",
+          "q": "Bendera Indonesia berwarna?",
+          "options": [
+            "Merah Putih",
+            "Putih Merah",
+            "Merah Biru",
+            "Hijau Putih"
+          ],
+          "answer": 0,
+          "hint": "Merah di atas, putih di bawah."
+        },
+        {
+          "id": "umum-e2",
+          "subject": "umum",
+          "level": "easy",
+          "q": "Hewan yang dijuluki raja hutan adalah?",
+          "options": ["Gajah", "Singa", "Kelinci", "Zebra"],
+          "answer": 1,
+          "hint": "Memiliki surai di lehernya."
+        },
+        {
+          "id": "umum-m1",
+          "subject": "umum",
+          "level": "medium",
+          "q": "Samudra terluas di dunia adalah?",
+          "options": ["Atlantik", "Hindia", "Arktik", "Pasifik"],
+          "answer": 3,
+          "hint": "Namanya berarti 'damai'."
+        },
+        {
+          "id": "umum-m2",
+          "subject": "umum",
+          "level": "medium",
+          "q": "Pulau terbesar di Indonesia adalah?",
+          "options": ["Jawa", "Sumatra", "Kalimantan", "Sulawesi"],
+          "answer": 2,
+          "hint": "Dikenal sebagai Borneo."
+        },
+        {
+          "id": "umum-h1",
+          "subject": "umum",
+          "level": "hard",
+          "q": "Sumpah Pemuda diikrarkan pada tahun?",
+          "options": ["1908", "1928", "1945", "1950"],
+          "answer": 1,
+          "hint": "Terjadi pada tanggal 28 Oktober."
+        },
+        {
+          "id": "umum-h2",
+          "subject": "umum",
+          "level": "hard",
+          "q": "Siapa pencipta lagu kebangsaan 'Indonesia Raya'?",
+          "options": [
+            "Ismail Marzuki",
+            "W.R. Supratman",
+            "Ibu Sud",
+            "C. Simanjuntak"
+          ],
+          "answer": 1,
+          "hint": "Beliau juga seorang wartawan dan pemain biola."
+        },
+        {
+          "id": "mat-add01",
+          "subject": "matematika",
+          "level": "easy",
+          "q": "18 + 27 = ?",
+          "options": ["35", "45", "46", "55"],
+          "answer": 1,
+          "hint": "Jumlahkan puluhan dan satuannya."
+        },
+        {
+          "id": "mat-add02",
+          "subject": "matematika",
+          "level": "medium",
+          "q": "64 - 29 = ?",
+          "options": ["35", "34", "45", "43"],
+          "answer": 0,
+          "hint": "Kurangi 64 dengan 30, lalu tambah 1."
+        },
+        {
+          "id": "mat-add03",
+          "subject": "matematika",
+          "level": "hard",
+          "q": "9 x 8 = ?",
+          "options": ["64", "72", "81", "78"],
+          "answer": 1,
+          "hint": "Ingat perkalian 9 dan 8."
+        },
+        {
+          "id": "mat-add04",
+          "subject": "matematika",
+          "level": "easy",
+          "q": "81 : 9 = ?",
+          "options": ["7", "8", "9", "10"],
+          "answer": 2,
+          "hint": "Cari bilangan yang jika dikali 9 hasilnya 81."
+        },
+        {
+          "id": "mat-add05",
+          "subject": "matematika",
+          "level": "medium",
+          "q": "Kelipatan 6 setelah 24 adalah?",
+          "options": ["28", "30", "32", "36"],
+          "answer": 1,
+          "hint": "Tambahkan 6 pada 24."
+        },
+        {
+          "id": "mat-add06",
+          "subject": "matematika",
+          "level": "hard",
+          "q": "Faktor dari 12 yang bukan faktor 12 adalah?",
+          "options": ["2", "3", "5", "4"],
+          "answer": 2,
+          "hint": "Faktor membagi habis suatu bilangan."
+        },
+        {
+          "id": "mat-add07",
+          "subject": "matematika",
+          "level": "easy",
+          "q": "Bilangan prima terkecil adalah?",
+          "options": ["0", "1", "2", "3"],
+          "answer": 2,
+          "hint": "Bilangan prima memiliki tepat dua faktor."
+        },
+        {
+          "id": "mat-add08",
+          "subject": "matematika",
+          "level": "medium",
+          "q": "Hasil 125 + 375 adalah?",
+          "options": ["400", "450", "500", "550"],
+          "answer": 2,
+          "hint": "Gabungkan 125 dan 375."
+        },
+        {
+          "id": "mat-add09",
+          "subject": "matematika",
+          "level": "hard",
+          "q": "Hasil 7 x 12 adalah?",
+          "options": ["72", "82", "84", "96"],
+          "answer": 2,
+          "hint": "Gunakan perkalian 7 dengan 12."
+        },
+        {
+          "id": "mat-add10",
+          "subject": "matematika",
+          "level": "easy",
+          "q": "Hasil 96 : 8 adalah?",
+          "options": ["10", "11", "12", "13"],
+          "answer": 2,
+          "hint": "Delapan dikali berapa sama dengan 96?"
+        },
+        {
+          "id": "mat-add11",
+          "subject": "matematika",
+          "level": "medium",
+          "q": "Nilai tempat angka 5 pada 3.582 adalah?",
+          "options": ["Satuan", "Puluhan", "Ratusan", "Ribuan"],
+          "answer": 2,
+          "hint": "Angka 5 berada pada posisi ratusan."
+        },
+        {
+          "id": "mat-add12",
+          "subject": "matematika",
+          "level": "hard",
+          "q": "Bilangan genap di antara 31 dan 37 adalah?",
+          "options": ["32", "33", "35", "37"],
+          "answer": 0,
+          "hint": "Bilangan genap habis dibagi 2."
+        },
+        {
+          "id": "mat-add13",
+          "subject": "matematika",
+          "level": "easy",
+          "q": "Bentuk pecahan dari 0,5 adalah?",
+          "options": ["1/4", "1/2", "2/3", "3/4"],
+          "answer": 1,
+          "hint": "Setengah sama dengan lima per sepuluh."
+        },
+        {
+          "id": "mat-add14",
+          "subject": "matematika",
+          "level": "medium",
+          "q": "Berapa 25% dari 80?",
+          "options": ["10", "15", "20", "25"],
+          "answer": 2,
+          "hint": "25% sama dengan seperempat."
+        },
+        {
+          "id": "mat-add15",
+          "subject": "matematika",
+          "level": "hard",
+          "q": "Pecahan yang senilai dengan 2/3 adalah?",
+          "options": ["3/5", "4/6", "5/6", "2/6"],
+          "answer": 1,
+          "hint": "Kalikan pembilang dan penyebut dengan bilangan sama."
+        },
+        {
+          "id": "mat-add16",
+          "subject": "matematika",
+          "level": "easy",
+          "q": "Hasil 1/4 + 2/4 adalah?",
+          "options": ["1/4", "2/4", "3/4", "3/8"],
+          "answer": 2,
+          "hint": "Jika penyebut sama, jumlahkan pembilang."
+        },
+        {
+          "id": "mat-add17",
+          "subject": "matematika",
+          "level": "medium",
+          "q": "Hasil 5/6 - 2/6 adalah?",
+          "options": ["1/6", "2/6", "3/6", "4/6"],
+          "answer": 2,
+          "hint": "Kurangi pembilang karena penyebut sama."
+        },
+        {
+          "id": "mat-add18",
+          "subject": "matematika",
+          "level": "hard",
+          "q": "Desimal 0,75 sama dengan?",
+          "options": ["7,5%", "25%", "50%", "75%"],
+          "answer": 3,
+          "hint": "Kalikan desimal dengan 100%."
+        },
+        {
+          "id": "mat-add19",
+          "subject": "matematika",
+          "level": "easy",
+          "q": "Keliling persegi panjang panjang 8 cm dan lebar 5 cm adalah?",
+          "options": ["13 cm", "26 cm", "40 cm", "80 cm"],
+          "answer": 1,
+          "hint": "Keliling = 2 x (panjang + lebar)."
+        },
+        {
+          "id": "mat-add20",
+          "subject": "matematika",
+          "level": "medium",
+          "q": "Luas persegi dengan sisi 7 cm adalah?",
+          "options": ["14 cm²", "28 cm²", "49 cm²", "56 cm²"],
+          "answer": 2,
+          "hint": "Luas persegi = sisi x sisi."
+        },
+        {
+          "id": "mat-add21",
+          "subject": "matematika",
+          "level": "hard",
+          "q": "Luas persegi panjang 9 cm x 4 cm adalah?",
+          "options": ["13 cm²", "26 cm²", "36 cm²", "40 cm²"],
+          "answer": 2,
+          "hint": "Kalikan panjang dengan lebar."
+        },
+        {
+          "id": "mat-add22",
+          "subject": "matematika",
+          "level": "easy",
+          "q": "Segitiga memiliki berapa sisi?",
+          "options": ["2", "3", "4", "5"],
+          "answer": 1,
+          "hint": "Bangun datar ini memiliki tiga sisi."
+        },
+        {
+          "id": "mat-add23",
+          "subject": "matematika",
+          "level": "medium",
+          "q": "Jumlah sudut dalam segitiga adalah?",
+          "options": ["90°", "180°", "270°", "360°"],
+          "answer": 1,
+          "hint": "Jumlah sudut segitiga selalu sama."
+        },
+        {
+          "id": "mat-add24",
+          "subject": "matematika",
+          "level": "hard",
+          "q": "Sudut siku-siku besarnya?",
+          "options": ["45°", "90°", "180°", "360°"],
+          "answer": 1,
+          "hint": "Sudut pada pojok persegi."
+        },
+        {
+          "id": "mat-add25",
+          "subject": "matematika",
+          "level": "easy",
+          "q": "Bangun ruang yang memiliki 6 sisi persegi sama besar adalah?",
+          "options": ["Balok", "Kubus", "Tabung", "Kerucut"],
+          "answer": 1,
+          "hint": "Semua rusuknya sama panjang."
+        },
+        {
+          "id": "mat-add26",
+          "subject": "matematika",
+          "level": "medium",
+          "q": "Banyak rusuk pada kubus adalah?",
+          "options": ["8", "10", "12", "14"],
+          "answer": 2,
+          "hint": "Hitung seluruh garis pertemuan sisi."
+        },
+        {
+          "id": "mat-add27",
+          "subject": "matematika",
+          "level": "hard",
+          "q": "Volume kubus dengan rusuk 3 cm adalah?",
+          "options": ["9 cm³", "18 cm³", "27 cm³", "36 cm³"],
+          "answer": 2,
+          "hint": "Volume = rusuk pangkat tiga."
+        },
+        {
+          "id": "mat-add28",
+          "subject": "matematika",
+          "level": "easy",
+          "q": "Volume balok 4 x 3 x 2 cm adalah?",
+          "options": ["9 cm³", "12 cm³", "24 cm³", "36 cm³"],
+          "answer": 2,
+          "hint": "Kalikan panjang, lebar, dan tinggi."
+        },
+        {
+          "id": "mat-add29",
+          "subject": "matematika",
+          "level": "medium",
+          "q": "1 kilometer sama dengan berapa meter?",
+          "options": ["10", "100", "1.000", "10.000"],
+          "answer": 2,
+          "hint": "Awalan kilo berarti seribu."
+        },
+        {
+          "id": "mat-add30",
+          "subject": "matematika",
+          "level": "hard",
+          "q": "2,5 meter sama dengan berapa sentimeter?",
+          "options": ["25", "250", "2.500", "0,25"],
+          "answer": 1,
+          "hint": "Satu meter sama dengan 100 sentimeter."
+        },
+        {
+          "id": "mat-add31",
+          "subject": "matematika",
+          "level": "easy",
+          "q": "3 jam sama dengan berapa menit?",
+          "options": ["90", "120", "180", "300"],
+          "answer": 2,
+          "hint": "Satu jam terdiri dari 60 menit."
+        },
+        {
+          "id": "mat-add32",
+          "subject": "matematika",
+          "level": "medium",
+          "q": "Satu lusin berisi berapa benda?",
+          "options": ["10", "12", "20", "24"],
+          "answer": 1,
+          "hint": "Lusin adalah satuan jumlah."
+        },
+        {
+          "id": "mat-add33",
+          "subject": "matematika",
+          "level": "hard",
+          "q": "Rata-rata dari 4, 6, dan 8 adalah?",
+          "options": ["5", "6", "7", "8"],
+          "answer": 1,
+          "hint": "Jumlahkan lalu bagi dengan banyak data."
+        },
+        {
+          "id": "mat-add34",
+          "subject": "matematika",
+          "level": "easy",
+          "q": "Median dari 2, 5, 7, 9, 10 adalah?",
+          "options": ["5", "7", "8", "9"],
+          "answer": 1,
+          "hint": "Median adalah nilai tengah setelah diurutkan."
+        },
+        {
+          "id": "mat-add35",
+          "subject": "matematika",
+          "level": "medium",
+          "q": "Modus dari 3, 4, 4, 5, 6 adalah?",
+          "options": ["3", "4", "5", "6"],
+          "answer": 1,
+          "hint": "Modus adalah nilai yang paling sering muncul."
+        },
+        {
+          "id": "mat-add36",
+          "subject": "matematika",
+          "level": "hard",
+          "q": "Jika 3 buku seharga Rp15.000, harga satu buku adalah?",
+          "options": ["Rp3.000", "Rp5.000", "Rp7.500", "Rp12.000"],
+          "answer": 1,
+          "hint": "Bagi harga total dengan jumlah buku."
+        },
+        {
+          "id": "mat-add37",
+          "subject": "matematika",
+          "level": "easy",
+          "q": "Harga Rp50.000 mendapat diskon 10%. Besar diskon adalah?",
+          "options": ["Rp2.500", "Rp5.000", "Rp10.000", "Rp15.000"],
+          "answer": 1,
+          "hint": "Hitung 10% dari 50.000."
+        },
+        {
+          "id": "mat-add38",
+          "subject": "matematika",
+          "level": "medium",
+          "q": "Pukul 07.30 ditambah 45 menit menjadi?",
+          "options": ["08.00", "08.15", "08.30", "09.15"],
+          "answer": 1,
+          "hint": "Tambahkan 30 menit lalu 15 menit."
+        },
+        {
+          "id": "mat-add39",
+          "subject": "matematika",
+          "level": "hard",
+          "q": "Bilangan Romawi untuk 10 adalah?",
+          "options": ["V", "X", "L", "C"],
+          "answer": 1,
+          "hint": "Simbol Romawi untuk sepuluh."
+        },
+        {
+          "id": "mat-add40",
+          "subject": "matematika",
+          "level": "easy",
+          "q": "Bilangan 0,25 jika diubah menjadi pecahan sederhana adalah?",
+          "options": ["1/2", "1/3", "1/4", "3/4"],
+          "answer": 2,
+          "hint": "Seperempat sama dengan 25 per 100."
+        },
+        {
+          "id": "mat-add41",
+          "subject": "matematika",
+          "level": "medium",
+          "q": "Hasil 2 pangkat 5 adalah?",
+          "options": ["10", "16", "25", "32"],
+          "answer": 3,
+          "hint": "Kalikan 2 sebanyak lima faktor."
+        },
+        {
+          "id": "mat-add42",
+          "subject": "matematika",
+          "level": "hard",
+          "q": "Akar kuadrat dari 81 adalah?",
+          "options": ["7", "8", "9", "10"],
+          "answer": 2,
+          "hint": "Cari bilangan yang kuadratnya 81."
+        },
+        {
+          "id": "mat-add43",
+          "subject": "matematika",
+          "level": "easy",
+          "q": "FPB dari 12 dan 18 adalah?",
+          "options": ["3", "6", "9", "12"],
+          "answer": 1,
+          "hint": "Cari faktor persekutuan terbesar."
+        },
+        {
+          "id": "mat-add44",
+          "subject": "matematika",
+          "level": "medium",
+          "q": "KPK dari 4 dan 6 adalah?",
+          "options": ["8", "10", "12", "24"],
+          "answer": 2,
+          "hint": "Cari kelipatan persekutuan terkecil."
+        },
+        {
+          "id": "mat-add45",
+          "subject": "matematika",
+          "level": "hard",
+          "q": "Jika x + 7 = 15, nilai x adalah?",
+          "options": ["6", "7", "8", "9"],
+          "answer": 2,
+          "hint": "Kurangi kedua ruas dengan 7."
+        },
+        {
+          "id": "mat-add46",
+          "subject": "matematika",
+          "level": "easy",
+          "q": "Jika 3x = 21, nilai x adalah?",
+          "options": ["6", "7", "8", "9"],
+          "answer": 1,
+          "hint": "Bagi 21 dengan 3."
+        },
+        {
+          "id": "mat-add47",
+          "subject": "matematika",
+          "level": "medium",
+          "q": "Pola 2, 4, 8, 16, ... angka berikutnya?",
+          "options": ["18", "24", "30", "32"],
+          "answer": 3,
+          "hint": "Setiap angka dikali dua."
+        },
+        {
+          "id": "mat-add48",
+          "subject": "matematika",
+          "level": "hard",
+          "q": "Pola 5, 10, 15, 20, ... angka berikutnya?",
+          "options": ["22", "24", "25", "30"],
+          "answer": 2,
+          "hint": "Tambahkan lima setiap langkah."
+        },
+        {
+          "id": "mat-add49",
+          "subject": "matematika",
+          "level": "easy",
+          "q": "Perbandingan 2 : 3 memiliki jumlah bagian  berapa?",
+          "options": ["3", "5", "6", "9"],
+          "answer": 1,
+          "hint": "Jumlahkan kedua angka perbandingan."
+        },
+        {
+          "id": "mat-add50",
+          "subject": "matematika",
+          "level": "medium",
+          "q": "Jika 2 kg beras seharga Rp28.000, harga 5 kg adalah?",
+          "options": ["Rp56.000", "Rp60.000", "Rp70.000", "Rp84.000"],
+          "answer": 2,
+          "hint": "Cari harga per kilogram terlebih dahulu."
+        },
+        {
+          "id": "mat-add51",
+          "subject": "matematika",
+          "level": "hard",
+          "q": "Jarak 120 km ditempuh dalam 2 jam. Kecepatan rata-rata?",
+          "options": ["40 km/jam", "50 km/jam", "60 km/jam", "80 km/jam"],
+          "answer": 2,
+          "hint": "Kecepatan = jarak dibagi waktu."
+        },
+        {
+          "id": "mat-add52",
+          "subject": "matematika",
+          "level": "easy",
+          "q": "Suhu naik dari 18°C menjadi 27°C. Kenaikannya?",
+          "options": ["7°C", "8°C", "9°C", "10°C"],
+          "answer": 2,
+          "hint": "Kurangi suhu awal dari suhu akhir."
+        },
+        {
+          "id": "mat-add53",
+          "subject": "matematika",
+          "level": "medium",
+          "q": "Bentuk persen dari 3/5 adalah?",
+          "options": ["30%", "40%", "50%", "60%"],
+          "answer": 3,
+          "hint": "Ubah pecahan menjadi desimal lalu persen."
+        },
+        {
+          "id": "mat-add54",
+          "subject": "matematika",
+          "level": "hard",
+          "q": "Hasil 2,4 + 1,35 adalah?",
+          "options": ["3,65", "3,75", "3,85", "4,75"],
+          "answer": 1,
+          "hint": "Sejajarkan tanda koma."
+        },
+        {
+          "id": "mat-add55",
+          "subject": "matematika",
+          "level": "easy",
+          "q": "Hasil 5,6 - 2,8 adalah?",
+          "options": ["2,6", "2,8", "3,2", "3,8"],
+          "answer": 1,
+          "hint": "Kurangkan angka desimal dengan sejajar."
+        },
+        {
+          "id": "mat-add56",
+          "subject": "matematika",
+          "level": "medium",
+          "q": "Hasil 0,4 x 10 adalah?",
+          "options": ["0,04", "0,4", "4", "40"],
+          "answer": 2,
+          "hint": "Mengalikan 10 menggeser koma satu tempat."
+        },
+        {
+          "id": "mat-add57",
+          "subject": "matematika",
+          "level": "hard",
+          "q": "Bilangan bulat yang terletak di antara -2 dan 2 adalah?",
+          "options": ["-3", "-1", "3", "4"],
+          "answer": 1,
+          "hint": "Urutkan bilangan pada garis bilangan."
+        },
+        {
+          "id": "mat-add58",
+          "subject": "matematika",
+          "level": "easy",
+          "q": "Hasil -4 + 9 adalah?",
+          "options": ["-13", "-5", "5", "13"],
+          "answer": 2,
+          "hint": "Mulai dari -4 lalu bergerak 9 langkah ke kanan."
+        },
+        {
+          "id": "mat-add59",
+          "subject": "matematika",
+          "level": "medium",
+          "q": "Hasil 6 - 10 adalah?",
+          "options": ["-4", "-2", "2", "4"],
+          "answer": 0,
+          "hint": "Kurangi 6 dengan 10."
+        },
+        {
+          "id": "mat-add60",
+          "subject": "matematika",
+          "level": "hard",
+          "q": "Besar sudut lurus adalah?",
+          "options": ["90°", "120°", "180°", "360°"],
+          "answer": 2,
+          "hint": "Sudut lurus membentuk satu garis."
+        },
+        {
+          "id": "mat-add61",
+          "subject": "matematika",
+          "level": "easy",
+          "q": "Banyak diagonal pada persegi adalah?",
+          "options": ["1", "2", "3", "4"],
+          "answer": 1,
+          "hint": "Hubungkan pasangan titik sudut yang berhadapan."
+        },
+        {
+          "id": "mat-add62",
+          "subject": "matematika",
+          "level": "medium",
+          "q": "Luas lingkaran berjari-jari 7 cm (π=22/7) adalah?",
+          "options": ["44 cm²", "77 cm²", "154 cm²", "308 cm²"],
+          "answer": 2,
+          "hint": "Luas lingkaran = π x r x r."
+        },
+        {
+          "id": "mat-add63",
+          "subject": "matematika",
+          "level": "hard",
+          "q": "Keliling lingkaran berdiameter 14 cm (π=22/7) adalah?",
+          "options": ["22 cm", "44 cm", "88 cm", "154 cm"],
+          "answer": 1,
+          "hint": "Keliling = π x diameter."
+        },
+        {
+          "id": "mat-add64",
+          "subject": "matematika",
+          "level": "easy",
+          "q": "Peluang muncul angka pada satu kali pelemparan koin adalah?",
+          "options": ["0", "1/4", "1/2", "1"],
+          "answer": 2,
+          "hint": "Koin memiliki dua sisi dengan peluang sama."
+        },
+        {
+          "id": "ipa-add01",
+          "subject": "ipa",
+          "level": "easy",
+          "q": "Organ utama untuk bernapas pada manusia adalah?",
+          "options": ["Jantung", "Paru-paru", "Lambung", "Ginjal"],
+          "answer": 1,
+          "hint": "Organ ini menghirup oksigen dan mengeluarkan karbon dioksida."
+        },
+        {
+          "id": "ipa-add02",
+          "subject": "ipa",
+          "level": "medium",
+          "q": "Alat indra untuk mendengar adalah?",
+          "options": ["Mata", "Hidung", "Telinga", "Kulit"],
+          "answer": 2,
+          "hint": "Organ ini menangkap gelombang suara."
+        },
+        {
+          "id": "ipa-add03",
+          "subject": "ipa",
+          "level": "hard",
+          "q": "Zat hijau daun disebut?",
+          "options": ["Hemoglobin", "Klorofil", "Melanin", "Keratin"],
+          "answer": 1,
+          "hint": "Pigmen ini membantu fotosintesis."
+        },
+        {
+          "id": "ipa-add04",
+          "subject": "ipa",
+          "level": "easy",
+          "q": "Sumber energi utama bagi Bumi adalah?",
+          "options": ["Bulan", "Matahari", "Angin", "Batu bara"],
+          "answer": 1,
+          "hint": "Cahaya dan panasnya menopang kehidupan."
+        },
+        {
+          "id": "ipa-add05",
+          "subject": "ipa",
+          "level": "medium",
+          "q": "Perubahan air menjadi uap disebut?",
+          "options": ["Membeku", "Menguap", "Mengembun", "Mencair"],
+          "answer": 1,
+          "hint": "Terjadi ketika air menerima panas."
+        },
+        {
+          "id": "ipa-add06",
+          "subject": "ipa",
+          "level": "hard",
+          "q": "Perubahan uap air menjadi titik-titik air disebut?",
+          "options": ["Menguap", "Menyublim", "Mengembun", "Membeku"],
+          "answer": 2,
+          "hint": "Contohnya terbentuknya embun pada pagi hari."
+        },
+        {
+          "id": "ipa-add07",
+          "subject": "ipa",
+          "level": "easy",
+          "q": "Air membeku pada suhu berapa derajat Celsius?",
+          "options": ["0°C", "10°C", "50°C", "100°C"],
+          "answer": 0,
+          "hint": "Titik beku air pada tekanan normal."
+        },
+        {
+          "id": "ipa-add08",
+          "subject": "ipa",
+          "level": "medium",
+          "q": "Benda yang dapat ditarik magnet disebut?",
+          "options": ["Magnetik", "Elastis", "Transparan", "Isolator"],
+          "answer": 0,
+          "hint": "Contohnya besi."
+        },
+        {
+          "id": "ipa-add09",
+          "subject": "ipa",
+          "level": "hard",
+          "q": "Bahan yang menghantarkan listrik dengan baik adalah?",
+          "options": ["Karet", "Plastik", "Tembaga", "Kayu"],
+          "answer": 2,
+          "hint": "Logam ini sering digunakan pada kabel."
+        },
+        {
+          "id": "ipa-add10",
+          "subject": "ipa",
+          "level": "easy",
+          "q": "Gaya yang menyebabkan benda jatuh ke tanah adalah?",
+          "options": ["Gesek", "Magnet", "Gravitasi", "Pegas"],
+          "answer": 2,
+          "hint": "Gaya tarik Bumi."
+        },
+        {
+          "id": "ipa-add11",
+          "subject": "ipa",
+          "level": "medium",
+          "q": "Satuan energi dalam SI adalah?",
+          "options": ["Newton", "Joule", "Meter", "Ampere"],
+          "answer": 1,
+          "hint": "Satuan ini juga digunakan untuk usaha."
+        },
+        {
+          "id": "ipa-add12",
+          "subject": "ipa",
+          "level": "hard",
+          "q": "Satuan daya listrik adalah?",
+          "options": ["Watt", "Volt", "Ohm", "Joule"],
+          "answer": 0,
+          "hint": "Daya menunjukkan energi per satuan waktu."
+        },
+        {
+          "id": "ipa-add13",
+          "subject": "ipa",
+          "level": "easy",
+          "q": "Alat untuk mengukur suhu adalah?",
+          "options": ["Barometer", "Termometer", "Higrometer", "Amperemeter"],
+          "answer": 1,
+          "hint": "Alat ini memiliki skala derajat."
+        },
+        {
+          "id": "ipa-add14",
+          "subject": "ipa",
+          "level": "medium",
+          "q": "Alat untuk mengukur kuat arus listrik adalah?",
+          "options": ["Voltmeter", "Amperemeter", "Termometer", "Dinamometer"],
+          "answer": 1,
+          "hint": "Namanya berasal dari satuan ampere."
+        },
+        {
+          "id": "ipa-add15",
+          "subject": "ipa",
+          "level": "hard",
+          "q": "Rangkaian listrik dengan satu jalur arus disebut?",
+          "options": ["Paralel", "Seri", "Campuran", "Terbuka"],
+          "answer": 1,
+          "hint": "Jika satu lampu putus, jalur arus terhenti."
+        },
+        {
+          "id": "ipa-add16",
+          "subject": "ipa",
+          "level": "easy",
+          "q": "Bunyi dapat merambat melalui?",
+          "options": [
+            "Ruang hampa saja",
+            "Zat perantara",
+            "Cahaya",
+            "Bayangan"
+          ],
+          "answer": 1,
+          "hint": "Bunyi memerlukan medium untuk merambat."
+        },
+        {
+          "id": "ipa-add17",
+          "subject": "ipa",
+          "level": "medium",
+          "q": "Bagian mata yang mengatur banyaknya cahaya masuk adalah?",
+          "options": ["Retina", "Pupil", "Lensa", "Kornea"],
+          "answer": 1,
+          "hint": "Lubang di tengah iris."
+        },
+        {
+          "id": "ipa-add18",
+          "subject": "ipa",
+          "level": "hard",
+          "q": "Bagian telinga yang bergetar saat menerima suara adalah?",
+          "options": [
+            "Gendang telinga",
+            "Daun telinga",
+            "Saluran eustachius",
+            "Rumah siput"
+          ],
+          "answer": 0,
+          "hint": "Membran ini meneruskan getaran suara."
+        },
+        {
+          "id": "ipa-add19",
+          "subject": "ipa",
+          "level": "easy",
+          "q": "Organ yang memompa darah ke seluruh tubuh adalah?",
+          "options": ["Paru-paru", "Hati", "Jantung", "Usus"],
+          "answer": 2,
+          "hint": "Organ ini bekerja terus-menerus."
+        },
+        {
+          "id": "ipa-add20",
+          "subject": "ipa",
+          "level": "medium",
+          "q": "Pembuluh darah yang membawa darah keluar dari jantung adalah?",
+          "options": ["Vena", "Arteri", "Kapiler", "Limfa"],
+          "answer": 1,
+          "hint": "Pembuluh ini membawa darah menjauhi jantung."
+        },
+        {
+          "id": "ipa-add21",
+          "subject": "ipa",
+          "level": "hard",
+          "q": "Sel darah merah berfungsi terutama untuk?",
+          "options": [
+            "Melawan kuman",
+            "Membekukan darah",
+            "Mengangkut oksigen",
+            "Mencerna makanan"
+          ],
+          "answer": 2,
+          "hint": "Mengandung hemoglobin."
+        },
+        {
+          "id": "ipa-add22",
+          "subject": "ipa",
+          "level": "easy",
+          "q": "Vitamin yang dapat dibentuk kulit dengan bantuan sinar matahari adalah?",
+          "options": ["Vitamin A", "Vitamin B", "Vitamin C", "Vitamin D"],
+          "answer": 3,
+          "hint": "Vitamin ini penting untuk kesehatan tulang."
+        },
+        {
+          "id": "ipa-add23",
+          "subject": "ipa",
+          "level": "medium",
+          "q": "Zat gizi utama sebagai sumber energi cepat adalah?",
+          "options": ["Karbohidrat", "Mineral", "Air", "Vitamin"],
+          "answer": 0,
+          "hint": "Contohnya nasi dan roti."
+        },
+        {
+          "id": "ipa-add24",
+          "subject": "ipa",
+          "level": "hard",
+          "q": "Proses mengunyah makanan terjadi di?",
+          "options": ["Mulut", "Kerongkongan", "Lambung", "Usus besar"],
+          "answer": 0,
+          "hint": "Pencernaan mekanik dimulai di sini."
+        },
+        {
+          "id": "ipa-add25",
+          "subject": "ipa",
+          "level": "easy",
+          "q": "Penyerapan sari-sari makanan terutama terjadi di?",
+          "options": ["Lambung", "Usus halus", "Usus besar", "Kerongkongan"],
+          "answer": 1,
+          "hint": "Memiliki jonjot usus untuk memperluas permukaan."
+        },
+        {
+          "id": "ipa-add26",
+          "subject": "ipa",
+          "level": "medium",
+          "q": "Organ yang menyaring darah dan menghasilkan urine adalah?",
+          "options": ["Hati", "Ginjal", "Jantung", "Pankreas"],
+          "answer": 1,
+          "hint": "Manusia umumnya memiliki dua organ ini."
+        },
+        {
+          "id": "ipa-add27",
+          "subject": "ipa",
+          "level": "hard",
+          "q": "Hewan pemakan tumbuhan disebut?",
+          "options": ["Karnivora", "Herbivora", "Omnivora", "Insektivora"],
+          "answer": 1,
+          "hint": "Sapi dan kambing termasuk kelompok ini."
+        },
+        {
+          "id": "ipa-add28",
+          "subject": "ipa",
+          "level": "easy",
+          "q": "Hewan pemakan segala disebut?",
+          "options": ["Herbivora", "Karnivora", "Omnivora", "Detritivora"],
+          "answer": 2,
+          "hint": "Contohnya beruang dan ayam."
+        },
+        {
+          "id": "ipa-add29",
+          "subject": "ipa",
+          "level": "medium",
+          "q": "Rantai makan dan dimakan dalam ekosistem disebut?",
+          "options": ["Rantai makanan", "Daur air", "Fotosintesis", "Adaptasi"],
+          "answer": 0,
+          "hint": "Menunjukkan perpindahan energi antarmakhluk hidup."
+        },
+        {
+          "id": "ipa-add30",
+          "subject": "ipa",
+          "level": "hard",
+          "q": "Makhluk hidup yang dapat membuat makanan sendiri disebut?",
+          "options": ["Konsumen", "Produsen", "Pengurai", "Predator"],
+          "answer": 1,
+          "hint": "Tumbuhan hijau merupakan contohnya."
+        },
+        {
+          "id": "ipa-add31",
+          "subject": "ipa",
+          "level": "easy",
+          "q": "Jamur dan bakteri pengurai berperan untuk?",
+          "options": [
+            "Membuat cahaya",
+            "Menguraikan sisa makhluk hidup",
+            "Menghasilkan hujan",
+            "Menghentikan fotosintesis"
+          ],
+          "answer": 1,
+          "hint": "Mengembalikan unsur hara ke lingkungan."
+        },
+        {
+          "id": "ipa-add32",
+          "subject": "ipa",
+          "level": "medium",
+          "q": "Tempat hidup suatu makhluk hidup disebut?",
+          "options": ["Populasi", "Habitat", "Komunitas", "Bioma"],
+          "answer": 1,
+          "hint": "Misalnya kolam bagi ikan."
+        },
+        {
+          "id": "ipa-add33",
+          "subject": "ipa",
+          "level": "hard",
+          "q": "Kumpulan individu sejenis di suatu tempat disebut?",
+          "options": ["Ekosistem", "Populasi", "Komunitas", "Habitat"],
+          "answer": 1,
+          "hint": "Contohnya sekumpulan ikan nila di kolam."
+        },
+        {
+          "id": "ipa-add34",
+          "subject": "ipa",
+          "level": "easy",
+          "q": "Peristiwa perpindahan panas tanpa zat perantara disebut?",
+          "options": ["Konduksi", "Konveksi", "Radiasi", "Evaporasi"],
+          "answer": 2,
+          "hint": "Panas Matahari sampai ke Bumi dengan cara ini."
+        },
+        {
+          "id": "ipa-add35",
+          "subject": "ipa",
+          "level": "medium",
+          "q": "Perpindahan panas melalui aliran zat disebut?",
+          "options": ["Konduksi", "Konveksi", "Radiasi", "Refleksi"],
+          "answer": 1,
+          "hint": "Terjadi pada air yang dipanaskan."
+        },
+        {
+          "id": "ipa-add36",
+          "subject": "ipa",
+          "level": "hard",
+          "q": "Bahan yang sulit menghantarkan panas disebut?",
+          "options": ["Konduktor", "Isolator", "Resistor", "Generator"],
+          "answer": 1,
+          "hint": "Kayu dan wol termasuk contohnya."
+        },
+        {
+          "id": "ipa-add37",
+          "subject": "ipa",
+          "level": "easy",
+          "q": "Planet yang dikenal sebagai planet merah adalah?",
+          "options": ["Venus", "Mars", "Jupiter", "Saturnus"],
+          "answer": 1,
+          "hint": "Permukaannya kaya senyawa besi berwarna kemerahan."
+        },
+        {
+          "id": "ipa-add38",
+          "subject": "ipa",
+          "level": "medium",
+          "q": "Planet terbesar dalam tata surya adalah?",
+          "options": ["Bumi", "Saturnus", "Jupiter", "Neptunus"],
+          "answer": 2,
+          "hint": "Planet ini memiliki Bintik Merah Besar."
+        },
+        {
+          "id": "ipa-add39",
+          "subject": "ipa",
+          "level": "hard",
+          "q": "Satelit alami Bumi adalah?",
+          "options": ["Mars", "Bulan", "Matahari", "Venus"],
+          "answer": 1,
+          "hint": "Benda langit ini mengorbit Bumi."
+        },
+        {
+          "id": "ipa-add40",
+          "subject": "ipa",
+          "level": "easy",
+          "q": "Gerak Bumi berputar pada porosnya disebut?",
+          "options": ["Revolusi", "Rotasi", "Presesi", "Orbit"],
+          "answer": 1,
+          "hint": "Gerak ini menyebabkan siang dan malam."
+        },
+        {
+          "id": "ipa-add41",
+          "subject": "ipa",
+          "level": "medium",
+          "q": "Waktu yang diperlukan Bumi untuk mengelilingi Matahari sekitar?",
+          "options": ["24 jam", "30 hari", "365¼ hari", "12 jam"],
+          "answer": 2,
+          "hint": "Menjadi dasar penentuan satu tahun."
+        },
+        {
+          "id": "ipa-add42",
+          "subject": "ipa",
+          "level": "hard",
+          "q": "Lapisan atmosfer tempat terjadinya cuaca adalah?",
+          "options": ["Troposfer", "Stratosfer", "Mesosfer", "Eksosfer"],
+          "answer": 0,
+          "hint": "Lapisan atmosfer paling bawah."
+        },
+        {
+          "id": "ipa-add43",
+          "subject": "ipa",
+          "level": "easy",
+          "q": "Batuan yang terbentuk dari pembekuan magma disebut?",
+          "options": ["Sedimen", "Beku", "Metamorf", "Organik"],
+          "answer": 1,
+          "hint": "Contohnya granit dan basalt."
+        },
+        {
+          "id": "ipa-add44",
+          "subject": "ipa",
+          "level": "medium",
+          "q": "Bencana yang disebabkan pergerakan lempeng bumi adalah?",
+          "options": [
+            "Gempa tektonik",
+            "Banjir rob",
+            "Kekeringan",
+            "Angin darat"
+          ],
+          "answer": 0,
+          "hint": "Energi dilepaskan ketika batuan bergeser."
+        },
+        {
+          "id": "ipa-add45",
+          "subject": "ipa",
+          "level": "hard",
+          "q": "Alat untuk mencatat getaran gempa adalah?",
+          "options": ["Seismograf", "Barometer", "Anemometer", "Termometer"],
+          "answer": 0,
+          "hint": "Hasil catatannya disebut seismogram."
+        },
+        {
+          "id": "ipa-add46",
+          "subject": "ipa",
+          "level": "easy",
+          "q": "Gas yang dibutuhkan manusia untuk respirasi adalah?",
+          "options": ["Nitrogen", "Oksigen", "Helium", "Metana"],
+          "answer": 1,
+          "hint": "Gas ini digunakan sel untuk menghasilkan energi."
+        },
+        {
+          "id": "ipa-add47",
+          "subject": "ipa",
+          "level": "medium",
+          "q": "Gas yang diserap tumbuhan saat fotosintesis adalah?",
+          "options": ["Oksigen", "Karbon dioksida", "Hidrogen", "Nitrogen"],
+          "answer": 1,
+          "hint": "Rumus kimianya CO₂."
+        },
+        {
+          "id": "ipa-add48",
+          "subject": "ipa",
+          "level": "hard",
+          "q": "Rumus kimia air adalah?",
+          "options": ["CO₂", "O₂", "H₂O", "NaCl"],
+          "answer": 2,
+          "hint": "Terdiri dari dua atom hidrogen dan satu oksigen."
+        },
+        {
+          "id": "ipa-add49",
+          "subject": "ipa",
+          "level": "easy",
+          "q": "Garam dapur memiliki rumus kimia?",
+          "options": ["NaCl", "H₂O", "CO₂", "HCl"],
+          "answer": 0,
+          "hint": "Tersusun dari natrium dan klorin."
+        },
+        {
+          "id": "ipa-add50",
+          "subject": "ipa",
+          "level": "medium",
+          "q": "Campuran air dan gula termasuk campuran?",
+          "options": ["Heterogen", "Homogen", "Suspensi kasar", "Unsur"],
+          "answer": 1,
+          "hint": "Gula larut merata dalam air."
+        },
+        {
+          "id": "ipa-add51",
+          "subject": "ipa",
+          "level": "hard",
+          "q": "Cara memisahkan pasir dari air adalah?",
+          "options": ["Filtrasi", "Distilasi", "Sublimasi", "Kromatografi"],
+          "answer": 0,
+          "hint": "Gunakan penyaring."
+        },
+        {
+          "id": "ipa-add52",
+          "subject": "ipa",
+          "level": "easy",
+          "q": "Perubahan wujud padat langsung menjadi gas disebut?",
+          "options": ["Mencair", "Menyublim", "Mengembun", "Membeku"],
+          "answer": 1,
+          "hint": "Contohnya kapur barus yang lama-lama habis."
+        },
+        {
+          "id": "ipa-add53",
+          "subject": "ipa",
+          "level": "medium",
+          "q": "Benda yang bentuknya tetap dan volumenya tetap adalah?",
+          "options": ["Gas", "Cair", "Padat", "Plasma"],
+          "answer": 2,
+          "hint": "Partikelnya tersusun rapat."
+        },
+        {
+          "id": "ipa-add54",
+          "subject": "ipa",
+          "level": "hard",
+          "q": "Contoh sumber energi terbarukan adalah?",
+          "options": ["Batu bara", "Minyak bumi", "Matahari", "Gas alam"],
+          "answer": 2,
+          "hint": "Sumber ini terus tersedia secara alami."
+        },
+        {
+          "id": "ipa-add55",
+          "subject": "ipa",
+          "level": "easy",
+          "q": "Lapisan ozon berfungsi menyerap sebagian besar sinar?",
+          "options": [
+            "Inframerah",
+            "Ultraviolet",
+            "Gelombang radio",
+            "Gelombang suara"
+          ],
+          "answer": 1,
+          "hint": "Melindungi makhluk hidup dari radiasi berbahaya."
+        },
+        {
+          "id": "ipa-add56",
+          "subject": "ipa",
+          "level": "medium",
+          "q": "Peningkatan suhu rata-rata Bumi disebut?",
+          "options": [
+            "Efek rumah kaca",
+            "Pemanasan global",
+            "Hujan asam",
+            "Erosi"
+          ],
+          "answer": 1,
+          "hint": "Berkaitan dengan meningkatnya gas rumah kaca."
+        },
+        {
+          "id": "ipa-add57",
+          "subject": "ipa",
+          "level": "hard",
+          "q": "Contoh adaptasi tumbuhan di daerah kering adalah?",
+          "options": [
+            "Daun lebar tipis",
+            "Duri pada kaktus",
+            "Akar sangat pendek",
+            "Tidak memiliki batang"
+          ],
+          "answer": 1,
+          "hint": "Duri membantu mengurangi penguapan."
+        },
+        {
+          "id": "ipa-add58",
+          "subject": "ipa",
+          "level": "easy",
+          "q": "Tulang yang melindungi otak adalah?",
+          "options": [
+            "Tulang rusuk",
+            "Tulang tengkorak",
+            "Tulang paha",
+            "Tulang belikat"
+          ],
+          "answer": 1,
+          "hint": "Membentuk rongga kepala."
+        },
+        {
+          "id": "ipa-add59",
+          "subject": "ipa",
+          "level": "medium",
+          "q": "Sendi yang memungkinkan gerak satu arah seperti pintu adalah?",
+          "options": ["Peluru", "Engsel", "Putar", "Geser"],
+          "answer": 1,
+          "hint": "Contohnya pada siku."
+        },
+        {
+          "id": "ipa-add60",
+          "subject": "ipa",
+          "level": "hard",
+          "q": "Mikroorganisme yang digunakan dalam pembuatan tempe adalah?",
+          "options": ["Rhizopus", "Lactobacillus", "Penicillium", "Plasmodium"],
+          "answer": 0,
+          "hint": "Kapang ini tumbuh pada kedelai."
+        },
+        {
+          "id": "ipa-add61",
+          "subject": "ipa",
+          "level": "easy",
+          "q": "Bagian tumbuhan yang umumnya menjadi tempat fotosintesis adalah?",
+          "options": ["Akar", "Daun", "Biji", "Buah"],
+          "answer": 1,
+          "hint": "Mengandung banyak kloroplas."
+        },
+        {
+          "id": "ipa-add62",
+          "subject": "ipa",
+          "level": "medium",
+          "q": "Bagian bunga yang menghasilkan serbuk sari adalah?",
+          "options": ["Putik", "Benang sari", "Kelopak", "Mahkota"],
+          "answer": 1,
+          "hint": "Kepala sari pada bagian ini menghasilkan serbuk sari."
+        },
+        {
+          "id": "ipa-add63",
+          "subject": "ipa",
+          "level": "hard",
+          "q": "Hewan yang mengalami metamorfosis sempurna adalah?",
+          "options": ["Belalang", "Kecoa", "Kupu-kupu", "Capung"],
+          "answer": 2,
+          "hint": "Siklus hidupnya melalui telur, larva, pupa, dan dewasa."
+        },
+        {
+          "id": "ipa-add64",
+          "subject": "ipa",
+          "level": "easy",
+          "q": "Contoh perkembangbiakan vegetatif alami pada tumbuhan adalah?",
+          "options": [
+            "Biji mangga",
+            "Tunas pisang",
+            "Penyerbukan bunga",
+            "Pembuahan"
+          ],
+          "answer": 1,
+          "hint": "Pisang dapat tumbuh individu baru dari bagian ini."
+        },
+        {
+          "id": "ind-add01",
+          "subject": "indonesia",
+          "level": "easy",
+          "q": "Gagasan utama dalam sebuah paragraf disebut?",
+          "options": [
+            "Kalimat penjelas",
+            "Ide pokok",
+            "Kata penghubung",
+            "Amanat"
+          ],
+          "answer": 1,
+          "hint": "Gagasan ini menjadi inti paragraf."
+        },
+        {
+          "id": "ind-add02",
+          "subject": "indonesia",
+          "level": "medium",
+          "q": "Persamaan kata 'cepat' adalah?",
+          "options": ["Lambat", "Lekas", "Lemah", "Jauh"],
+          "answer": 1,
+          "hint": "Kata ini bermakna tidak membutuhkan waktu lama."
+        },
+        {
+          "id": "ind-add03",
+          "subject": "indonesia",
+          "level": "hard",
+          "q": "Lawan kata 'hemat' adalah?",
+          "options": ["Cermat", "Boros", "Irit", "Teliti"],
+          "answer": 1,
+          "hint": "Perilaku menggunakan uang secara berlebihan."
+        },
+        {
+          "id": "ind-add04",
+          "subject": "indonesia",
+          "level": "easy",
+          "q": "Kata baku yang benar adalah?",
+          "options": ["Ijin", "Izin", "Idzin", "Izhin"],
+          "answer": 1,
+          "hint": "Perhatikan bentuk baku menurut KBBI."
+        },
+        {
+          "id": "ind-add05",
+          "subject": "indonesia",
+          "level": "medium",
+          "q": "Penulisan kata depan yang benar terdapat pada?",
+          "options": ["dirumah", "ke sekolah", "diambil", "kesana"],
+          "answer": 1,
+          "hint": "Kata depan ditulis terpisah dari kata tempat."
+        },
+        {
+          "id": "ind-add06",
+          "subject": "indonesia",
+          "level": "hard",
+          "q": "Kalimat tanya biasanya diakhiri tanda?",
+          "options": ["Titik", "Koma", "Tanya", "Seru"],
+          "answer": 2,
+          "hint": "Tanda baca ini digunakan untuk pertanyaan."
+        },
+        {
+          "id": "ind-add07",
+          "subject": "indonesia",
+          "level": "easy",
+          "q": "Tanda baca untuk mengakhiri kalimat berita adalah?",
+          "options": ["Titik", "Tanya", "Petik", "Titik dua"],
+          "answer": 0,
+          "hint": "Kalimat berita umumnya diakhiri tanda ini."
+        },
+        {
+          "id": "ind-add08",
+          "subject": "indonesia",
+          "level": "medium",
+          "q": "Kata yang menunjukkan pelaku dalam kalimat disebut?",
+          "options": ["Predikat", "Subjek", "Objek", "Keterangan"],
+          "answer": 1,
+          "hint": "Unsur ini biasanya menjawab pertanyaan siapa atau apa."
+        },
+        {
+          "id": "ind-add09",
+          "subject": "indonesia",
+          "level": "hard",
+          "q": "Dalam kalimat 'Ibu memasak nasi', predikatnya adalah?",
+          "options": ["Ibu", "Memasak", "Nasi", "Ibu memasak"],
+          "answer": 1,
+          "hint": "Predikat menyatakan tindakan atau keadaan."
+        },
+        {
+          "id": "ind-add10",
+          "subject": "indonesia",
+          "level": "easy",
+          "q": "Kalimat yang berisi perintah disebut kalimat?",
+          "options": ["Deklaratif", "Interogatif", "Imperatif", "Eksklamatif"],
+          "answer": 2,
+          "hint": "Contohnya: 'Tolong tutup pintu!'"
+        },
+        {
+          "id": "ind-add11",
+          "subject": "indonesia",
+          "level": "medium",
+          "q": "Cerita yang tokohnya berupa hewan dan berperilaku seperti manusia disebut?",
+          "options": ["Legenda", "Fabel", "Mite", "Novel"],
+          "answer": 1,
+          "hint": "Cerita ini sering mengandung pesan moral."
+        },
+        {
+          "id": "ind-add12",
+          "subject": "indonesia",
+          "level": "hard",
+          "q": "Cerita asal-usul suatu tempat disebut?",
+          "options": ["Fabel", "Legenda", "Pantun", "Biografi"],
+          "answer": 1,
+          "hint": "Contohnya cerita asal-usul Danau Toba."
+        },
+        {
+          "id": "ind-add13",
+          "subject": "indonesia",
+          "level": "easy",
+          "q": "Cerita tentang kehidupan seseorang yang ditulis orang lain disebut?",
+          "options": ["Autobiografi", "Biografi", "Dongeng", "Drama"],
+          "answer": 1,
+          "hint": "Penulisnya bukan tokoh yang diceritakan."
+        },
+        {
+          "id": "ind-add14",
+          "subject": "indonesia",
+          "level": "medium",
+          "q": "Riwayat hidup yang ditulis oleh diri sendiri disebut?",
+          "options": ["Biografi", "Autobiografi", "Legenda", "Cerpen"],
+          "answer": 1,
+          "hint": "Awalan auto berarti sendiri."
+        },
+        {
+          "id": "ind-add15",
+          "subject": "indonesia",
+          "level": "hard",
+          "q": "Pesan yang ingin disampaikan pengarang dalam cerita disebut?",
+          "options": ["Tema", "Amanat", "Alur", "Latar"],
+          "answer": 1,
+          "hint": "Biasanya berupa pelajaran atau nasihat."
+        },
+        {
+          "id": "ind-add16",
+          "subject": "indonesia",
+          "level": "easy",
+          "q": "Tempat, waktu, dan suasana dalam cerita disebut?",
+          "options": ["Tokoh", "Latar", "Konflik", "Sudut pandang"],
+          "answer": 1,
+          "hint": "Unsur ini menjawab di mana, kapan, dan bagaimana suasana."
+        },
+        {
+          "id": "ind-add17",
+          "subject": "indonesia",
+          "level": "medium",
+          "q": "Rangkaian peristiwa dalam cerita disebut?",
+          "options": ["Alur", "Tema", "Amanat", "Dialog"],
+          "answer": 0,
+          "hint": "Dapat berupa alur maju, mundur, atau campuran."
+        },
+        {
+          "id": "ind-add18",
+          "subject": "indonesia",
+          "level": "hard",
+          "q": "Orang yang mengalami peristiwa dalam cerita disebut?",
+          "options": ["Latar", "Tokoh", "Amanat", "Ilustrator"],
+          "answer": 1,
+          "hint": "Tokoh dapat utama maupun tambahan."
+        },
+        {
+          "id": "ind-add19",
+          "subject": "indonesia",
+          "level": "easy",
+          "q": "Puisi lama yang terdiri atas empat baris dan bersajak a-b-a-b disebut?",
+          "options": ["Syair", "Pantun", "Gurindam", "Mantra"],
+          "answer": 1,
+          "hint": "Baris pertama dan kedua biasanya sampiran."
+        },
+        {
+          "id": "ind-add20",
+          "subject": "indonesia",
+          "level": "medium",
+          "q": "Dalam pantun, dua baris pertama disebut?",
+          "options": ["Isi", "Sampiran", "Amanat", "Bait"],
+          "answer": 1,
+          "hint": "Bagian ini mengantarkan rima menuju isi."
+        },
+        {
+          "id": "ind-add21",
+          "subject": "indonesia",
+          "level": "hard",
+          "q": "Puisi yang setiap baitnya terdiri atas dua baris disebut?",
+          "options": ["Pantun", "Gurindam", "Soneta", "Hikayat"],
+          "answer": 1,
+          "hint": "Biasanya berisi nasihat dan memiliki hubungan sebab-akibat."
+        },
+        {
+          "id": "ind-add22",
+          "subject": "indonesia",
+          "level": "easy",
+          "q": "Majas yang memberi sifat manusia kepada benda mati disebut?",
+          "options": ["Personifikasi", "Metafora", "Litotes", "Ironi"],
+          "answer": 0,
+          "hint": "Contohnya 'angin berbisik'."
+        },
+        {
+          "id": "ind-add23",
+          "subject": "indonesia",
+          "level": "medium",
+          "q": "Majas yang melebih-lebihkan sesuatu disebut?",
+          "options": ["Simile", "Hiperbola", "Metonimia", "Eufemisme"],
+          "answer": 1,
+          "hint": "Contohnya 'air matanya membanjiri pipi'."
+        },
+        {
+          "id": "ind-add24",
+          "subject": "indonesia",
+          "level": "hard",
+          "q": "Majas yang menggunakan perbandingan langsung tanpa kata pembanding disebut?",
+          "options": ["Metafora", "Simile", "Ironi", "Pleonasme"],
+          "answer": 0,
+          "hint": "Contohnya 'dia adalah bintang kelas'."
+        },
+        {
+          "id": "ind-add25",
+          "subject": "indonesia",
+          "level": "easy",
+          "q": "Kata hubung yang menyatakan sebab adalah?",
+          "options": ["Tetapi", "Karena", "Atau", "Lalu"],
+          "answer": 1,
+          "hint": "Kata ini menjelaskan alasan terjadinya sesuatu."
+        },
+        {
+          "id": "ind-add26",
+          "subject": "indonesia",
+          "level": "medium",
+          "q": "Kata hubung yang menyatakan pertentangan adalah?",
+          "options": ["Dan", "Serta", "Namun", "Karena"],
+          "answer": 2,
+          "hint": "Kata ini menghubungkan dua hal yang berlawanan."
+        },
+        {
+          "id": "ind-add27",
+          "subject": "indonesia",
+          "level": "hard",
+          "q": "Bentuk berimbuhan yang benar dari kata dasar 'ajar' adalah?",
+          "options": ["Pelajarin", "Belajar", "Ajaranlah", "Mengajarinya-kan"],
+          "answer": 1,
+          "hint": "Kata ini berarti melakukan kegiatan menuntut ilmu."
+        },
+        {
+          "id": "ind-add28",
+          "subject": "indonesia",
+          "level": "easy",
+          "q": "Awalan pada kata 'terjatuh' adalah?",
+          "options": ["me-", "ber-", "ter-", "pe-"],
+          "answer": 2,
+          "hint": "Imbuhan berada di depan kata jatuh."
+        },
+        {
+          "id": "ind-add29",
+          "subject": "indonesia",
+          "level": "medium",
+          "q": "Akhiran pada kata 'makanan' adalah?",
+          "options": ["-an", "-kan", "-i", "-nya"],
+          "answer": 0,
+          "hint": "Imbuhan terletak di akhir kata."
+        },
+        {
+          "id": "ind-add30",
+          "subject": "indonesia",
+          "level": "hard",
+          "q": "Kata ulang pada 'anak-anak' menyatakan makna?",
+          "options": ["Satu anak", "Banyak anak", "Anak kecil", "Anak sulung"],
+          "answer": 1,
+          "hint": "Pengulangan kata dapat menyatakan jamak."
+        },
+        {
+          "id": "ind-add31",
+          "subject": "indonesia",
+          "level": "easy",
+          "q": "Kata 'mereka' termasuk jenis kata?",
+          "options": ["Kata benda", "Kata ganti", "Kata sifat", "Kata kerja"],
+          "answer": 1,
+          "hint": "Digunakan untuk menggantikan orang ketiga jamak."
+        },
+        {
+          "id": "ind-add32",
+          "subject": "indonesia",
+          "level": "medium",
+          "q": "Kata sifat dalam kalimat 'Rumah itu sangat besar' adalah?",
+          "options": ["Rumah", "Itu", "Sangat", "Besar"],
+          "answer": 3,
+          "hint": "Kata ini menerangkan keadaan rumah."
+        },
+        {
+          "id": "ind-add33",
+          "subject": "indonesia",
+          "level": "hard",
+          "q": "Kalimat efektif adalah kalimat yang?",
+          "options": [
+            "Panjang dan rumit",
+            "Jelas, singkat, dan tepat",
+            "Memiliki banyak pengulangan",
+            "Tidak memiliki predikat"
+          ],
+          "answer": 1,
+          "hint": "Kalimat efektif tidak boros kata."
+        },
+        {
+          "id": "ind-add34",
+          "subject": "indonesia",
+          "level": "easy",
+          "q": "Bentuk baku dari 'aktifitas' adalah?",
+          "options": ["Aktifitas", "Aktivitas", "Aktipitas", "Aktifitaz"],
+          "answer": 1,
+          "hint": "Gunakan bentuk dengan huruf v."
+        },
+        {
+          "id": "ind-add35",
+          "subject": "indonesia",
+          "level": "medium",
+          "q": "Bentuk baku dari 'resiko' adalah?",
+          "options": ["Resiko", "Risiko", "Resikho", "Risyko"],
+          "answer": 1,
+          "hint": "Bentuk bakunya memakai huruf i."
+        },
+        {
+          "id": "ind-add36",
+          "subject": "indonesia",
+          "level": "hard",
+          "q": "Penulisan gelar yang tepat adalah?",
+          "options": ["Dr Ahmad", "Dr. Ahmad", "DR Ahmad.", "dr Ahmad"],
+          "answer": 1,
+          "hint": "Singkatan gelar doktor diakhiri titik."
+        },
+        {
+          "id": "ind-add37",
+          "subject": "indonesia",
+          "level": "easy",
+          "q": "Kata serapan yang baku adalah?",
+          "options": ["Kwalitas", "Kualitas", "Qualitet", "Kwalitet"],
+          "answer": 1,
+          "hint": "Bentuk baku memakai awalan ku-."
+        },
+        {
+          "id": "ind-add38",
+          "subject": "indonesia",
+          "level": "medium",
+          "q": "Paragraf yang kalimat utamanya berada di awal disebut?",
+          "options": ["Induktif", "Deduktif", "Campuran", "Naratif"],
+          "answer": 1,
+          "hint": "Gagasan utama disampaikan lebih dahulu."
+        },
+        {
+          "id": "ind-add39",
+          "subject": "indonesia",
+          "level": "hard",
+          "q": "Paragraf yang kalimat utamanya berada di akhir disebut?",
+          "options": ["Deduktif", "Induktif", "Deskriptif", "Persuasif"],
+          "answer": 1,
+          "hint": "Kesimpulan atau gagasan utama muncul di akhir."
+        },
+        {
+          "id": "ind-add40",
+          "subject": "indonesia",
+          "level": "easy",
+          "q": "Teks yang bertujuan menjelaskan langkah melakukan sesuatu disebut?",
+          "options": ["Deskripsi", "Prosedur", "Narasi", "Eksposisi"],
+          "answer": 1,
+          "hint": "Biasanya berisi tujuan, alat, dan tahapan."
+        },
+        {
+          "id": "ind-add41",
+          "subject": "indonesia",
+          "level": "medium",
+          "q": "Teks yang menggambarkan objek secara rinci disebut?",
+          "options": ["Deskripsi", "Prosedur", "Anekdot", "Negosiasi"],
+          "answer": 0,
+          "hint": "Pembaca seolah dapat melihat atau merasakan objek."
+        },
+        {
+          "id": "ind-add42",
+          "subject": "indonesia",
+          "level": "hard",
+          "q": "Teks yang menyampaikan informasi berdasarkan fakta disebut?",
+          "options": ["Fiksi", "Nonfiksi", "Fantasi", "Dongeng"],
+          "answer": 1,
+          "hint": "Isinya bersumber dari kenyataan."
+        },
+        {
+          "id": "ind-add43",
+          "subject": "indonesia",
+          "level": "easy",
+          "q": "Laporan hasil pengamatan sebaiknya disusun berdasarkan?",
+          "options": [
+            "Khayalan",
+            "Fakta pengamatan",
+            "Pendapat teman",
+            "Cerita turun-temurun"
+          ],
+          "answer": 1,
+          "hint": "Informasi harus sesuai hasil observasi."
+        },
+        {
+          "id": "ind-add44",
+          "subject": "indonesia",
+          "level": "medium",
+          "q": "Orang yang diwawancarai disebut?",
+          "options": ["Pewawancara", "Narasumber", "Pembaca", "Penyunting"],
+          "answer": 1,
+          "hint": "Ia memberikan informasi dalam wawancara."
+        },
+        {
+          "id": "ind-add45",
+          "subject": "indonesia",
+          "level": "hard",
+          "q": "Daftar pertanyaan sebelum wawancara disebut?",
+          "options": [
+            "Daftar pustaka",
+            "Pedoman wawancara",
+            "Indeks",
+            "Glosarium"
+          ],
+          "answer": 1,
+          "hint": "Disiapkan agar wawancara terarah."
+        },
+        {
+          "id": "ind-add46",
+          "subject": "indonesia",
+          "level": "easy",
+          "q": "Ringkasan isi bacaan tanpa mengubah pokok pikiran disebut?",
+          "options": ["Parafrasa bebas", "Rangkuman", "Dialog", "Resensi"],
+          "answer": 1,
+          "hint": "Ditulis lebih singkat dengan inti tetap terjaga."
+        },
+        {
+          "id": "ind-add47",
+          "subject": "indonesia",
+          "level": "medium",
+          "q": "Ulasan atau penilaian terhadap suatu karya disebut?",
+          "options": ["Resensi", "Puisi", "Pantun", "Pidato"],
+          "answer": 0,
+          "hint": "Biasanya membahas kelebihan dan kekurangan karya."
+        },
+        {
+          "id": "ind-add48",
+          "subject": "indonesia",
+          "level": "hard",
+          "q": "Kata yang memiliki makna lebih dari satu disebut?",
+          "options": ["Sinonim", "Antonim", "Polisemi", "Homonim"],
+          "answer": 2,
+          "hint": "Maknanya bergantung pada konteks."
+        },
+        {
+          "id": "ind-add49",
+          "subject": "indonesia",
+          "level": "easy",
+          "q": "Dua kata yang lafal dan tulisannya sama tetapi maknanya berbeda disebut?",
+          "options": ["Homonim", "Sinonim", "Antonim", "Hiponim"],
+          "answer": 0,
+          "hint": "Contohnya 'bisa' yang berarti mampu atau racun."
+        },
+        {
+          "id": "ind-add50",
+          "subject": "indonesia",
+          "level": "medium",
+          "q": "Kata 'buku' dalam frasa 'buku tulis' merupakan kata?",
+          "options": ["Kerja", "Benda", "Sifat", "Bilangan"],
+          "answer": 1,
+          "hint": "Kata ini menamai suatu benda."
+        },
+        {
+          "id": "ind-add51",
+          "subject": "indonesia",
+          "level": "hard",
+          "q": "Kalimat langsung biasanya menggunakan tanda?",
+          "options": ["Kurung", "Petik", "Hubung", "Garis miring"],
+          "answer": 1,
+          "hint": "Ucapan asli ditandai dengan tanda ini."
+        },
+        {
+          "id": "ind-add52",
+          "subject": "indonesia",
+          "level": "easy",
+          "q": "Penulisan nama orang yang benar menggunakan huruf?",
+          "options": [
+            "Kecil semua",
+            "Kapital pada awal unsur nama",
+            "Kapital di akhir",
+            "Miring"
+          ],
+          "answer": 1,
+          "hint": "Nama diri diawali huruf kapital."
+        },
+        {
+          "id": "ind-add53",
+          "subject": "indonesia",
+          "level": "medium",
+          "q": "Kata sapaan dalam kalimat 'Silakan duduk, Pak' adalah?",
+          "options": ["Silakan", "Duduk", "Pak", "Kata"],
+          "answer": 2,
+          "hint": "Sapaan digunakan untuk menyebut orang yang diajak bicara."
+        },
+        {
+          "id": "ind-add54",
+          "subject": "indonesia",
+          "level": "hard",
+          "q": "Bagian surat yang berisi inti pesan disebut?",
+          "options": ["Kop surat", "Isi surat", "Lampiran", "Tembusan"],
+          "answer": 1,
+          "hint": "Bagian ini menyampaikan maksud pengirim."
+        },
+        {
+          "id": "ind-add55",
+          "subject": "indonesia",
+          "level": "easy",
+          "q": "Surat yang digunakan untuk urusan pribadi disebut?",
+          "options": [
+            "Surat dinas",
+            "Surat pribadi",
+            "Surat edaran",
+            "Surat keputusan"
+          ],
+          "answer": 1,
+          "hint": "Contohnya surat kepada sahabat."
+        },
+        {
+          "id": "ind-add56",
+          "subject": "indonesia",
+          "level": "medium",
+          "q": "Orang yang menyampaikan pidato disebut?",
+          "options": ["Moderator", "Orator", "Notulis", "Editor"],
+          "answer": 1,
+          "hint": "Istilah ini merujuk pada pembicara pidato."
+        },
+        {
+          "id": "ind-add57",
+          "subject": "indonesia",
+          "level": "hard",
+          "q": "Kegiatan bertukar pendapat untuk membahas masalah disebut?",
+          "options": ["Diskusi", "Monolog", "Membaca", "Menyimak"],
+          "answer": 0,
+          "hint": "Peserta menyampaikan argumen dan tanggapan."
+        },
+        {
+          "id": "ind-add58",
+          "subject": "indonesia",
+          "level": "easy",
+          "q": "Kata 'sangat' dalam kalimat 'sangat indah' berfungsi sebagai?",
+          "options": [
+            "Kata depan",
+            "Kata keterangan derajat",
+            "Kata ganti",
+            "Kata benda"
+          ],
+          "answer": 1,
+          "hint": "Kata ini memperkuat tingkat sifat."
+        },
+        {
+          "id": "ind-add59",
+          "subject": "indonesia",
+          "level": "medium",
+          "q": "Imbuhan 'di-' pada kata 'ditulis' berfungsi membentuk kalimat?",
+          "options": ["Aktif", "Pasif", "Tanya", "Perintah"],
+          "answer": 1,
+          "hint": "Subjek dikenai tindakan."
+        },
+        {
+          "id": "ind-add60",
+          "subject": "indonesia",
+          "level": "hard",
+          "q": "Penulisan yang benar adalah?",
+          "options": ["antar kota", "antarkota", "antar-kota", "antarKota"],
+          "answer": 1,
+          "hint": "Bentuk terikat antar- dirangkai dengan kata sesudahnya."
+        },
+        {
+          "id": "ind-add61",
+          "subject": "indonesia",
+          "level": "easy",
+          "q": "Lawan kata 'optimis' adalah?",
+          "options": ["Yakin", "Pesimis", "Semangat", "Percaya"],
+          "answer": 1,
+          "hint": "Sikap ini cenderung tidak berharap baik."
+        },
+        {
+          "id": "ind-add62",
+          "subject": "indonesia",
+          "level": "medium",
+          "q": "Sinonim kata 'cermat' adalah?",
+          "options": ["Teliti", "Ceroboh", "Lalai", "Lamban"],
+          "answer": 0,
+          "hint": "Orang ini memperhatikan detail dengan saksama."
+        },
+        {
+          "id": "ind-add63",
+          "subject": "indonesia",
+          "level": "hard",
+          "q": "Kata baku yang tepat adalah?",
+          "options": ["Nasehat", "Nasihat", "Nasehat", "Naséhat"],
+          "answer": 1,
+          "hint": "Bentuk bakunya menggunakan huruf i."
+        },
+        {
+          "id": "ind-add64",
+          "subject": "indonesia",
+          "level": "easy",
+          "q": "Kata 'walaupun' menyatakan hubungan?",
+          "options": ["Penambahan", "Konsesif", "Pilihan", "Tujuan"],
+          "answer": 1,
+          "hint": "Menunjukkan keadaan yang berlawanan tetapi tidak menghalangi."
+        },
+        {
+          "id": "eng-add01",
+          "subject": "inggris",
+          "level": "easy",
+          "q": "What is the plural form of 'child'?",
+          "options": ["Childs", "Children", "Childes", "Childrens"],
+          "answer": 1,
+          "hint": "This noun has an irregular plural form."
+        },
+        {
+          "id": "eng-add02",
+          "subject": "inggris",
+          "level": "medium",
+          "q": "What is the past tense of 'eat'?",
+          "options": ["Eated", "Ate", "Eaten", "Eating"],
+          "answer": 1,
+          "hint": "It is an irregular verb."
+        },
+        {
+          "id": "eng-add03",
+          "subject": "inggris",
+          "level": "hard",
+          "q": "Choose the correct article: ___ umbrella.",
+          "options": ["A", "An", "The a", "No article"],
+          "answer": 1,
+          "hint": "Use 'an' before a vowel sound."
+        },
+        {
+          "id": "eng-add04",
+          "subject": "inggris",
+          "level": "easy",
+          "q": "What is the opposite of 'early'?",
+          "options": ["Fast", "Late", "Soon", "Quick"],
+          "answer": 1,
+          "hint": "It means after the expected time."
+        },
+        {
+          "id": "eng-add05",
+          "subject": "inggris",
+          "level": "medium",
+          "q": "Which word is a noun?",
+          "options": ["Beautiful", "Run", "Happiness", "Quickly"],
+          "answer": 2,
+          "hint": "A noun names a person, place, thing, or idea."
+        },
+        {
+          "id": "eng-add06",
+          "subject": "inggris",
+          "level": "hard",
+          "q": "Which word is an adjective?",
+          "options": ["Carefully", "Beauty", "Tall", "Speak"],
+          "answer": 2,
+          "hint": "An adjective describes a noun."
+        },
+        {
+          "id": "eng-add07",
+          "subject": "inggris",
+          "level": "easy",
+          "q": "Complete: They ___ playing football now.",
+          "options": ["is", "am", "are", "be"],
+          "answer": 2,
+          "hint": "Use the verb 'to be' with 'they'."
+        },
+        {
+          "id": "eng-add08",
+          "subject": "inggris",
+          "level": "medium",
+          "q": "Complete: I ___ a student.",
+          "options": ["is", "am", "are", "be"],
+          "answer": 1,
+          "hint": "Use the first-person singular form of 'to be'."
+        },
+        {
+          "id": "eng-add09",
+          "subject": "inggris",
+          "level": "hard",
+          "q": "Complete: He ___ not like coffee.",
+          "options": ["do", "does", "is", "are"],
+          "answer": 1,
+          "hint": "Use 'does' with he, she, or it."
+        },
+        {
+          "id": "eng-add10",
+          "subject": "inggris",
+          "level": "easy",
+          "q": "Choose the correct sentence.",
+          "options": [
+            "She have a cat.",
+            "She has a cat.",
+            "She haves a cat.",
+            "She having a cat."
+          ],
+          "answer": 1,
+          "hint": "Third-person singular uses 'has'."
+        },
+        {
+          "id": "eng-add11",
+          "subject": "inggris",
+          "level": "medium",
+          "q": "What is the comparative form of 'big'?",
+          "options": ["Biger", "Biggest", "Bigger", "More big"],
+          "answer": 2,
+          "hint": "Double the final consonant before -er."
+        },
+        {
+          "id": "eng-add12",
+          "subject": "inggris",
+          "level": "hard",
+          "q": "What is the superlative form of 'good'?",
+          "options": ["Goodest", "Better", "Best", "More good"],
+          "answer": 2,
+          "hint": "This adjective has an irregular superlative."
+        },
+        {
+          "id": "eng-add13",
+          "subject": "inggris",
+          "level": "easy",
+          "q": "The meaning of 'library' in Indonesian is?",
+          "options": ["Laboratorium", "Perpustakaan", "Kantor", "Toko buku"],
+          "answer": 1,
+          "hint": "A place where people borrow books."
+        },
+        {
+          "id": "eng-add14",
+          "subject": "inggris",
+          "level": "medium",
+          "q": "The meaning of 'teacher' is?",
+          "options": ["Dokter", "Guru", "Petani", "Pelajar"],
+          "answer": 1,
+          "hint": "A person who teaches students."
+        },
+        {
+          "id": "eng-add15",
+          "subject": "inggris",
+          "level": "hard",
+          "q": "What is the English word for 'kucing'?",
+          "options": ["Dog", "Bird", "Cat", "Fish"],
+          "answer": 2,
+          "hint": "A common pet that says meow."
+        },
+        {
+          "id": "eng-add16",
+          "subject": "inggris",
+          "level": "easy",
+          "q": "What is the English word for 'jendela'?",
+          "options": ["Door", "Window", "Wall", "Roof"],
+          "answer": 1,
+          "hint": "You can look outside through it."
+        },
+        {
+          "id": "eng-add17",
+          "subject": "inggris",
+          "level": "medium",
+          "q": "Which day comes after Wednesday?",
+          "options": ["Tuesday", "Thursday", "Friday", "Saturday"],
+          "answer": 1,
+          "hint": "It is the fourth weekday in a common Monday-start week."
+        },
+        {
+          "id": "eng-add18",
+          "subject": "inggris",
+          "level": "hard",
+          "q": "Which month comes before May?",
+          "options": ["March", "June", "April", "July"],
+          "answer": 2,
+          "hint": "It is the fourth month of the year."
+        },
+        {
+          "id": "eng-add19",
+          "subject": "inggris",
+          "level": "easy",
+          "q": "How many days are there in a week?",
+          "options": ["Five", "Six", "Seven", "Eight"],
+          "answer": 2,
+          "hint": "A week has seven days."
+        },
+        {
+          "id": "eng-add20",
+          "subject": "inggris",
+          "level": "medium",
+          "q": "What time is 3:30?",
+          "options": [
+            "Half past three",
+            "Quarter past three",
+            "Quarter to three",
+            "Half past four"
+          ],
+          "answer": 0,
+          "hint": "Thirty minutes after three."
+        },
+        {
+          "id": "eng-add21",
+          "subject": "inggris",
+          "level": "hard",
+          "q": "Choose the correct preposition: The book is ___ the table.",
+          "options": ["in", "on", "at", "under to"],
+          "answer": 1,
+          "hint": "The book touches the surface."
+        },
+        {
+          "id": "eng-add22",
+          "subject": "inggris",
+          "level": "easy",
+          "q": "Choose the correct preposition: I live ___ Indonesia.",
+          "options": ["on", "at", "in", "to"],
+          "answer": 2,
+          "hint": "Use this preposition with countries."
+        },
+        {
+          "id": "eng-add23",
+          "subject": "inggris",
+          "level": "medium",
+          "q": "Complete: We go to school ___ Monday.",
+          "options": ["in", "on", "at", "by"],
+          "answer": 1,
+          "hint": "Use this preposition with days."
+        },
+        {
+          "id": "eng-add24",
+          "subject": "inggris",
+          "level": "hard",
+          "q": "Complete: She was born ___ 2010.",
+          "options": ["at", "on", "in", "from"],
+          "answer": 2,
+          "hint": "Use this preposition with years."
+        },
+        {
+          "id": "eng-add25",
+          "subject": "inggris",
+          "level": "easy",
+          "q": "What is the past tense of 'go'?",
+          "options": ["Goed", "Gone", "Went", "Going"],
+          "answer": 2,
+          "hint": "It is an irregular verb."
+        },
+        {
+          "id": "eng-add26",
+          "subject": "inggris",
+          "level": "medium",
+          "q": "What is the past participle of 'write'?",
+          "options": ["Wrote", "Written", "Writing", "Writes"],
+          "answer": 1,
+          "hint": "Used with have or has."
+        },
+        {
+          "id": "eng-add27",
+          "subject": "inggris",
+          "level": "hard",
+          "q": "Complete: I have ___ my homework.",
+          "options": ["do", "did", "done", "doing"],
+          "answer": 2,
+          "hint": "Present perfect uses the past participle."
+        },
+        {
+          "id": "eng-add28",
+          "subject": "inggris",
+          "level": "easy",
+          "q": "Choose the correct question.",
+          "options": [
+            "Where you live?",
+            "Where do you live?",
+            "Where does you live?",
+            "Where are live you?"
+          ],
+          "answer": 1,
+          "hint": "Use do with the subject 'you'."
+        },
+        {
+          "id": "eng-add29",
+          "subject": "inggris",
+          "level": "medium",
+          "q": "What is the opposite of 'expensive'?",
+          "options": ["Cheap", "Rich", "Costly", "High"],
+          "answer": 0,
+          "hint": "It means not costing much money."
+        },
+        {
+          "id": "eng-add30",
+          "subject": "inggris",
+          "level": "hard",
+          "q": "What is the synonym of 'begin'?",
+          "options": ["Finish", "Start", "Close", "Stop"],
+          "answer": 1,
+          "hint": "It means to commence."
+        },
+        {
+          "id": "eng-add31",
+          "subject": "inggris",
+          "level": "easy",
+          "q": "Which sentence is in the present continuous tense?",
+          "options": [
+            "I read every day.",
+            "I am reading now.",
+            "I read yesterday.",
+            "I will read tomorrow."
+          ],
+          "answer": 1,
+          "hint": "It uses am/is/are plus verb-ing."
+        },
+        {
+          "id": "eng-add32",
+          "subject": "inggris",
+          "level": "medium",
+          "q": "Which sentence is in the simple past tense?",
+          "options": [
+            "They play outside.",
+            "They are playing.",
+            "They played yesterday.",
+            "They will play."
+          ],
+          "answer": 2,
+          "hint": "The verb shows a completed past action."
+        },
+        {
+          "id": "eng-add33",
+          "subject": "inggris",
+          "level": "hard",
+          "q": "Complete: If you study, you ___ pass the test.",
+          "options": ["will", "would have", "are", "did"],
+          "answer": 0,
+          "hint": "This is a first conditional sentence."
+        },
+        {
+          "id": "eng-add34",
+          "subject": "inggris",
+          "level": "easy",
+          "q": "What is the meaning of 'borrow'?",
+          "options": ["Meminjam", "Meminjamkan", "Membeli", "Menjual"],
+          "answer": 0,
+          "hint": "You take something and return it later."
+        },
+        {
+          "id": "eng-add35",
+          "subject": "inggris",
+          "level": "medium",
+          "q": "What is the meaning of 'lend'?",
+          "options": ["Meminjam", "Meminjamkan", "Mengembalikan", "Menyimpan"],
+          "answer": 1,
+          "hint": "You allow someone to use something temporarily."
+        },
+        {
+          "id": "eng-add36",
+          "subject": "inggris",
+          "level": "hard",
+          "q": "Which one is a question word for a place?",
+          "options": ["When", "Why", "Where", "Who"],
+          "answer": 2,
+          "hint": "Use it to ask about location."
+        },
+        {
+          "id": "eng-add37",
+          "subject": "inggris",
+          "level": "easy",
+          "q": "Which one is a question word for a reason?",
+          "options": ["What", "Why", "Where", "Which"],
+          "answer": 1,
+          "hint": "Use it to ask for a reason."
+        },
+        {
+          "id": "eng-add38",
+          "subject": "inggris",
+          "level": "medium",
+          "q": "Choose the correct pronoun: This is Anna. ___ is my friend.",
+          "options": ["He", "She", "It", "They"],
+          "answer": 1,
+          "hint": "Use this pronoun for a female person."
+        },
+        {
+          "id": "eng-add39",
+          "subject": "inggris",
+          "level": "hard",
+          "q": "Choose the correct possessive adjective: This is ___ bag.",
+          "options": ["I", "me", "my", "mine"],
+          "answer": 2,
+          "hint": "It comes before a noun."
+        },
+        {
+          "id": "eng-add40",
+          "subject": "inggris",
+          "level": "easy",
+          "q": "What is the plural of 'mouse'?",
+          "options": ["Mouses", "Mices", "Mice", "Mouse"],
+          "answer": 2,
+          "hint": "This animal name has an irregular plural."
+        },
+        {
+          "id": "eng-add41",
+          "subject": "inggris",
+          "level": "medium",
+          "q": "What is the plural of 'tooth'?",
+          "options": ["Tooths", "Teeth", "Toothes", "Tooth"],
+          "answer": 1,
+          "hint": "The vowel changes in the plural."
+        },
+        {
+          "id": "eng-add42",
+          "subject": "inggris",
+          "level": "hard",
+          "q": "Which animal is known as man's best friend?",
+          "options": ["Cat", "Horse", "Dog", "Rabbit"],
+          "answer": 2,
+          "hint": "This animal is commonly kept as a pet."
+        },
+        {
+          "id": "eng-add43",
+          "subject": "inggris",
+          "level": "easy",
+          "q": "What is the meaning of 'hungry'?",
+          "options": ["Haus", "Lapar", "Mengantuk", "Marah"],
+          "answer": 1,
+          "hint": "You feel this when you need food."
+        },
+        {
+          "id": "eng-add44",
+          "subject": "inggris",
+          "level": "medium",
+          "q": "What is the meaning of 'thirsty'?",
+          "options": ["Lapar", "Kenyang", "Haus", "Lelah"],
+          "answer": 2,
+          "hint": "You feel this when you need water."
+        },
+        {
+          "id": "eng-add45",
+          "subject": "inggris",
+          "level": "hard",
+          "q": "Complete: There ___ three apples on the plate.",
+          "options": ["is", "am", "are", "be"],
+          "answer": 2,
+          "hint": "Use the plural form of 'there be'."
+        },
+        {
+          "id": "eng-add46",
+          "subject": "inggris",
+          "level": "easy",
+          "q": "Complete: There ___ a pencil in my bag.",
+          "options": ["are", "is", "were", "be"],
+          "answer": 1,
+          "hint": "Use the singular form."
+        },
+        {
+          "id": "eng-add47",
+          "subject": "inggris",
+          "level": "medium",
+          "q": "Choose the correct spelling.",
+          "options": ["Beautifull", "Beutiful", "Beautiful", "Beautifol"],
+          "answer": 2,
+          "hint": "The word means attractive or pleasing."
+        },
+        {
+          "id": "eng-add48",
+          "subject": "inggris",
+          "level": "hard",
+          "q": "What is the opposite of 'noisy'?",
+          "options": ["Loud", "Quiet", "Busy", "Crowded"],
+          "answer": 1,
+          "hint": "It means making little or no sound."
+        },
+        {
+          "id": "eng-add49",
+          "subject": "inggris",
+          "level": "easy",
+          "q": "Which word means 'perjalanan'?",
+          "options": ["Journey", "Kitchen", "Weather", "Window"],
+          "answer": 0,
+          "hint": "It refers to travelling from one place to another."
+        },
+        {
+          "id": "eng-add50",
+          "subject": "inggris",
+          "level": "medium",
+          "q": "What is the English word for 'perpustakaan'?",
+          "options": ["Bookshop", "Library", "Classroom", "Museum"],
+          "answer": 1,
+          "hint": "Students often read or borrow books here."
+        },
+        {
+          "id": "eng-add51",
+          "subject": "inggris",
+          "level": "hard",
+          "q": "Choose the correct response: 'How are you?'",
+          "options": [
+            "I am fine, thank you.",
+            "I am ten years old.",
+            "It is a pencil.",
+            "Good night yesterday."
+          ],
+          "answer": 0,
+          "hint": "This is a common greeting response."
+        },
+        {
+          "id": "eng-add52",
+          "subject": "inggris",
+          "level": "easy",
+          "q": "Choose the correct response to 'Thank you.'",
+          "options": [
+            "Goodbye.",
+            "You're welcome.",
+            "I'm sorry.",
+            "Good morning."
+          ],
+          "answer": 1,
+          "hint": "This phrase politely replies to thanks."
+        },
+        {
+          "id": "eng-add53",
+          "subject": "inggris",
+          "level": "medium",
+          "q": "What does 'Could you help me?' express?",
+          "options": ["An apology", "A request", "A warning", "A greeting"],
+          "answer": 1,
+          "hint": "The speaker is asking someone to do something."
+        },
+        {
+          "id": "eng-add54",
+          "subject": "inggris",
+          "level": "hard",
+          "q": "Which sentence is a command?",
+          "options": [
+            "Are you ready?",
+            "Please open the door.",
+            "I like music.",
+            "She is happy."
+          ],
+          "answer": 1,
+          "hint": "It tells someone what to do."
+        },
+        {
+          "id": "eng-add55",
+          "subject": "inggris",
+          "level": "easy",
+          "q": "What is the past tense of 'see'?",
+          "options": ["Seed", "Saw", "Seen", "Seeing"],
+          "answer": 1,
+          "hint": "It is an irregular verb."
+        },
+        {
+          "id": "eng-add56",
+          "subject": "inggris",
+          "level": "medium",
+          "q": "What is the past tense of 'make'?",
+          "options": ["Maked", "Made", "Makes", "Making"],
+          "answer": 1,
+          "hint": "The vowel changes in this irregular verb."
+        },
+        {
+          "id": "eng-add57",
+          "subject": "inggris",
+          "level": "hard",
+          "q": "Complete: My father ___ a doctor.",
+          "options": ["am", "are", "is", "be"],
+          "answer": 2,
+          "hint": "Use the singular form of 'to be'."
+        },
+        {
+          "id": "eng-add58",
+          "subject": "inggris",
+          "level": "easy",
+          "q": "Complete: The children ___ in the garden.",
+          "options": ["plays", "play", "playing", "is play"],
+          "answer": 1,
+          "hint": "Use the base verb with a plural subject."
+        },
+        {
+          "id": "eng-add59",
+          "subject": "inggris",
+          "level": "medium",
+          "q": "Which word is an adverb?",
+          "options": ["Slowly", "Slow", "Slowness", "Slower"],
+          "answer": 0,
+          "hint": "It describes how an action is done."
+        },
+        {
+          "id": "eng-add60",
+          "subject": "inggris",
+          "level": "hard",
+          "q": "What is the opposite of 'strong'?",
+          "options": ["Powerful", "Weak", "Brave", "Hard"],
+          "answer": 1,
+          "hint": "It means not physically powerful."
+        },
+        {
+          "id": "eng-add61",
+          "subject": "inggris",
+          "level": "easy",
+          "q": "What does 'environment' mean?",
+          "options": ["Lingkungan", "Perjalanan", "Peraturan", "Perdagangan"],
+          "answer": 0,
+          "hint": "It includes the surroundings where living things exist."
+        },
+        {
+          "id": "eng-add62",
+          "subject": "inggris",
+          "level": "medium",
+          "q": "Complete: I usually ___ breakfast at seven.",
+          "options": ["has", "have", "having", "had been"],
+          "answer": 1,
+          "hint": "Use the base verb with 'I' in the simple present."
+        },
+        {
+          "id": "eng-add63",
+          "subject": "inggris",
+          "level": "hard",
+          "q": "Which sentence uses 'will' correctly?",
+          "options": [
+            "She will goes home.",
+            "She will go home.",
+            "She will going home.",
+            "She wills go home."
+          ],
+          "answer": 1,
+          "hint": "After will, use the base form of the verb."
+        },
+        {
+          "id": "eng-add64",
+          "subject": "inggris",
+          "level": "easy",
+          "q": "What is the opposite of 'always'?",
+          "options": ["Usually", "Often", "Never", "Sometimes"],
+          "answer": 2,
+          "hint": "This word means at no time."
+        },
+        {
+          "id": "umum-add01",
+          "subject": "umum",
+          "level": "easy",
+          "q": "Apa ibu kota Provinsi Jawa Barat?",
+          "options": ["Semarang", "Bandung", "Surabaya", "Serang"],
+          "answer": 1,
+          "hint": "Kota ini dikenal dengan julukan Kota Kembang."
+        },
+        {
+          "id": "umum-add02",
+          "subject": "umum",
+          "level": "medium",
+          "q": "Apa mata uang resmi Indonesia?",
+          "options": ["Ringgit", "Rupiah", "Baht", "Peso"],
+          "answer": 1,
+          "hint": "Simbol mata uangnya adalah Rp."
+        },
+        {
+          "id": "umum-add03",
+          "subject": "umum",
+          "level": "hard",
+          "q": "Hari Kemerdekaan Indonesia diperingati setiap tanggal?",
+          "options": ["1 Juni", "17 Agustus", "28 Oktober", "10 November"],
+          "answer": 1,
+          "hint": "Proklamasi dibacakan pada tahun 1945."
+        },
+        {
+          "id": "umum-add04",
+          "subject": "umum",
+          "level": "easy",
+          "q": "Siapa presiden pertama Republik Indonesia?",
+          "options": ["Soeharto", "B.J. Habibie", "Soekarno", "Mohammad Hatta"],
+          "answer": 2,
+          "hint": "Beliau membacakan teks proklamasi bersama Mohammad Hatta."
+        },
+        {
+          "id": "umum-add05",
+          "subject": "umum",
+          "level": "medium",
+          "q": "Siapa wakil presiden pertama Indonesia?",
+          "options": [
+            "Mohammad Hatta",
+            "Sutan Sjahrir",
+            "Ki Hajar Dewantara",
+            "Ahmad Yani"
+          ],
+          "answer": 0,
+          "hint": "Beliau dikenal sebagai Bapak Koperasi Indonesia."
+        },
+        {
+          "id": "umum-add06",
+          "subject": "umum",
+          "level": "hard",
+          "q": "Lambang negara Indonesia adalah?",
+          "options": [
+            "Garuda Pancasila",
+            "Harimau Sumatra",
+            "Komodo",
+            "Burung Cenderawasih"
+          ],
+          "answer": 0,
+          "hint": "Burung ini mencengkeram pita bertuliskan semboyan negara."
+        },
+        {
+          "id": "umum-add07",
+          "subject": "umum",
+          "level": "easy",
+          "q": "Semboyan Bhinneka Tunggal Ika memiliki arti?",
+          "options": [
+            "Bersatu kita teguh",
+            "Berbeda-beda tetapi tetap satu",
+            "Keadilan untuk semua",
+            "Maju bersama"
+          ],
+          "answer": 1,
+          "hint": "Semboyan ini menekankan persatuan dalam keberagaman."
+        },
+        {
+          "id": "umum-add08",
+          "subject": "umum",
+          "level": "medium",
+          "q": "Dasar negara Indonesia adalah?",
+          "options": ["UUD 1945", "Pancasila", "Sumpah Pemuda", "Proklamasi"],
+          "answer": 1,
+          "hint": "Terdiri atas lima sila."
+        },
+        {
+          "id": "umum-add09",
+          "subject": "umum",
+          "level": "hard",
+          "q": "Berapa jumlah sila dalam Pancasila?",
+          "options": ["3", "4", "5", "6"],
+          "answer": 2,
+          "hint": "Panca berarti lima."
+        },
+        {
+          "id": "umum-add10",
+          "subject": "umum",
+          "level": "easy",
+          "q": "Lagu kebangsaan Indonesia adalah?",
+          "options": [
+            "Bagimu Negeri",
+            "Indonesia Raya",
+            "Garuda Pancasila",
+            "Hari Merdeka"
+          ],
+          "answer": 1,
+          "hint": "Diciptakan oleh W.R. Supratman."
+        },
+        {
+          "id": "umum-add11",
+          "subject": "umum",
+          "level": "medium",
+          "q": "Siapa yang dikenal sebagai Bapak Pendidikan Nasional?",
+          "options": [
+            "Ki Hajar Dewantara",
+            "R.A. Kartini",
+            "Pattimura",
+            "Diponegoro"
+          ],
+          "answer": 0,
+          "hint": "Tanggal lahirnya diperingati sebagai Hari Pendidikan Nasional."
+        },
+        {
+          "id": "umum-add12",
+          "subject": "umum",
+          "level": "hard",
+          "q": "Tanggal Hari Pendidikan Nasional adalah?",
+          "options": ["2 Mei", "20 Mei", "1 Juni", "10 November"],
+          "answer": 0,
+          "hint": "Tanggal ini bertepatan dengan hari lahir tokoh pendidikan nasional."
+        },
+        {
+          "id": "umum-add13",
+          "subject": "umum",
+          "level": "easy",
+          "q": "Hari Pahlawan diperingati setiap?",
+          "options": ["17 Agustus", "1 Oktober", "10 November", "22 Desember"],
+          "answer": 2,
+          "hint": "Mengenang perjuangan di Surabaya pada 1945."
+        },
+        {
+          "id": "umum-add14",
+          "subject": "umum",
+          "level": "medium",
+          "q": "Organisasi negara-negara Asia Tenggara disebut?",
+          "options": ["OPEC", "ASEAN", "PBB", "APEC"],
+          "answer": 1,
+          "hint": "Indonesia termasuk negara pendirinya."
+        },
+        {
+          "id": "umum-add15",
+          "subject": "umum",
+          "level": "hard",
+          "q": "ASEAN didirikan pada tahun?",
+          "options": ["1945", "1955", "1967", "1975"],
+          "answer": 2,
+          "hint": "Deklarasi Bangkok ditandatangani pada tahun ini."
+        },
+        {
+          "id": "umum-add16",
+          "subject": "umum",
+          "level": "easy",
+          "q": "Markas besar PBB berada di kota?",
+          "options": ["London", "Paris", "New York", "Tokyo"],
+          "answer": 2,
+          "hint": "Terletak di Amerika Serikat."
+        },
+        {
+          "id": "umum-add17",
+          "subject": "umum",
+          "level": "medium",
+          "q": "Benua terbesar di dunia adalah?",
+          "options": ["Afrika", "Asia", "Eropa", "Australia"],
+          "answer": 1,
+          "hint": "Benua ini memiliki wilayah daratan terluas."
+        },
+        {
+          "id": "umum-add18",
+          "subject": "umum",
+          "level": "hard",
+          "q": "Benua terkecil di dunia adalah?",
+          "options": ["Asia", "Eropa", "Australia", "Afrika"],
+          "answer": 2,
+          "hint": "Sering juga disebut Oseania dalam konteks kawasan."
+        },
+        {
+          "id": "umum-add19",
+          "subject": "umum",
+          "level": "easy",
+          "q": "Gurun Sahara terletak di benua?",
+          "options": ["Asia", "Afrika", "Eropa", "Amerika Selatan"],
+          "answer": 1,
+          "hint": "Gurun panas luas ini berada di bagian utara benua tersebut."
+        },
+        {
+          "id": "umum-add20",
+          "subject": "umum",
+          "level": "medium",
+          "q": "Gunung tertinggi di dunia di atas permukaan laut adalah?",
+          "options": ["Kilimanjaro", "Everest", "Fuji", "Elbrus"],
+          "answer": 1,
+          "hint": "Puncaknya berada di Pegunungan Himalaya."
+        },
+        {
+          "id": "umum-add21",
+          "subject": "umum",
+          "level": "hard",
+          "q": "Sungai terpanjang di Indonesia adalah?",
+          "options": ["Kapuas", "Bengawan Solo", "Citarum", "Musi"],
+          "answer": 0,
+          "hint": "Sungai ini berada di Kalimantan Barat."
+        },
+        {
+          "id": "umum-add22",
+          "subject": "umum",
+          "level": "easy",
+          "q": "Danau terbesar di Indonesia adalah?",
+          "options": [
+            "Danau Poso",
+            "Danau Toba",
+            "Danau Singkarak",
+            "Danau Maninjau"
+          ],
+          "answer": 1,
+          "hint": "Danau vulkanik besar ini berada di Sumatra Utara."
+        },
+        {
+          "id": "umum-add23",
+          "subject": "umum",
+          "level": "medium",
+          "q": "Pulau Bali berada di sebelah timur pulau?",
+          "options": ["Sumatra", "Jawa", "Kalimantan", "Sulawesi"],
+          "answer": 1,
+          "hint": "Pulau ini dipisahkan oleh Selat Bali."
+        },
+        {
+          "id": "umum-add24",
+          "subject": "umum",
+          "level": "hard",
+          "q": "Candi Borobudur terletak di provinsi?",
+          "options": [
+            "Jawa Barat",
+            "Jawa Tengah",
+            "Jawa Timur",
+            "DI Yogyakarta"
+          ],
+          "answer": 1,
+          "hint": "Candi Buddha ini berada di Magelang."
+        },
+        {
+          "id": "umum-add25",
+          "subject": "umum",
+          "level": "easy",
+          "q": "Candi Prambanan merupakan kompleks candi bercorak?",
+          "options": ["Buddha", "Hindu", "Islam", "Kristen"],
+          "answer": 1,
+          "hint": "Kompleks ini terkenal dengan kisah Ramayana."
+        },
+        {
+          "id": "umum-add26",
+          "subject": "umum",
+          "level": "medium",
+          "q": "Rumah adat Tongkonan berasal dari?",
+          "options": ["Bali", "Toraja", "Minangkabau", "Betawi"],
+          "answer": 1,
+          "hint": "Rumah adat ini memiliki atap khas melengkung."
+        },
+        {
+          "id": "umum-add27",
+          "subject": "umum",
+          "level": "hard",
+          "q": "Tari Saman berasal dari provinsi?",
+          "options": ["Aceh", "Riau", "Banten", "Maluku"],
+          "answer": 0,
+          "hint": "Tarian ini dilakukan dengan gerakan tangan yang kompak."
+        },
+        {
+          "id": "umum-add28",
+          "subject": "umum",
+          "level": "easy",
+          "q": "Alat musik angklung berasal dari?",
+          "options": ["Jawa Barat", "Papua", "NTT", "Kalimantan Timur"],
+          "answer": 0,
+          "hint": "Alat musik ini terbuat dari bambu."
+        },
+        {
+          "id": "umum-add29",
+          "subject": "umum",
+          "level": "medium",
+          "q": "Kain tradisional batik diakui UNESCO sebagai warisan budaya takbenda pada tahun?",
+          "options": ["2005", "2009", "2012", "2015"],
+          "answer": 1,
+          "hint": "Pengakuan internasional ini terjadi pada bulan Oktober."
+        },
+        {
+          "id": "umum-add30",
+          "subject": "umum",
+          "level": "hard",
+          "q": "Hewan komodo berasal dari wilayah?",
+          "options": [
+            "Kepulauan Nusa Tenggara",
+            "Kalimantan",
+            "Sumatra",
+            "Papua"
+          ],
+          "answer": 0,
+          "hint": "Habitat alaminya antara lain Pulau Komodo dan Rinca."
+        },
+        {
+          "id": "umum-add31",
+          "subject": "umum",
+          "level": "easy",
+          "q": "Hewan endemik Indonesia yang memiliki cula satu adalah?",
+          "options": ["Badak Jawa", "Gajah Sumatra", "Anoa", "Bekantan"],
+          "answer": 0,
+          "hint": "Populasinya sangat langka di Ujung Kulon."
+        },
+        {
+          "id": "umum-add32",
+          "subject": "umum",
+          "level": "medium",
+          "q": "Burung cenderawasih dikenal berasal dari?",
+          "options": ["Jawa", "Papua", "Bali", "Madura"],
+          "answer": 1,
+          "hint": "Burung ini terkenal dengan bulunya yang indah."
+        },
+        {
+          "id": "umum-add33",
+          "subject": "umum",
+          "level": "hard",
+          "q": "Pohon yang menjadi bahan utama pembuatan kertas adalah?",
+          "options": ["Jati", "Pinus atau akasia", "Kelapa", "Bambu saja"],
+          "answer": 1,
+          "hint": "Kayunya diolah menjadi bubur kertas."
+        },
+        {
+          "id": "umum-add34",
+          "subject": "umum",
+          "level": "easy",
+          "q": "Sampah organik mudah terurai karena berasal dari?",
+          "options": ["Bahan alami makhluk hidup", "Kaca", "Logam", "Plastik"],
+          "answer": 0,
+          "hint": "Contohnya sisa sayuran dan daun."
+        },
+        {
+          "id": "umum-add35",
+          "subject": "umum",
+          "level": "medium",
+          "q": "Warna lampu lalu lintas yang berarti berhenti adalah?",
+          "options": ["Hijau", "Kuning", "Merah", "Biru"],
+          "answer": 2,
+          "hint": "Pengendara harus menghentikan kendaraan."
+        },
+        {
+          "id": "umum-add36",
+          "subject": "umum",
+          "level": "hard",
+          "q": "Alat untuk menunjukkan arah mata angin adalah?",
+          "options": ["Termometer", "Kompas", "Mikroskop", "Teleskop"],
+          "answer": 1,
+          "hint": "Jarumnya menunjuk arah utara magnetis."
+        },
+        {
+          "id": "umum-add37",
+          "subject": "umum",
+          "level": "easy",
+          "q": "Arah mata angin di antara utara dan timur adalah?",
+          "options": ["Tenggara", "Barat laut", "Timur laut", "Barat daya"],
+          "answer": 2,
+          "hint": "Arah ini disebut northeast dalam bahasa Inggris."
+        },
+        {
+          "id": "umum-add38",
+          "subject": "umum",
+          "level": "medium",
+          "q": "Jumlah hari pada tahun kabisat adalah?",
+          "options": ["364", "365", "366", "367"],
+          "answer": 2,
+          "hint": "Bulan Februari memiliki 29 hari."
+        },
+        {
+          "id": "umum-add39",
+          "subject": "umum",
+          "level": "hard",
+          "q": "Bulan yang memiliki jumlah hari paling sedikit adalah?",
+          "options": ["Januari", "Februari", "Maret", "Desember"],
+          "answer": 1,
+          "hint": "Biasanya memiliki 28 hari."
+        },
+        {
+          "id": "umum-add40",
+          "subject": "umum",
+          "level": "easy",
+          "q": "Satu abad sama dengan berapa tahun?",
+          "options": ["10", "50", "100", "1.000"],
+          "answer": 2,
+          "hint": "Abad adalah satuan waktu seratus tahun."
+        },
+        {
+          "id": "umum-add41",
+          "subject": "umum",
+          "level": "medium",
+          "q": "Satu dekade sama dengan berapa tahun?",
+          "options": ["5", "10", "20", "100"],
+          "answer": 1,
+          "hint": "Dekade berarti sepuluh tahun."
+        },
+        {
+          "id": "umum-add42",
+          "subject": "umum",
+          "level": "hard",
+          "q": "Olahraga yang menggunakan raket dan kok adalah?",
+          "options": ["Tenis meja", "Bulu tangkis", "Sepak bola", "Bola voli"],
+          "answer": 1,
+          "hint": "Permainan ini dimainkan di atas net."
+        },
+        {
+          "id": "umum-add43",
+          "subject": "umum",
+          "level": "easy",
+          "q": "Jumlah pemain inti satu tim sepak bola di lapangan adalah?",
+          "options": ["5", "6", "10", "11"],
+          "answer": 3,
+          "hint": "Termasuk seorang penjaga gawang."
+        },
+        {
+          "id": "umum-add44",
+          "subject": "umum",
+          "level": "medium",
+          "q": "Dalam bola basket, berapa poin tembakan dari luar garis tiga angka?",
+          "options": ["1", "2", "3", "4"],
+          "answer": 2,
+          "hint": "Nilainya sesuai nama garis tersebut."
+        },
+        {
+          "id": "umum-add45",
+          "subject": "umum",
+          "level": "hard",
+          "q": "Olahraga lari jarak jauh 42,195 km disebut?",
+          "options": ["Sprint", "Maraton", "Estafet", "Lompat jauh"],
+          "answer": 1,
+          "hint": "Jarak ini merupakan jarak resmi lomba maraton."
+        },
+        {
+          "id": "umum-add46",
+          "subject": "umum",
+          "level": "easy",
+          "q": "Induk organisasi sepak bola dunia adalah?",
+          "options": ["FIFA", "FIBA", "BWF", "IOC"],
+          "answer": 0,
+          "hint": "Organisasi ini mengatur sepak bola internasional."
+        },
+        {
+          "id": "umum-add47",
+          "subject": "umum",
+          "level": "medium",
+          "q": "Olimpiade musim panas biasanya diadakan setiap berapa tahun?",
+          "options": ["2", "3", "4", "5"],
+          "answer": 2,
+          "hint": "Siklus penyelenggaraannya empat tahunan."
+        },
+        {
+          "id": "umum-add48",
+          "subject": "umum",
+          "level": "hard",
+          "q": "Alat untuk melihat benda sangat kecil adalah?",
+          "options": ["Teleskop", "Mikroskop", "Periskop", "Kamera"],
+          "answer": 1,
+          "hint": "Digunakan di laboratorium."
+        },
+        {
+          "id": "umum-add49",
+          "subject": "umum",
+          "level": "easy",
+          "q": "Alat untuk mengamati benda langit yang jauh adalah?",
+          "options": ["Mikroskop", "Teleskop", "Barometer", "Kompas"],
+          "answer": 1,
+          "hint": "Alat ini mengumpulkan cahaya dari objek jauh."
+        },
+        {
+          "id": "umum-add50",
+          "subject": "umum",
+          "level": "medium",
+          "q": "Penemu telepon yang sering dicatat dalam sejarah adalah?",
+          "options": [
+            "Alexander Graham Bell",
+            "Thomas Edison",
+            "Isaac Newton",
+            "Galileo Galilei"
+          ],
+          "answer": 0,
+          "hint": "Namanya lekat dengan perkembangan telepon awal."
+        },
+        {
+          "id": "umum-add51",
+          "subject": "umum",
+          "level": "hard",
+          "q": "Penemu lampu pijar praktis yang terkenal adalah?",
+          "options": [
+            "Nikola Tesla",
+            "Thomas Alva Edison",
+            "James Watt",
+            "Louis Pasteur"
+          ],
+          "answer": 1,
+          "hint": "Tokoh ini mengembangkan sistem penerangan listrik."
+        },
+        {
+          "id": "umum-add52",
+          "subject": "umum",
+          "level": "easy",
+          "q": "Ilmuwan yang merumuskan hukum gravitasi klasik adalah?",
+          "options": [
+            "Albert Einstein",
+            "Isaac Newton",
+            "Charles Darwin",
+            "Marie Curie"
+          ],
+          "answer": 1,
+          "hint": "Kisah apel sering dikaitkan dengannya."
+        },
+        {
+          "id": "umum-add53",
+          "subject": "umum",
+          "level": "medium",
+          "q": "Bahan bakar fosil yang berbentuk cair dan diolah menjadi bensin adalah?",
+          "options": ["Batu bara", "Minyak bumi", "Gas alam", "Uranium"],
+          "answer": 1,
+          "hint": "Sumber energi ini berasal dari proses geologi jutaan tahun."
+        },
+        {
+          "id": "umum-add54",
+          "subject": "umum",
+          "level": "hard",
+          "q": "Mata uang Jepang adalah?",
+          "options": ["Yuan", "Won", "Yen", "Baht"],
+          "answer": 2,
+          "hint": "Simbolnya sering ditulis ¥."
+        },
+        {
+          "id": "umum-add55",
+          "subject": "umum",
+          "level": "easy",
+          "q": "Ibu kota Australia adalah?",
+          "options": ["Sydney", "Melbourne", "Canberra", "Perth"],
+          "answer": 2,
+          "hint": "Kota ini menjadi pusat pemerintahan federal."
+        },
+        {
+          "id": "umum-add56",
+          "subject": "umum",
+          "level": "medium",
+          "q": "Ibu kota Thailand adalah?",
+          "options": ["Hanoi", "Bangkok", "Manila", "Phnom Penh"],
+          "answer": 1,
+          "hint": "Kota ini berada di tepi Sungai Chao Phraya."
+        },
+        {
+          "id": "umum-add57",
+          "subject": "umum",
+          "level": "hard",
+          "q": "Menara Eiffel berada di negara?",
+          "options": ["Italia", "Prancis", "Jerman", "Spanyol"],
+          "answer": 1,
+          "hint": "Bangunan terkenal ini berada di Paris."
+        },
+        {
+          "id": "umum-add58",
+          "subject": "umum",
+          "level": "easy",
+          "q": "Patung Liberty berada di negara?",
+          "options": ["Kanada", "Amerika Serikat", "Brasil", "Meksiko"],
+          "answer": 1,
+          "hint": "Monumen ini berada di New York."
+        },
+        {
+          "id": "umum-add59",
+          "subject": "umum",
+          "level": "medium",
+          "q": "Bahasa resmi Brasil adalah?",
+          "options": ["Spanyol", "Portugis", "Inggris", "Prancis"],
+          "answer": 1,
+          "hint": "Negara ini merupakan negara berbahasa utama Portugis di Amerika Selatan."
+        },
+        {
+          "id": "umum-add60",
+          "subject": "umum",
+          "level": "hard",
+          "q": "Berapakah jumlah warna pada pelangi yang umum diajarkan?",
+          "options": ["5", "6", "7", "8"],
+          "answer": 2,
+          "hint": "Urutannya sering diingat dengan singkatan mejikuhibiniu."
+        },
+        {
+          "id": "umum-add61",
+          "subject": "umum",
+          "level": "easy",
+          "q": "Simbol kimia emas adalah?",
+          "options": ["Ag", "Au", "Fe", "Cu"],
+          "answer": 1,
+          "hint": "Simbolnya berasal dari nama Latin aurum."
+        },
+        {
+          "id": "umum-add62",
+          "subject": "umum",
+          "level": "medium",
+          "q": "Simbol kimia besi adalah?",
+          "options": ["Bi", "Be", "Fe", "Br"],
+          "answer": 2,
+          "hint": "Simbol ini berasal dari kata Latin ferrum."
+        },
+        {
+          "id": "umum-add63",
+          "subject": "umum",
+          "level": "hard",
+          "q": "Satuan dasar untuk mengukur panjang dalam SI adalah?",
+          "options": ["Liter", "Meter", "Gram", "Sekon"],
+          "answer": 1,
+          "hint": "Simbol satuannya adalah m."
+        },
+        {
+          "id": "umum-add64",
+          "subject": "umum",
+          "level": "easy",
+          "q": "Perangkat komputer yang digunakan untuk mengetik adalah?",
+          "options": ["Monitor", "Keyboard", "Speaker", "Printer"],
+          "answer": 1,
+          "hint": "Perangkat masukan ini memiliki tombol huruf."
+        }
+      ]
     }
-  ]
-}
