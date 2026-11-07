@@ -168,3 +168,14 @@ Edit `data/questions.json`. Setiap soal berbentuk:
 - Soal di dalam satu area tidak berulang sampai semuanya muncul. Tingkat kesulitan tetap menyesuaikan jawaban pemain (DDA).
 - Bonus +15 🪙 jika semua kotak ❓ di sebuah area berhasil dibuka.
 - Saran jumlah soal: **60 atau lebih** (sekitar 8 soal per area) agar tidak ada soal yang terulang lintas area.
+
+## Kunci & Kontrol Sentuh
+
+- **Kunci 🔑 per area = 50% dari jumlah soal area itu** (minimal 3). Contoh: area berisi 20 soal → butuh 10 kunci. Jumlah tampil di HUD (mis. 🔑 4/10) dan di kartu level.
+- Tombol sentuh otomatis menyesuaikan layar: ukuran mengikuti lebar/tinggi layar HP, lebih besar (tapi dibatasi) di tablet, menghormati *safe area* (notch). ◀ ▶ di kiri, Lompat dan Skill bertumpuk di kanan sehingga tidak saling menimpa.
+
+## Batas 20 Kotak & Soal Berganti Tiap Main
+
+- Setiap area memuat **maksimal 20 kotak ❓** (ditambah ronde bos). Kunci 🔑 = 50% dari jumlah kotak (maks. 10).
+- Seluruh bank soal area tetap terpakai: tiap kali masuk area, soal diambil dari yang **belum pernah muncul** (riwayat tersimpan di LocalStorage per mata pelajaran & area). Setelah semua soal area habis dipakai, putaran baru dimulai.
+- Soal tanpa `id` otomatis diberi ID dari isinya.

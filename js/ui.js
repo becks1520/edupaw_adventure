@@ -65,11 +65,12 @@
       $("#hud-level").textContent = name;
     },
 
-    setStats({ coins, keys, score }) {
+    setStats({ coins, keys, need = E.KEYS_REQUIRED, score }) {
       $("#hud-coins").textContent = coins;
       $("#hud-keys").textContent = keys;
+      $("#hud-keys-need").textContent = need;
       $("#hud-score").textContent = score;
-      $("#hud-keys-chip").classList.toggle("ready", keys >= E.KEYS_REQUIRED);
+      $("#hud-keys-chip").classList.toggle("ready", keys >= need);
     },
 
     initAbility(c) {
@@ -381,13 +382,13 @@
     },
     {
       icon: "🔑",
-      title: "Misi: Kumpulkan 3 Kunci",
+      title: "Misi: Kumpulkan Kunci",
       html: () => `
         <ol class="how-steps">
           <li><b>Sundul kotak ❓</b> dari bawah dengan melompat.</li>
           <li><b>Jawab kuis</b> yang muncul. Jawaban benar memberi <b>🔑 Kunci Angka</b> dan koin.</li>
           <li>Salah jawab? Tenang, kotaknya <b>bisa dicoba lagi</b>.</li>
-          <li>Kumpulkan <b>minimal 3 🔑</b>. Bendera finish baru menyala dan bisa disentuh.</li>
+          <li>Kumpulkan <b>🔑 sebanyak 50% dari jumlah soal</b> di area itu (minimal 3). Jumlahnya tampil di pojok atas, mis. 🔑 4/10. Bendera finish baru menyala dan bisa disentuh.</li>
         </ol>
         <div class="how-demo">
           <span class="chip">🔑 <b>2</b>/3</span><span class="arrow">➜</span>
@@ -459,7 +460,7 @@
             <p>Bos berhenti dan muncul kuis. <b>Benar = bos terluka 💥 (-1 HP)</b>. Salah = bos menembak balik 3 bola.</p>
           </div>
         </div>
-        <p class="how-note">Ulangi sampai HP bos habis, lalu pastikan punya 3 🔑 dan sentuh bendera finish 🏁.</p>`,
+        <p class="how-note">Ulangi sampai HP bos habis, lalu pastikan punya semua 🔑 yang dibutuhkan dan sentuh bendera finish 🏁.</p>`,
     },
     {
       icon: "👥",
@@ -615,9 +616,12 @@
           <p>${
             lv.boss
               ? `${lv.boss.emoji} Bos: <b>${esc(lv.boss.name)}</b> (HP ${lv.boss.hp}). Fase hindari + Quiz Attack.`
-              : "Kumpulkan 3 Kunci 🔑 dari kotak ❓ lalu capai bendera finish."
+              : `Kumpulkan ${E.levelQuiz(i, d.subject).keys} Kunci 🔑 dari kotak ❓ lalu capai bendera finish.`
           }</p>
-          <span class="tag">📚 ${E.levelQuiz(i, d.subject).slice.length} soal · ${stars}${done ? ` · Skor ${done.best}` : ""}</span>
+          <span class="tag">📚 ${(() => {
+            const z = E.levelQuiz(i, d.subject);
+            return z.boxCount + z.bossRounds;
+          })()} soal/main · bank ${E.levelQuiz(i, d.subject).slice.length} · ${stars}${done ? ` · Skor ${done.best}` : ""}</span>
           <div class="actions">
             <button class="btn small" data-act="play" data-i="${i}" ${locked ? "disabled" : ""}>${locked ? "🔒 Terkunci" : "Mulai"}</button>
           </div>

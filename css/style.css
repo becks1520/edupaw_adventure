@@ -1718,3 +1718,75 @@ kbd {
   white-space: nowrap;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
 }
+
+/* ==========================================================================
+   KONTROL SENTUH RESPONSIF (HP & tablet)
+   Ukuran tombol mengikuti layar: --tb = ukuran dasar tombol.
+   Kiri: ◀ ▶ berdampingan. Kanan: Lompat (bawah) + Skill (di atasnya).
+   ========================================================================== */
+body.touch {
+  --tb: clamp(44px, min(13vw, 17vh), 68px);
+  --edge-l: max(12px, env(safe-area-inset-left));
+  --edge-r: max(12px, env(safe-area-inset-right));
+  --edge-b: max(14px, env(safe-area-inset-bottom));
+  --gap: clamp(8px, 2vw, 16px);
+}
+
+/* Tablet: sedikit lebih besar tapi tetap terbatas */
+@media (min-width: 700px) and (min-height: 500px) {
+  body.touch {
+    --tb: clamp(60px, min(9vw, 14vh), 88px);
+  }
+}
+
+body.touch #touch button {
+  width: var(--tb);
+  height: var(--tb);
+  font-size: calc(var(--tb) * 0.4);
+  border-width: 2px;
+  background: rgba(35, 50, 74, 0.45);
+  bottom: var(--edge-b);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+body.touch #touch .dpad button:first-child {
+  left: var(--edge-l);
+}
+
+body.touch #touch .dpad button:last-child {
+  left: calc(var(--edge-l) + var(--tb) + var(--gap));
+}
+
+body.touch #touch #t-jump {
+  right: var(--edge-r);
+  bottom: var(--edge-b);
+  width: calc(var(--tb) * 1.2);
+  height: calc(var(--tb) * 1.2);
+  font-size: calc(var(--tb) * 0.5);
+}
+
+body.touch #ability {
+  right: var(--edge-r);
+  bottom: calc(var(--edge-b) + var(--tb) * 1.2 + var(--gap));
+  width: calc(var(--tb) * 1.05);
+  height: calc(var(--tb) * 1.05);
+  border-width: 3px;
+}
+
+body.touch #ability #ab-emoji {
+  font-size: calc(var(--tb) * 0.4);
+}
+
+body.touch #ability #ab-name {
+  font-size: clamp(8px, calc(var(--tb) * 0.15), 11px);
+  margin-top: 0;
+}
+
+body.touch #ability #ab-cd {
+  font-size: calc(var(--tb) * 0.35);
+}

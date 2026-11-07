@@ -495,7 +495,15 @@
           console.warn(`[EduPaw] ID ganda dilewati: ${q.id}`);
           return;
         }
-        if (q.id) seen.add(q.id);
+        if (!q.id) {
+          // ID otomatis dari isi soal (stabil antar sesi) untuk riwayat soal yang sudah muncul
+          let h = 0;
+          const txt = String(q.q);
+          for (let k = 0; k < txt.length; k++) h = (h * 31 + txt.charCodeAt(k)) | 0;
+          q.id = `auto_${(h >>> 0).toString(36)}`;
+          if (seen.has(q.id)) return;
+        }
+        seen.add(q.id);
         all.push(q);
       });
     });
@@ -521,6 +529,7 @@
      (deterministik), jadi sama di semua perangkat pada mode balapan LAN.
      --------------------------------------------------------------------- */
   E.MIN_BOXES = 5;
+  E.MAX_BOXES = 20; // batas kotak ❓ per area; sisa soal dipakai bergiliran tiap main
 
   function seededRandom(seed) {
     let a = seed >>> 0;
@@ -589,8 +598,13 @@
     }
     if (!slice.length) slice = E.questionPool(subject);
 
-    const boxCount = Math.max(E.MIN_BOXES, slice.length - bossRounds);
-    return { slice, bossRounds, boxCount };
+    const boxCount = Math.min(E.MAX_BOXES, Math.max(E.MIN_BOXES, slice.length - bossRounds));
+    // Kunci wajib = 50% dari jumlah kotak soal area (min. 3, maks. boxCount - 1 agar tetap bisa salah)
+    const keys = Math.max(
+      E.KEYS_REQUIRED,
+      Math.min(Math.ceil(boxCount * 0.5), Math.max(E.KEYS_REQUIRED, boxCount - 1))
+    );
+    return { slice, bossRounds, boxCount, keys: Math.min(keys, boxCount) };
   };
 
   /* ---------------------------------------------------------------------
@@ -602,6 +616,7 @@
     name: "Pemain",
     starterChosen: false,
     seenHowto: false,
+    seenQ: {}, // riwayat id soal yang sudah muncul per area (agar tiap main berbeda)
     selected: "foxy",
     unlocked: [],
     upgrades: {},

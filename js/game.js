@@ -33,8 +33,10 @@
      ====================================================================== */
   class AdaptiveEngine {
     /** @param {Array} pool jatah soal untuk area ini */
-    constructor(pool) {
+    constructor(pool, seen, onUse) {
       this.pool = pool.slice();
+      this.seen = new Set(seen || []); // soal yang sudah muncul di permainan sebelumnya
+      this.onUse = onUse;
       this.levelIdx = 0;
       this.correctStreak = 0;
       this.wrongStreak = 0;
@@ -48,10 +50,15 @@
 
     /** Pilih soal yang belum muncul; utamakan tingkat sekarang, lalu yang terdekat. */
     pick() {
-      let fresh = this.pool.filter((q) => !this.used.has(q));
+      let fresh = this.pool.filter((q) => !this.used.has(q) && !this.seen.has(q.id));
       if (!fresh.length) {
-        this.used.clear();
-        fresh = this.pool.slice();
+        // Semua soal area sudah pernah muncul: mulai putaran baru (hindari yang baru saja keluar)
+        this.seen.clear();
+        fresh = this.pool.filter((q) => !this.used.has(q));
+        if (!fresh.length) {
+          this.used.clear();
+          fresh = this.pool.slice();
+        }
       }
       const order = E.DIFFICULTIES.map((d, i) => i).sort(
         (a, b) => Math.abs(a - this.levelIdx) - Math.abs(b - this.levelIdx) || a - b
@@ -64,6 +71,8 @@
       if (!cand.length) cand = fresh;
       const q = cand[Math.floor(Math.random() * cand.length)];
       this.used.add(q);
+      this.seen.add(q.id);
+      if (this.onUse) this.onUse(q, this.seen);
       return q;
     }
 
@@ -617,6 +626,7 @@
       const quiz = E.levelQuiz(this.levelIdx, subject);
       this.quizPlan = quiz;
       this.boxTotal = quiz.boxCount;
+      this.keysNeeded = quiz.keys;
 
       const built = buildLevel(this.levelIdx, o.seed || 20260101, quiz.boxCount);
       this.grid = built.grid.map((row) => row.slice());
@@ -653,7 +663,12 @@
       this.airJumps = 0;
       this.coyote = 0;
       this.fx = E.wardrobeEffects();
-      this.ai = new AdaptiveEngine(quiz.slice);
+      const seenKey = `${subject}|${this.levelIdx}`;
+      Save.data.seenQ = Save.data.seenQ || {};
+      this.ai = new AdaptiveEngine(quiz.slice, Save.data.seenQ[seenKey], (q, seen) => {
+        Save.data.seenQ[seenKey] = Array.from(seen);
+        Save.write();
+      });
 
       this.physics.resume();
       this.tweens.resumeAll();
@@ -680,8 +695,8 @@
       this.events.once("shutdown", () => this.cleanup());
       UI.Toast.show(
         this.meta.boss
-          ? `${this.meta.boss.emoji} Kumpulkan 3 🔑 lalu kalahkan ${this.meta.boss.name}!`
-          : `🔑 Kumpulkan 3 kunci dari ${this.boxTotal} kotak ❓ lalu capai bendera!`,
+          ? `${this.meta.boss.emoji} Kumpulkan ${this.keysNeeded} 🔑 lalu kalahkan ${this.meta.boss.name}!`
+          : `🔑 Kumpulkan ${this.keysNeeded} kunci dari ${this.boxTotal} kotak ❓ lalu capai bendera!`,
         3200
       );
     }
@@ -1157,13 +1172,14 @@
 
     onFinishFlag() {
       if (this.finished) return;
-      const ready = this.state.keys >= E.KEYS_REQUIRED && this.bossDefeated;
+      const ready = this.state.keys >= this.keysNeeded && this.bossDefeated;
       if (ready) {
         this.finishLevel();
       } else if (this.levelTime - this.lastFlagToast > 2.5) {
         this.lastFlagToast = this.levelTime;
         const need = [];
-        if (this.state.keys < E.KEYS_REQUIRED) need.push(`3 kunci 🔑 (${this.state.keys}/3)`);
+        if (this.state.keys < this.keysNeeded)
+          need.push(`${this.keysNeeded} kunci 🔑 (${this.state.keys}/${this.keysNeeded})`);
         if (!this.bossDefeated) need.push("kalahkan bos 👑");
         UI.Toast.show(`Bendera terkunci! Butuh ${need.join(" dan ")}`, 2200);
       }
@@ -1171,7 +1187,7 @@
 
     refreshFlag() {
       if (!this.finishFlag) return;
-      const ready = this.state.keys >= E.KEYS_REQUIRED && this.bossDefeated;
+      const ready = this.state.keys >= this.keysNeeded && this.bossDefeated;
       this.finishFlag.setTexture(ready ? "flagOn" : "flag");
     }
 
@@ -1497,7 +1513,7 @@
           s.boxesDone++;
           ctx.box.setTexture("boxUsed");
           this.refreshFlag();
-          UI.Toast.show(`🔑 Kunci Angka didapat (${s.keys}/${E.KEYS_REQUIRED})`, 1800);
+          UI.Toast.show(`🔑 Kunci Angka didapat (${s.keys}/${this.keysNeeded})`, 1800);
         } else {
           ctx.box.setData("used", false);
         }
@@ -1539,7 +1555,12 @@
     }
 
     hudStats() {
-      return { coins: this.state.coins, keys: this.state.keys, score: this.calcScore() };
+      return {
+        coins: this.state.coins,
+        keys: this.state.keys,
+        need: this.keysNeeded,
+        score: this.calcScore(),
+      };
     }
 
     /* ----------------------------- Selesai level ----------------------------- */
