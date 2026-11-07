@@ -84,9 +84,14 @@
       b.classList.toggle("active", !!active);
     },
 
-    bossBar(show, ratio) {
+    bossBar(show, ratio, cfg) {
       $("#boss-bar").classList.toggle("hidden", !show);
-      if (show) $("#boss-fill").style.width = `${Math.max(0, ratio) * 100}%`;
+      if (!show) return;
+      $("#boss-fill").style.width = `${Math.max(0, ratio) * 100}%`;
+      if (cfg) {
+        $("#boss-emoji").textContent = cfg.emoji;
+        $("#boss-name").textContent = cfg.name;
+      }
     },
 
     /** list: [{name, label, me}] atau null untuk menyembunyikan */
@@ -398,6 +403,7 @@
           <li>✅ <b>3 jawaban benar</b> beruntun: soal naik tingkat.</li>
           <li>❌ <b>2 jawaban salah</b> beruntun: soal dibuat lebih mudah dan muncul <b>💡 petunjuk visual</b>.</li>
           <li>🪙 Setiap jawaban benar memberi <b>+5 koin edukasi</b>.</li>
+          <li>📚 Semua soal dibagi rata ke seluruh area, jadi <b>setiap soal di bank soal akan muncul</b> selama petualangan.</li>
         </ul>
         <div class="how-demo levels">
           <span class="lv easy">Mudah</span><span class="arrow">⇄</span>
@@ -434,13 +440,19 @@
     },
     {
       icon: "👑",
-      title: "Melawan Bos Raja Angka",
+      title: "Melawan Para Bos",
       html: () => `
-        <div class="boss-bar"><span>👑</span><div><i></i></div><b>HP 5</b></div>
+        <ul class="how-list tight">
+          ${E.LEVELS.map((lv, i) =>
+            lv.boss
+              ? `<li>${lv.boss.emoji} <b>Level ${i + 1}: ${lv.boss.name}</b> · HP ${lv.boss.hp}</li>`
+              : ""
+          ).join("")}
+        </ul>
         <div class="how-cols">
           <div class="how-box">
             <h4>🏃 Fase 1: Hindari</h4>
-            <p>Bos berjalan dan melompat sambil menembakkan bola angka. <b>Hindari selama 12 detik</b>.</p>
+            <p>Bos berjalan dan melompat sambil menembakkan bola angka. <b>Hindari beberapa detik</b>.</p>
           </div>
           <div class="how-box">
             <h4>⚡ Fase 2: Quiz Attack</h4>
@@ -513,7 +525,7 @@
           </div>
         </form>
         <div class="mascot">${E.avatar(d.selected)}</div>
-        <p class="copy">EduPaw Adventure © 2026</p>`;
+        <div class="lfoot"><b>Edupaw Adventure</b><br />Dikembangkan oleh Kuslan Wawan © 2026</div>`;
     },
 
     screen_home() {
@@ -598,10 +610,14 @@
         const stars = done ? "⭐".repeat(done.stars) + "☆".repeat(3 - done.stars) : "☆☆☆";
         return `
         <div class="card ${locked ? "locked" : ""}">
-          <div class="em">${lv.boss ? "👑" : i === 0 ? "🌳" : "💎"}</div>
+          <div class="em">${lv.emoji}</div>
           <h3>Level ${i + 1}: ${lv.name}</h3>
-          <p>${lv.boss ? "Pertarungan bos: fase hindari + fase Quiz Attack." : "Kumpulkan 3 Kunci 🔑 dari kotak ❓ lalu capai bendera finish."}</p>
-          <span class="tag">${stars}${done ? ` · Skor ${done.best}` : ""}</span>
+          <p>${
+            lv.boss
+              ? `${lv.boss.emoji} Bos: <b>${esc(lv.boss.name)}</b> (HP ${lv.boss.hp}). Fase hindari + Quiz Attack.`
+              : "Kumpulkan 3 Kunci 🔑 dari kotak ❓ lalu capai bendera finish."
+          }</p>
+          <span class="tag">📚 ${E.levelQuiz(i, d.subject).slice.length} soal · ${stars}${done ? ` · Skor ${done.best}` : ""}</span>
           <div class="actions">
             <button class="btn small" data-act="play" data-i="${i}" ${locked ? "disabled" : ""}>${locked ? "🔒 Terkunci" : "Mulai"}</button>
           </div>
@@ -731,9 +747,10 @@
           l.mode === "race"
             ? `<label for="lob-level">Level</label>
                <select id="lob-level" data-field="level">
-                 ${E.LEVELS.slice(0, 2)
+                 ${E.LEVELS.map((lv, i) => ({ lv, i }))
+                   .filter((x) => !x.lv.boss)
                    .map(
-                     (lv, i) =>
+                     ({ lv, i }) =>
                        `<option value="${i}" ${Number(l.level) === i ? "selected" : ""}>Level ${i + 1}: ${lv.name}</option>`
                    )
                    .join("")}

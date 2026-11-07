@@ -1089,6 +1089,18 @@ button {
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.45);
 }
 
+.lfoot {
+  position: relative;
+  z-index: 2;
+  margin: 12px 0 0;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.35;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
 /* ---------- Avatar hewan ---------- */
 .avatar {
   position: relative;
@@ -1657,6 +1669,16 @@ kbd {
     display: none;
   }
 
+  .lfoot {
+    position: fixed;
+    right: 8px;
+    bottom: 6px;
+    max-width: 19vw;
+    margin: 0;
+    font-size: 9px;
+    text-align: right;
+  }
+
   .mascot {
     width: 110px;
   }
@@ -1687,4 +1709,12 @@ kbd {
   .heading {
     font-size: 26px;
   }
+}
+
+#boss-name {
+  font-size: 12px;
+  font-weight: 800;
+  color: #fff;
+  white-space: nowrap;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
 }

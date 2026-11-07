@@ -126,3 +126,45 @@ Semua sprite dibuat prosedural (`makeTextures` di `js/game.js`) agar proyek lang
 - `hapus-autostart.bat` - mematikan fitur autostart.
 
 Pemain lain di Wi-Fi yang sama membuka `http://IP-KOMPUTER:3003`. Saat pertama kali, izinkan Node.js di Windows Firewall (jaringan Private).
+
+## Area Petualangan & Bos
+
+Ada **8 area**, 4 di antaranya memiliki bos:
+
+| Level | Area               | Bos                      | HP  |
+| ----- | ------------------ | ------------------------ | --- |
+| 1     | Padang Rumput      | -                        | -   |
+| 2     | Hutan Berbunga     | 🐝 Ratu Lebah Hitung     | 3   |
+| 3     | Gua Kristal        | -                        | -   |
+| 4     | Gurun Pasir        | 🌵 Raja Kaktus Soal      | 4   |
+| 5     | Gunung Salju       | -                        | -   |
+| 6     | Pulau Awan         | 🐉 Naga Awan Kuis        | 5   |
+| 7     | Gunung Api         | -                        | -   |
+| 8     | Benteng Raja Angka | 👑 Raja Angka (terakhir) | 7   |
+
+Level dibuat otomatis (deterministik) dari `E.LEVELS` di `js/config.js`. Untuk mengubah panjang area, ubah `length`;
+untuk mengubah kekuatan bos, ubah `hp`, `speed`, `shoot`, `ball`, dan `dodge`.
+
+## Menambah Soal (semua soal ditampilkan)
+
+Edit `data/questions.json`. Setiap soal berbentuk:
+
+```json
+{
+  "id": "mat-01",
+  "subject": "matematika",
+  "level": "easy",
+  "q": "7 + 5 = ?",
+  "options": ["10", "11", "12", "13"],
+  "answer": 2,
+  "hint": "..."
+}
+```
+
+- `level`: `easy`, `medium`, atau `hard`. `answer` adalah nomor pilihan yang benar, dimulai dari 0. `id` harus unik.
+- Semua array soal di file digabung, apa pun nama kuncinya. Soal yang salah format dilewati dan dilaporkan di console (F12).
+- **Semua soal dibagi otomatis ke 8 area.** Area dengan bos mendapat jatah lebih banyak. Jumlah kotak ❓ tiap area
+  mengikuti jatah soalnya (minimal 5), jadi makin banyak soal, makin panjang petualangannya.
+- Soal di dalam satu area tidak berulang sampai semuanya muncul. Tingkat kesulitan tetap menyesuaikan jawaban pemain (DDA).
+- Bonus +15 🪙 jika semua kotak ❓ di sebuah area berhasil dibuka.
+- Saran jumlah soal: **60 atau lebih** (sekitar 8 soal per area) agar tidak ada soal yang terulang lintas area.

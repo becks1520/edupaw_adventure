@@ -150,23 +150,133 @@
   E.LEVELS = [
     {
       name: "Padang Rumput",
+      emoji: "🌳",
       theme: "grass",
       sky: 0x8fd3ff,
       tint: 0xffffff,
       pit: 3,
       enemySpeed: 60,
+      length: 14,
     },
-    { name: "Gua Kristal", theme: "cave", sky: 0x2a2f5a, tint: 0x9fb4ff, pit: 4, enemySpeed: 80 },
+    {
+      name: "Hutan Berbunga",
+      emoji: "🌸",
+      theme: "grass",
+      sky: 0xa9e6b0,
+      tint: 0xd8ffd0,
+      pit: 3,
+      enemySpeed: 65,
+      length: 15,
+      boss: {
+        name: "Ratu Lebah Hitung",
+        emoji: "🐝",
+        tex: "boss1",
+        hp: 3,
+        speed: 90,
+        shoot: 1.9,
+        ball: 180,
+        dodge: 10,
+      },
+    },
+    {
+      name: "Gua Kristal",
+      emoji: "💎",
+      theme: "cave",
+      sky: 0x2a2f5a,
+      tint: 0x9fb4ff,
+      pit: 4,
+      enemySpeed: 80,
+      length: 17,
+    },
+    {
+      name: "Gurun Pasir",
+      emoji: "🏜️",
+      theme: "desert",
+      sky: 0xffd89a,
+      tint: 0xffe0a0,
+      pit: 4,
+      enemySpeed: 70,
+      length: 18,
+      boss: {
+        name: "Raja Kaktus Soal",
+        emoji: "🌵",
+        tex: "boss2",
+        hp: 4,
+        speed: 105,
+        shoot: 1.7,
+        ball: 200,
+        dodge: 11,
+      },
+    },
+    {
+      name: "Gunung Salju",
+      emoji: "❄️",
+      theme: "snow",
+      sky: 0xcfe9ff,
+      tint: 0xe8f4ff,
+      pit: 4,
+      enemySpeed: 75,
+      length: 20,
+    },
+    {
+      name: "Pulau Awan",
+      emoji: "☁️",
+      theme: "sky",
+      sky: 0x6fb8ff,
+      tint: 0xfff0ff,
+      pit: 4,
+      enemySpeed: 80,
+      length: 21,
+      boss: {
+        name: "Naga Awan Kuis",
+        emoji: "🐉",
+        tex: "boss3",
+        hp: 5,
+        speed: 115,
+        shoot: 1.5,
+        ball: 220,
+        dodge: 11,
+      },
+    },
+    {
+      name: "Gunung Api",
+      emoji: "🌋",
+      theme: "volcano",
+      sky: 0x4a1d1d,
+      tint: 0xff9a70,
+      pit: 4,
+      enemySpeed: 90,
+      length: 23,
+    },
     {
       name: "Benteng Raja Angka",
+      emoji: "🏰",
       theme: "castle",
       sky: 0x4a2c3b,
       tint: 0xffb3a0,
-      pit: 3,
-      enemySpeed: 70,
-      boss: true,
+      pit: 4,
+      enemySpeed: 85,
+      length: 24,
+      boss: {
+        name: "Raja Angka",
+        emoji: "👑",
+        tex: "boss",
+        hp: 7,
+        speed: 125,
+        shoot: 1.4,
+        ball: 240,
+        dodge: 12,
+      },
     },
   ];
+
+  /** Warna tubuh tiap bos (dipakai pembuat tekstur di game.js). */
+  E.BOSS_LOOKS = {
+    boss: { horn: 0x4b2e8c, body: 0x6b4bb8, belly: 0x9a7be0, crown: 0xffd23f, mouth: 0x2b1655 },
+    boss1: { horn: 0x8a5a00, body: 0xf2b705, belly: 0xffe08a, crown: 0xff5a5f, mouth: 0x5a3b00 },
+    boss2: { horn: 0x2d7a3c, body: 0x3f9b4f, belly: 0x9ad99a, crown: 0xff7043, mouth: 0x1f4d28 },
+    boss3: { horn: 0x2f7fc4, body: 0x4fa3e8, belly: 0xcdeaff, crown: 0xffd23f, mouth: 0x1c4f80 },
+  };
 
   /* ---------------------------------------------------------------------
      Wardrobe (aksesori + efek status)
@@ -405,6 +515,85 @@
   };
 
   /* ---------------------------------------------------------------------
+     Pembagian soal ke seluruh area petualangan
+     Semua soal di bank dibagi ke area (area dengan bos mendapat jatah lebih
+     banyak karena bos butuh banyak ronde kuis). Pembagian bersifat tetap
+     (deterministik), jadi sama di semua perangkat pada mode balapan LAN.
+     --------------------------------------------------------------------- */
+  E.MIN_BOXES = 5;
+
+  function seededRandom(seed) {
+    let a = seed >>> 0;
+    return function () {
+      a = (a + 0x6d2b79f5) >>> 0;
+      let t = a;
+      t = Math.imul(t ^ (t >>> 15), t | 1);
+      t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+      return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+    };
+  }
+
+  E.questionPool = function (subject) {
+    const all = E.questions || [];
+    const pool = all.filter((q) => !subject || subject === "mixed" || q.subject === subject);
+    return pool.length ? pool : all.slice();
+  };
+
+  /** Mengembalikan array soal per area (panjang = jumlah area). */
+  E.campaignSlices = function (subject) {
+    const pool = E.questionPool(subject);
+    const rng = seededRandom(20260101 + pool.length);
+
+    // Dek tercampur rata antar tingkat kesulitan: urutkan berdasarkan posisi relatif di grupnya.
+    const keyed = [];
+    E.DIFFICULTIES.forEach((d) => {
+      const group = pool
+        .filter((q) => q.level === d)
+        .sort((a, b) => String(a.id).localeCompare(String(b.id)));
+      for (let i = group.length - 1; i > 0; i--) {
+        const j = Math.floor(rng() * (i + 1));
+        [group[i], group[j]] = [group[j], group[i]];
+      }
+      group.forEach((q, i) => keyed.push({ q, k: (i + rng() * 0.8) / group.length }));
+    });
+    const deck = keyed.sort((a, b) => a.k - b.k).map((x) => x.q);
+
+    const weights = E.LEVELS.map((lv) => (lv.boss ? 1 + lv.boss.hp / 5 : 1));
+    const total = weights.reduce((a, b) => a + b, 0);
+    const slices = [];
+    let cum = 0;
+    let from = 0;
+    weights.forEach((w) => {
+      cum += w;
+      const to = Math.round((cum / total) * deck.length);
+      slices.push(deck.slice(from, to));
+      from = to;
+    });
+    return slices;
+  };
+
+  /** Rencana kuis satu area: daftar soal, jumlah kotak ❓, dan ronde bos. */
+  E.levelQuiz = function (index, subject) {
+    const lv = E.LEVELS[index];
+    const slices = E.campaignSlices(subject);
+    let slice = (slices[index] || []).slice();
+    const bossRounds = lv.boss ? lv.boss.hp : 0;
+
+    // Jatah terlalu sedikit (bank soal kecil)? Lengkapi dari soal area lain agar tidak berulang-ulang.
+    const need = E.MIN_BOXES + bossRounds;
+    if (slice.length < need) {
+      const others = slices.flat().filter((q) => !slice.includes(q));
+      const shift = others.length ? (index * 7) % others.length : 0;
+      const ring = others.slice(shift).concat(others.slice(0, shift));
+      slice = slice.concat(ring.slice(0, need - slice.length));
+    }
+    if (!slice.length) slice = E.questionPool(subject);
+
+    const boxCount = Math.max(E.MIN_BOXES, slice.length - bossRounds);
+    return { slice, bossRounds, boxCount };
+  };
+
+  /* ---------------------------------------------------------------------
      Penyimpanan progres (LocalStorage)
      --------------------------------------------------------------------- */
   const SAVE_KEY = "edupaw_save_v1";
@@ -422,7 +611,7 @@
     wardrobe: { owned: [], equipped: { hat: null, glasses: null, bag: null } },
     achievements: [],
     levels: {},
-    stats: { correct: 0, bestStreak: 0, totalCoins: 0, secrets: 0, levelsDone: 0 },
+    stats: { correct: 0, bestStreak: 0, totalCoins: 0, secrets: 0, levelsDone: 0, bosses: 0 },
   });
 
   E.Save = {

@@ -32,9 +32,9 @@
      - >= 2 salah beruntun  -> soal disederhanakan + visual hint
      ====================================================================== */
   class AdaptiveEngine {
-    constructor(questions, subject) {
-      this.pool = questions.filter((q) => subject === "mixed" || q.subject === subject);
-      if (!this.pool.length) this.pool = questions.slice();
+    /** @param {Array} pool jatah soal untuk area ini */
+    constructor(pool) {
+      this.pool = pool.slice();
       this.levelIdx = 0;
       this.correctStreak = 0;
       this.wrongStreak = 0;
@@ -46,17 +46,24 @@
       return E.DIFFICULTIES[this.levelIdx];
     }
 
+    /** Pilih soal yang belum muncul; utamakan tingkat sekarang, lalu yang terdekat. */
     pick() {
-      const ofLevel = () => this.pool.filter((q) => q.level === this.level);
-      let cand = ofLevel().filter((q) => !this.used.has(q.id));
-      if (!cand.length) {
-        ofLevel().forEach((q) => this.used.delete(q.id));
-        cand = ofLevel();
+      let fresh = this.pool.filter((q) => !this.used.has(q));
+      if (!fresh.length) {
+        this.used.clear();
+        fresh = this.pool.slice();
       }
-      if (!cand.length) cand = this.pool.filter((q) => !this.used.has(q.id));
-      if (!cand.length) cand = this.pool;
+      const order = E.DIFFICULTIES.map((d, i) => i).sort(
+        (a, b) => Math.abs(a - this.levelIdx) - Math.abs(b - this.levelIdx) || a - b
+      );
+      let cand = [];
+      for (const i of order) {
+        cand = fresh.filter((q) => q.level === E.DIFFICULTIES[i]);
+        if (cand.length) break;
+      }
+      if (!cand.length) cand = fresh;
       const q = cand[Math.floor(Math.random() * cand.length)];
-      this.used.add(q.id);
+      this.used.add(q);
       return q;
     }
 
@@ -93,64 +100,53 @@
               ^ duri  C koin  T harta rahasia  E musuh  N monster angka
               H checkpoint  F finish  P start  X bos
      ====================================================================== */
-  const PLANS = [
-    [
-      "flat",
-      "boxes",
-      "pit",
-      "enemy",
-      "stairs",
-      "boxes",
-      "spikes",
-      "checkpoint",
-      "monster",
-      "secretBear",
-      "boxes",
-      "pit",
-      "enemy",
-      "secretHigh",
-      "boxes",
-      "checkpoint",
-      "stairs",
-      "pit",
-      "secretGlide",
-      "monster",
-      "boxes",
-    ],
-    [
-      "flat",
-      "enemy",
-      "boxes",
-      "pit",
-      "monster",
-      "spikes",
-      "boxes",
-      "stairs",
-      "secretBear",
-      "checkpoint",
-      "pit",
-      "monster",
-      "enemy",
-      "boxes",
-      "secretGlide",
-      "pit",
-      "spikes",
-      "checkpoint",
-      "secretHigh",
-      "monster",
-      "boxes",
-    ],
-    ["flat", "boxes", "checkpoint", "boxes", "enemy", "boxes"],
-  ];
+  /** Susun daftar segmen satu area (deterministik berdasarkan seed). */
+  function makePlan(index, meta, boxCount, rnd) {
+    const pick = (arr) => arr[Math.floor(rnd() * arr.length)];
+    const hazards = ["enemy", "monster", "pit", "spikes", "stairs", "enemy", "monster"];
+    if (index >= 2) hazards.push("pit", "spikes");
 
-  function buildLevel(index, seed) {
+    const items = ["flat"];
+    for (let i = 0; i < meta.length; i++) {
+      let name = pick(hazards);
+      if (name === items[items.length - 1]) name = pick(hazards);
+      items.push(name);
+    }
+
+    // Tiga jalan rahasia tersebar di sepanjang area
+    ["secretBear", "secretHigh", "secretGlide"].forEach((name, k) => {
+      const at = Math.floor((items.length * (k + 1)) / 4) + Math.floor(rnd() * 3);
+      items.splice(at, 0, name);
+    });
+
+    // Kotak kuis tersebar merata (maks. 3 kotak per segmen)
+    const boxSegs = Math.max(2, Math.ceil(boxCount / 3));
+    const base = Math.floor(boxCount / boxSegs);
+    const extra = boxCount % boxSegs;
+    const len0 = items.length;
+    for (let k = 0; k < boxSegs; k++) {
+      const n = base + (k < extra ? 1 : 0);
+      items.splice(Math.floor(((k + 0.5) * len0) / boxSegs) + k, 0, { name: "boxes", n });
+    }
+
+    // Checkpoint tiap 6 segmen
+    const out = [];
+    items.forEach((it, i) => {
+      out.push(typeof it === "string" ? { name: it } : it);
+      if ((i + 1) % 6 === 0) out.push({ name: "checkpoint" });
+    });
+    return out;
+  }
+
+  function buildLevel(index, seed, boxCount) {
     const meta = E.LEVELS[index];
     const ROWS = 14;
     const GROUND = 12;
-    const MAXC = 420;
+    const MAXC = 1800;
     const g = Array.from({ length: ROWS }, () => Array(MAXC).fill(" "));
     const rnd = mulberry32(seed + index * 7919);
     const between = (a, b) => a + Math.floor(rnd() * (b - a + 1));
+    const plan = makePlan(index, meta, boxCount || E.MIN_BOXES, rnd);
 
     const put = (x, y, ch) => {
       if (x >= 0 && x < MAXC && y >= 0 && y < ROWS) g[y][x] = ch;
@@ -200,12 +196,11 @@
         put(x + 4, 9, "C");
         return 9;
       },
-      boxes(x) {
+      boxes(x, n = 2) {
         ground(x, x + 8);
-        put(x + 2, 8, "?");
-        put(x + 3, 8, "B");
-        put(x + 4, 8, rnd() < 0.6 ? "?" : "B");
-        put(x + 5, 8, "B");
+        for (let i = 1; i <= 5; i++) put(x + i, 8, "B");
+        const at = n >= 3 ? [1, 3, 5] : n === 2 ? [2, 4] : [3];
+        at.forEach((i) => put(x + i, 8, "?"));
         coinRow(x + 1, 3, 11);
         return 8;
       },
@@ -264,8 +259,8 @@
     coinRow(5, 3);
 
     let x = 10;
-    PLANS[index].forEach((name) => {
-      x += seg[name](x);
+    plan.forEach((it) => {
+      if (x < MAXC - 80) x += seg[it.name](x, it.n);
     });
 
     let arena = null;
@@ -499,13 +494,13 @@
         .fillTriangle(10, 30, 14, 30, 12, 35)
         .fillTriangle(22, 30, 26, 30, 24, 35);
     });
-    mk("boss", 96, 96, (g) => {
-      g.fillStyle(0x4b2e8c, 1)
+    const drawBoss = (g, c) => {
+      g.fillStyle(c.horn, 1)
         .fillTriangle(14, 26, 20, 0, 36, 22)
         .fillTriangle(82, 26, 76, 0, 60, 22);
-      g.fillStyle(0x6b4bb8, 1).fillCircle(48, 54, 40);
-      g.fillStyle(0x9a7be0, 1).fillEllipse(48, 68, 52, 34);
-      g.fillStyle(0xffd23f, 1)
+      g.fillStyle(c.body, 1).fillCircle(48, 54, 40);
+      g.fillStyle(c.belly, 1).fillEllipse(48, 68, 52, 34);
+      g.fillStyle(c.crown, 1)
         .fillTriangle(24, 24, 30, 6, 38, 22)
         .fillTriangle(38, 22, 48, 2, 58, 22)
         .fillTriangle(58, 22, 66, 6, 72, 24);
@@ -514,10 +509,13 @@
       g.lineStyle(5, 0x111111, 1);
       g.beginPath().moveTo(22, 34).lineTo(42, 42).strokePath();
       g.beginPath().moveTo(74, 34).lineTo(54, 42).strokePath();
-      g.fillStyle(0x2b1655, 1).fillRoundedRect(30, 66, 36, 16, 6);
+      g.fillStyle(c.mouth, 1).fillRoundedRect(30, 66, 36, 16, 6);
       g.fillStyle(0xffffff, 1);
       for (let i = 0; i < 4; i++) g.fillTriangle(32 + i * 9, 66, 40 + i * 9, 66, 36 + i * 9, 75);
-    });
+    };
+    Object.keys(E.BOSS_LOOKS).forEach((key) =>
+      mk(key, 96, 96, (g) => drawBoss(g, E.BOSS_LOOKS[key]))
+    );
     mk("ball", 16, 16, (g) => {
       g.fillStyle(0xff6b00, 1).fillCircle(8, 8, 7.5);
       g.fillStyle(0xffd23f, 1).fillCircle(7, 7, 4);
@@ -615,7 +613,12 @@
       this.meta = E.LEVELS[this.levelIdx];
       this.mode = o.mode || "single";
 
-      const built = buildLevel(this.levelIdx, o.seed || 20260101);
+      const subject = o.subject || Save.data.subject;
+      const quiz = E.levelQuiz(this.levelIdx, subject);
+      this.quizPlan = quiz;
+      this.boxTotal = quiz.boxCount;
+
+      const built = buildLevel(this.levelIdx, o.seed || 20260101, quiz.boxCount);
       this.grid = built.grid.map((row) => row.slice());
       this.cols = built.cols;
       this.rows = built.rows;
@@ -633,6 +636,7 @@
         deaths: 0,
         time: 0,
         streak: 0,
+        boxesDone: 0,
       };
       this.quizActive = false;
       this.finished = false;
@@ -649,7 +653,7 @@
       this.airJumps = 0;
       this.coyote = 0;
       this.fx = E.wardrobeEffects();
-      this.ai = new AdaptiveEngine(E.questions, o.subject || Save.data.subject);
+      this.ai = new AdaptiveEngine(quiz.slice);
 
       this.physics.resume();
       this.tweens.resumeAll();
@@ -668,7 +672,7 @@
       this.setupAbility();
       this.setupNetwork();
 
-      UI.HUD.setLevel(`Lv${this.levelIdx + 1} · ${this.meta.name}`);
+      UI.HUD.setLevel(`Lv${this.levelIdx + 1}/${E.LEVELS.length} · ${this.meta.name}`);
       UI.HUD.setStats(this.hudStats());
       if (this.meta.boss) UI.HUD.bossBar(false);
       this.refreshFlag();
@@ -676,9 +680,9 @@
       this.events.once("shutdown", () => this.cleanup());
       UI.Toast.show(
         this.meta.boss
-          ? "👑 Kumpulkan 3 🔑 lalu kalahkan Raja Angka!"
-          : "🔑 Kumpulkan 3 kunci dari kotak ❓ lalu capai bendera!",
-        3000
+          ? `${this.meta.boss.emoji} Kumpulkan 3 🔑 lalu kalahkan ${this.meta.boss.name}!`
+          : `🔑 Kumpulkan 3 kunci dari ${this.boxTotal} kotak ❓ lalu capai bendera!`,
+        3200
       );
     }
 
@@ -693,7 +697,7 @@
     /* ----------------------------- Dunia ----------------------------- */
     makeBackground() {
       const count = Math.ceil(this.worldW / 380);
-      const alpha = this.meta.theme === "grass" ? 0.95 : 0.18;
+      const alpha = { grass: 0.95, desert: 0.8, snow: 0.9, sky: 1 }[this.meta.theme] || 0.18;
       for (let i = 0; i < count; i++) {
         this.add
           .image(i * 380 + Phaser.Math.Between(0, 160), Phaser.Math.Between(30, 150), "cloud")
@@ -1301,12 +1305,14 @@
 
     /* ----------------------------- Bos ----------------------------- */
     spawnBoss(x, y) {
-      const b = this.physics.add.sprite(x, y, "boss");
+      const cfg = this.meta.boss;
+      const b = this.physics.add.sprite(x, y, cfg.tex);
+      b.cfg = cfg;
       b.setDepth(8);
       b.body.setSize(80, 84).setOffset(8, 10);
       b.setCollideWorldBounds(true);
-      b.hp = 5;
-      b.maxHp = 5;
+      b.hp = cfg.hp;
+      b.maxHp = cfg.hp;
       b.phase = "intro";
       b.timer = 0;
       b.dir = -1;
@@ -1316,7 +1322,7 @@
     }
 
     bossSpeed() {
-      return 90 + (this.boss.maxHp - this.boss.hp) * 18;
+      return this.boss.cfg.speed + (this.boss.maxHp - this.boss.hp) * 18;
     }
 
     updateBoss(dt) {
@@ -1330,9 +1336,9 @@
         case "intro":
           if (p.x > this.arena.x0 * T) {
             b.phase = "dodge";
-            b.timer = 12;
-            UI.HUD.bossBar(true, b.hp / b.maxHp);
-            UI.Toast.show("👑 Fase 1: Hindari serangan Raja Angka!", 2500);
+            b.timer = b.cfg.dodge;
+            UI.HUD.bossBar(true, b.hp / b.maxHp, b.cfg);
+            UI.Toast.show(`${b.cfg.emoji} Fase 1: Hindari serangan ${b.cfg.name}!`, 2500);
           }
           break;
 
@@ -1344,7 +1350,7 @@
           b.shootCd -= dt;
           b.hopCd -= dt;
           if (b.shootCd <= 0) {
-            b.shootCd = Math.max(0.8, 1.7 - (b.maxHp - b.hp) * 0.15);
+            b.shootCd = Math.max(0.7, b.cfg.shoot - (b.maxHp - b.hp) * 0.15);
             this.bossShoot(Phaser.Math.Angle.Between(b.x, b.y, p.x, p.y));
           }
           if (b.hopCd <= 0 && (b.body.blocked.down || b.body.touching.down)) {
@@ -1381,7 +1387,7 @@
       ball.body.setAllowGravity(false);
       ball.setDepth(9);
       ball.life = 4;
-      this.physics.velocityFromRotation(angle, 190, ball.body.velocity);
+      this.physics.velocityFromRotation(angle, b.cfg.ball, ball.body.velocity);
     }
 
     updateProjectiles(dt) {
@@ -1395,7 +1401,7 @@
     damageBoss() {
       const b = this.boss;
       b.hp--;
-      UI.HUD.bossBar(true, b.hp / b.maxHp);
+      UI.HUD.bossBar(true, b.hp / b.maxHp, b.cfg);
       this.cameras.main.shake(250, 0.01);
       b.setTint(0xffffff);
       this.time.delayedCall(200, () => b.active && b.clearTint());
@@ -1407,7 +1413,9 @@
         b.body.enable = false;
         this.bossDefeated = true;
         UI.HUD.bossBar(false);
-        UI.Toast.show("🎉 Raja Angka kalah! Bendera finish menunggu.", 2800);
+        Save.data.stats.bosses = (Save.data.stats.bosses || 0) + 1;
+        Save.write();
+        UI.Toast.show(`🎉 ${b.cfg.name} kalah! Bendera finish menunggu.`, 2800);
         this.tweens.add({
           targets: b,
           alpha: 0,
@@ -1419,7 +1427,7 @@
         this.refreshFlag();
       } else {
         b.phase = "dodge";
-        b.timer = 10;
+        b.timer = Math.max(7, b.cfg.dodge - 2);
       }
     }
 
@@ -1486,6 +1494,7 @@
       if (ctx.box) {
         if (res.correct) {
           s.keys++;
+          s.boxesDone++;
           ctx.box.setTexture("boxUsed");
           this.refreshFlag();
           UI.Toast.show(`🔑 Kunci Angka didapat (${s.keys}/${E.KEYS_REQUIRED})`, 1800);
@@ -1540,14 +1549,17 @@
       this.physics.pause();
       const s = this.state;
 
-      const timeBonus = Math.max(0, Math.round(120 - s.time)) * 5;
+      const par = Math.max(120, Math.round(this.cols * 0.7));
+      const timeBonus = Math.max(0, Math.round(par - s.time)) * 5;
       const score = this.calcScore() + timeBonus;
       const stars = 1 + (s.correct >= 3 ? 1 : 0) + (s.secrets > 0 ? 1 : 0);
 
       const prev = Save.data.levels[this.levelIdx] || { stars: 0, best: 0 };
       const gained = Math.max(0, stars - prev.stars);
       Save.data.stars += gained;
-      Save.addCoins(gained * 15 + 10);
+      const allBoxes = this.boxTotal > 0 && s.boxesDone >= this.boxTotal;
+      const bonus = gained * 15 + 10 + (allBoxes ? 15 : 0);
+      Save.addCoins(bonus);
       Save.data.levels[this.levelIdx] = {
         stars: Math.max(prev.stars, stars),
         best: Math.max(prev.best, score),
@@ -1561,7 +1573,8 @@
         `🪙 Koin: ${s.coins} · 🔑 Kunci: ${s.keys}`,
         `✅ Benar: ${s.correct} · ❌ Salah: ${s.wrong}`,
         `🌟 Rahasia: ${s.secrets} · 👾 Musuh: ${s.enemies}`,
-        `Bonus selesai: +${gained * 15 + 10} 🪙`,
+        `📚 Kotak ❓ terbuka: ${s.boxesDone}/${this.boxTotal}${allBoxes ? " (+15 🪙 semua soal!)" : ""}`,
+        `Bonus selesai: +${bonus} 🪙`,
       ];
 
       if (this.mode === "race" && this.net) {
@@ -1584,7 +1597,7 @@
 
       const hasNext = this.levelIdx < E.LEVELS.length - 1;
       UI.Result.show({
-        title: "🎉 Level Selesai!",
+        title: hasNext ? "🎉 Level Selesai!" : "🏆 Petualangan Tamat!",
         stars,
         lines,
         buttons: [
