@@ -128,8 +128,8 @@ button {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  padding: max(8px, env(safe-area-inset-top)) max(10px, env(safe-area-inset-right)) 0
-    max(10px, env(safe-area-inset-left));
+  padding: max(8px, env(safe-area-inset-top))
+    max(10px, env(safe-area-inset-right)) 0 max(10px, env(safe-area-inset-left));
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -521,7 +521,7 @@ button {
   z-index: 40;
   overflow-y: auto;
   touch-action: pan-y;
-  background: linear-gradient(180deg, #8fdcff 0%, #c9f1ff 55%, #bdf0a0 55%, #6fd46f 100%);
+  background: linear-gradient(180deg, #6fcbff 0%, #b9ecff 55%, #e6fbff 100%);
 }
 
 .menu-body {
@@ -839,5 +839,873 @@ button {
   .opt {
     padding: 8px;
     min-height: 44px;
+  }
+}
+
+/* ==========================================================================
+   Layar pembuka, pilih karakter, beranda, cara bermain
+   ========================================================================== */
+.menu-body {
+  z-index: 1;
+}
+
+#menu[data-screen="title"] .menu-body,
+#menu[data-screen="starter"] .menu-body,
+#menu[data-screen="howto"] .menu-body,
+#menu[data-screen="home"] .menu-body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---------- Latar pemandangan ---------- */
+.scenery {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.scenery svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.sun {
+  position: absolute;
+  right: 14%;
+  top: 4%;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 247, 170, 0.95) 0 22%,
+    rgba(255, 247, 170, 0) 70%
+  );
+}
+
+.cloud {
+  position: absolute;
+  left: -220px;
+  width: 140px;
+  height: 44px;
+  border-radius: 999px;
+  background: #fff;
+  opacity: 0.92;
+  animation: drift 70s linear infinite;
+}
+
+.cloud::before,
+.cloud::after {
+  content: "";
+  position: absolute;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.cloud::before {
+  width: 60px;
+  height: 60px;
+  left: 20px;
+  top: -28px;
+}
+
+.cloud::after {
+  width: 46px;
+  height: 46px;
+  left: 70px;
+  top: -20px;
+}
+
+.cloud.c1 {
+  top: 12%;
+}
+
+.cloud.c2 {
+  top: 26%;
+  transform: scale(0.7);
+  animation-duration: 95s;
+  animation-delay: -40s;
+}
+
+.cloud.c3 {
+  top: 6%;
+  transform: scale(1.2);
+  animation-duration: 120s;
+  animation-delay: -80s;
+}
+
+@keyframes drift {
+  to {
+    left: 110vw;
+  }
+}
+
+/* ---------- Logo ---------- */
+.logo-img {
+  display: block;
+  width: min(440px, 80vw);
+  height: auto;
+  margin: 0 auto 4px;
+  filter: drop-shadow(0 8px 10px rgba(10, 30, 70, 0.3));
+  animation: bob 3.2s ease-in-out infinite;
+}
+
+.logo-img.hero {
+  width: min(600px, 88vw);
+}
+
+.logo-img.small {
+  width: min(250px, 54vw);
+}
+
+.tagline {
+  margin: 0 0 14px;
+  font-weight: 800;
+  font-size: clamp(15px, 2.6vw, 20px);
+  color: #fff;
+  text-shadow:
+    0 2px 0 #1f7fb3,
+    0 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+.heading {
+  margin: 4px 0 0;
+  font-size: clamp(28px, 6vw, 46px);
+  line-height: 1.05;
+  color: var(--sun);
+  text-shadow:
+    0 4px 0 #1f7fb3,
+    0 8px 12px rgba(0, 0, 0, 0.25);
+}
+
+.heading.small {
+  font-size: clamp(24px, 5vw, 36px);
+  margin-bottom: 10px;
+}
+
+/* ---------- Tombol besar & kecil ---------- */
+.btn.cta {
+  width: 100%;
+  font-size: clamp(18px, 3.2vw, 24px);
+  padding: 16px 26px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #ffbf47, #ff8a1f);
+  box-shadow:
+    0 6px 0 #c9620c,
+    inset 0 3px 0 rgba(255, 255, 255, 0.45);
+  text-shadow: 0 2px 0 rgba(150, 70, 0, 0.5);
+  letter-spacing: 0.5px;
+}
+
+.btn.cta:active:not(:disabled) {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 #c9620c;
+}
+
+.btn.mini {
+  font-size: 14px;
+  padding: 9px 16px;
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.18);
+}
+
+.mini-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+/* ---------- Layar login ---------- */
+.login-card {
+  position: relative;
+  z-index: 2;
+  width: min(430px, 92vw);
+  padding: 20px 22px 16px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 4px solid #fff;
+  box-shadow:
+    0 10px 0 rgba(0, 0, 0, 0.12),
+    0 18px 30px rgba(10, 30, 70, 0.2);
+  text-align: center;
+  backdrop-filter: blur(6px);
+}
+
+.login-card label {
+  display: block;
+  font-weight: 800;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.login-card input {
+  width: 100%;
+  margin-bottom: 14px;
+  padding: 13px 16px;
+  border-radius: 999px;
+  border: 3px solid #cfe3f7;
+  background: #fff;
+  font: 800 18px var(--font);
+  text-align: center;
+  color: var(--ink);
+  user-select: text;
+  -webkit-user-select: text;
+}
+
+.login-card input:focus {
+  outline: none;
+  border-color: var(--sky-dark);
+  box-shadow: 0 0 0 4px rgba(58, 166, 224, 0.25);
+}
+
+.mascot {
+  position: fixed;
+  left: clamp(0px, 3vw, 60px);
+  bottom: 0;
+  width: clamp(130px, 25vw, 340px);
+  z-index: 1;
+  pointer-events: none;
+  animation: bob 2.4s ease-in-out infinite;
+}
+
+.mascot .avatar {
+  background: none;
+  box-shadow: none;
+}
+
+.copy {
+  position: relative;
+  z-index: 2;
+  margin: 12px 0 0;
+  font-size: 12px;
+  font-weight: 800;
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.45);
+}
+
+.lfoot {
+  position: relative;
+  z-index: 2;
+  margin: 12px 0 0;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.35;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* ---------- Avatar hewan ---------- */
+.avatar {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 50% 38%,
+    #ffffff 0%,
+    var(--glow, #9cf) 100%
+  );
+  box-shadow: inset 0 -6px 0 rgba(0, 0, 0, 0.08);
+}
+
+.avatar .portrait {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.avatar.locked .portrait {
+  filter: brightness(0) opacity(0.3);
+}
+
+.avatar .lock {
+  position: absolute;
+  right: 4%;
+  bottom: 4%;
+  font-size: 26px;
+}
+
+.em-avatar {
+  width: 92px;
+}
+
+/* ---------- Pilih karakter ---------- */
+.starter-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px;
+  width: 100%;
+  margin: 16px 0 6px;
+}
+
+.pick-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 232px;
+  padding: 18px 16px 16px;
+  border-radius: 28px;
+  border-top: 8px solid var(--glow);
+  background: #fff;
+  text-align: center;
+  box-shadow: 0 8px 0 rgba(0, 0, 0, 0.12);
+  transition:
+    transform 0.15s,
+    box-shadow 0.15s;
+}
+
+.pick-card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 14px 0 rgba(0, 0, 0, 0.1),
+    0 0 0 4px var(--glow);
+}
+
+.pick-avatar {
+  width: 150px;
+}
+
+.pick-card h3 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.pill {
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: #eaf6ff;
+  color: #1f7fb3;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.pick-card p {
+  margin: 0;
+  min-height: 52px;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.mini-stats {
+  width: 100%;
+  margin: 0;
+  padding: 8px 12px;
+  list-style: none;
+  border-radius: 14px;
+  background: #f1f6fd;
+  font-size: 13px;
+}
+
+.mini-stats li {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pick-card .btn {
+  width: 100%;
+  margin-top: 4px;
+}
+
+/* ---------- Beranda ---------- */
+.player-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px auto 12px;
+  padding: 6px 16px 6px 8px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.12);
+}
+
+.player-avatar {
+  width: 52px;
+}
+
+.player-info {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  line-height: 1.15;
+}
+
+.player-info span {
+  font-size: 12px;
+  font-weight: 700;
+  opacity: 0.7;
+}
+
+#menu[data-screen="home"] .menu-buttons {
+  width: min(420px, 92vw);
+  max-width: none;
+}
+
+.tile-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.tile {
+  border: 0;
+  border-radius: 22px;
+  padding: 14px 8px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.15;
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.25);
+  box-shadow:
+    0 6px 0 rgba(0, 0, 0, 0.22),
+    inset 0 3px 0 rgba(255, 255, 255, 0.4);
+  transition: transform 0.1s;
+}
+
+.tile:hover {
+  transform: translateY(-3px);
+}
+
+.tile:active {
+  transform: translateY(3px);
+}
+
+.tile span {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 34px;
+}
+
+.t-blue {
+  background: linear-gradient(180deg, #4fb0ff, #2a7de0);
+}
+
+.t-purple {
+  background: linear-gradient(180deg, #b573ff, #8240e0);
+}
+
+.t-green {
+  background: linear-gradient(180deg, #43d98a, #1fa958);
+}
+
+.t-pink {
+  background: linear-gradient(180deg, #ff74a8, #e83e86);
+}
+
+/* ---------- Cara bermain ---------- */
+.how-card {
+  width: min(720px, 94vw);
+  padding: 18px 20px 20px;
+  border-radius: 28px;
+  background: #fff;
+  text-align: left;
+  box-shadow: 0 8px 0 rgba(0, 0, 0, 0.12);
+}
+
+.how-card header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+  border-bottom: 3px dashed #d9e6f5;
+}
+
+.how-card h2 {
+  flex: 1;
+  margin: 0;
+  font-size: clamp(19px, 3.6vw, 26px);
+}
+
+.how-card small {
+  font-weight: 800;
+  color: #7b8aa0;
+}
+
+.how-ico {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background: #fff3c4;
+  font-size: 30px;
+}
+
+.how-body {
+  min-height: 210px;
+  font-size: clamp(14px, 2.2vw, 16px);
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.how-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.how-box {
+  padding: 12px 14px;
+  border-radius: 18px;
+  background: #f1f8ff;
+}
+
+.how-box h4 {
+  margin: 0 0 8px;
+}
+
+.how-box p {
+  margin: 0;
+}
+
+kbd {
+  display: inline-block;
+  min-width: 28px;
+  padding: 2px 8px;
+  border: 2px solid #c3d2e4;
+  border-bottom-width: 4px;
+  border-radius: 8px;
+  background: #fff;
+  font: 800 13px var(--font);
+  text-align: center;
+}
+
+.keys {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.keys li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.keys li span {
+  font-size: 13px;
+  text-align: right;
+  opacity: 0.8;
+}
+
+.how-note,
+.how-lead {
+  margin: 12px 0 0;
+  padding: 8px 12px;
+  border-radius: 12px;
+  background: #fff8dc;
+  font-size: 14px;
+}
+
+.how-lead {
+  margin: 0 0 10px;
+}
+
+.how-steps {
+  margin: 0 0 12px;
+  padding: 0;
+  list-style: none;
+  counter-reset: s;
+}
+
+.how-steps li {
+  position: relative;
+  margin-bottom: 8px;
+  padding-left: 40px;
+  counter-increment: s;
+}
+
+.how-steps li::before {
+  content: counter(s);
+  position: absolute;
+  left: 0;
+  top: -2px;
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--grass);
+  color: #fff;
+  font-weight: 800;
+}
+
+.how-list {
+  margin: 0;
+  padding-left: 4px;
+  list-style: none;
+}
+
+.how-list li {
+  margin-bottom: 10px;
+}
+
+.how-list.tight li {
+  margin-bottom: 6px;
+}
+
+.how-demo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 16px;
+  background: #eef7ff;
+}
+
+.how-demo .arrow {
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.how-demo .big-ico {
+  font-size: 38px;
+}
+
+.chip.ok {
+  background: #d7f7e0;
+  color: #17703a;
+}
+
+.lv {
+  padding: 6px 14px;
+  border-radius: 999px;
+  color: #fff;
+  font-weight: 800;
+}
+
+.lv.easy {
+  background: #3ec46d;
+}
+
+.lv.med {
+  background: #ff9f43;
+}
+
+.lv.hard {
+  background: #ef5350;
+}
+
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6px 4px;
+  border-radius: 14px;
+  background: #f1f8ff;
+  line-height: 1.15;
+  text-align: center;
+}
+
+.skill span {
+  font-size: 22px;
+}
+
+.skill small {
+  font-size: 11px;
+  color: #1f7fb3;
+}
+
+.boss-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.boss-bar span {
+  font-size: 28px;
+}
+
+.boss-bar div {
+  flex: 1;
+  height: 18px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #e3e9f2;
+}
+
+.boss-bar i {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #ff6b6b, #ff3d3d);
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 14px 0 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+.dot.on {
+  width: 30px;
+  border-radius: 999px;
+  background: var(--sun);
+}
+
+.how-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+@media (max-width: 640px) {
+  .how-cols {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .mascot {
+    opacity: 0.9;
+    width: 110px;
+  }
+}
+
+@media (max-height: 560px) {
+  .logo-img,
+  .logo-img.hero {
+    width: min(300px, 46vw);
+  }
+
+  .tagline {
+    margin-bottom: 8px;
+    font-size: 14px;
+  }
+
+  .login-card {
+    padding: 12px 16px 10px;
+  }
+
+  .login-card input {
+    margin-bottom: 8px;
+    padding: 8px 12px;
+  }
+
+  .btn.cta {
+    padding: 11px 20px;
+  }
+
+  .pick-avatar {
+    width: 96px;
+  }
+
+  .pick-card {
+    width: 200px;
+    gap: 5px;
+    padding: 12px;
+  }
+
+  .pick-card p {
+    min-height: 0;
+  }
+
+  .how-body {
+    min-height: 0;
+  }
+}
+
+/* ---------- Penyempurnaan ---------- */
+#menu[data-screen="starter"] .sub {
+  display: inline-block;
+  max-width: min(640px, 94vw);
+  margin: 10px 0 0;
+  padding: 8px 16px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+#menu[data-screen="home"] .logo-img {
+  width: min(360px, 74vw);
+}
+
+#boot .logo-img {
+  width: min(320px, 70vw);
+}
+
+@media (max-height: 430px) {
+  .logo-img,
+  .logo-img.hero,
+  #menu[data-screen="home"] .logo-img {
+    width: min(210px, 36vw);
+  }
+
+  .tagline,
+  .copy,
+  .lfoot {
+    display: none;
+  }
+
+  .mascot {
+    width: 110px;
+  }
+
+  .login-card {
+    width: min(400px, 60vw);
+    padding: 8px 14px;
+  }
+
+  .login-card label {
+    margin-bottom: 4px;
+    font-size: 14px;
+  }
+
+  .player-bar {
+    margin: 4px auto 8px;
+  }
+
+  .tile {
+    padding: 8px 6px;
+    font-size: 13px;
+  }
+
+  .tile span {
+    font-size: 24px;
+  }
+
+  .heading {
+    font-size: 26px;
   }
 }

@@ -8,6 +8,7 @@
     />
     <meta name="theme-color" content="#7ad7ff" />
     <title>EduPaw Adventure</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -58,6 +59,7 @@
 
       <!-- Layar loading -->
       <div id="boot">
+        <img class="logo-img" src="assets/logo.png" alt="EduPaw Adventure" />
         <div class="spinner">🐾</div>
         <p id="boot-text">Memuat EduPaw Adventure...</p>
       </div>
@@ -96,7 +98,7 @@
         } catch (err) {
           console.warn("PeerJS tidak termuat, mode multiplayer dinonaktifkan.");
         }
-        var files = ["js/config.js", "js/network.js", "js/ui.js", "js/game.js"];
+        var files = ["js/config.js", "js/art.js", "js/network.js", "js/ui.js", "js/game.js"];
         for (var i = 0; i < files.length; i++) {
           await loadScript(files[i]);
         }

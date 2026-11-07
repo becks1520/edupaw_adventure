@@ -355,6 +355,7 @@
   const defaults = () => ({
     name: "Pemain",
     starterChosen: false,
+    seenHowto: false,
     selected: "foxy",
     unlocked: [],
     upgrades: {},

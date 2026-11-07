@@ -13,7 +13,14 @@
   const esc = (s) =>
     String(s).replace(
       /[&<>"']/g,
-      (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]
+      (c) =>
+        ({
+          "&": "&amp;",
+          "<": "&lt;",
+          ">": "&gt;",
+          '"': "&quot;",
+          "'": "&#39;",
+        })[c],
     );
 
   const shuffle = (arr) => {
@@ -100,7 +107,7 @@
       el.innerHTML = list
         .map(
           (p) =>
-            `<div class="row ${p.me ? "me" : ""}"><span>${esc(p.name)}</span><span>${esc(p.label)}</span></div>`
+            `<div class="row ${p.me ? "me" : ""}"><span>${esc(p.name)}</span><span>${esc(p.label)}</span></div>`,
         )
         .join("");
     },
@@ -124,10 +131,15 @@
     const enable = () => {
       T.enabled = true;
       document.body.classList.add("touch");
-      if (!$("#hud").classList.contains("hidden")) $("#touch").classList.remove("hidden");
+      if (!$("#hud").classList.contains("hidden"))
+        $("#touch").classList.remove("hidden");
     };
 
-    if (window.matchMedia("(pointer: coarse)").matches || "ontouchstart" in window) enable();
+    if (
+      window.matchMedia("(pointer: coarse)").matches ||
+      "ontouchstart" in window
+    )
+      enable();
     else window.addEventListener("touchstart", enable, { once: true });
 
     const bind = (selector, onDown, onUp) => {
@@ -143,18 +155,20 @@
         el.classList.remove("pressed");
       };
       el.addEventListener("pointerdown", down);
-      ["pointerup", "pointercancel", "pointerleave"].forEach((ev) => el.addEventListener(ev, up));
+      ["pointerup", "pointercancel", "pointerleave"].forEach((ev) =>
+        el.addEventListener(ev, up),
+      );
     };
 
     bind(
       "#t-left",
       () => (T.left = true),
-      () => (T.left = false)
+      () => (T.left = false),
     );
     bind(
       "#t-right",
       () => (T.right = true),
-      () => (T.right = false)
+      () => (T.right = false),
     );
     bind(
       "#t-jump",
@@ -162,7 +176,7 @@
         T.jump = true;
         T.jumpQueued = true;
       },
-      () => (T.jump = false)
+      () => (T.jump = false),
     );
     bind("#ability", () => (T.actionQueued = true));
   }
@@ -208,7 +222,7 @@
                   eliminated.includes(idx) ? "disabled" : ""
                 }>
                   <span class="k">${letters[pos]}</span><span>${esc(q.options[idx])}</span>
-                </button>`
+                </button>`,
                 )
                 .join("")}
             </div>
@@ -262,7 +276,7 @@
         };
 
         el.querySelectorAll(".opt").forEach((b) =>
-          b.addEventListener("click", () => finish(Number(b.dataset.i), false))
+          b.addEventListener("click", () => finish(Number(b.dataset.i), false)),
         );
         window.addEventListener("keydown", onKey);
 
@@ -294,7 +308,9 @@
     show(o) {
       const el = $("#result");
       const stars =
-        o.stars != null ? "⭐".repeat(o.stars) + "☆".repeat(Math.max(0, 3 - o.stars)) : "";
+        o.stars != null
+          ? "⭐".repeat(o.stars) + "☆".repeat(Math.max(0, 3 - o.stars))
+          : "";
       el.innerHTML = `
         <div class="result-card">
           <h2>${esc(o.title)}</h2>
@@ -320,7 +336,7 @@
       el.innerHTML = list
         .map(
           (p, i) =>
-            `<div>${["🥇", "🥈", "🥉"][i] || `${i + 1}.`} ${esc(p.name)} — ${esc(p.label)}</div>`
+            `<div>${["🥇", "🥈", "🥉"][i] || `${i + 1}.`} ${esc(p.name)} — ${esc(p.label)}</div>`,
         )
         .join("");
     },
@@ -333,15 +349,147 @@
   /* ======================================================================
      MENU
      ====================================================================== */
+  const ABILITY_ICON = {
+    foxy: "🦘",
+    bunny: "🚀",
+    kitty: "💨",
+    panda: "🛡️",
+    owl: "🪂",
+    bear: "🔨",
+    penguin: "🧊",
+    cheetah: "🧲",
+  };
+
+  const kbd = (...keys) => keys.map((k) => `<kbd>${k}</kbd>`).join(" ");
+
+  /** Halaman panduan "Cara Bermain". */
+  const HOWTO = [
+    {
+      icon: "🎮",
+      title: "Cara Mengontrol",
+      html: () => `
+        <div class="how-cols">
+          <div class="how-box">
+            <h4>💻 Komputer</h4>
+            <ul class="keys">
+              <li>${kbd("A", "D")} atau ${kbd("◀", "▶")}<span>Jalan</span></li>
+              <li>${kbd("Spasi")} ${kbd("W")} ${kbd("▲")}<span>Lompat</span></li>
+              <li>${kbd("E")} atau ${kbd("Shift")}<span>Skill hewan</span></li>
+              <li>${kbd("1")}–${kbd("4")}<span>Jawab kuis</span></li>
+            </ul>
+          </div>
+          <div class="how-box">
+            <h4>📱 HP / Tablet</h4>
+            <ul class="keys">
+              <li><kbd>◀</kbd> <kbd>▶</kbd><span>D-Pad kiri bawah</span></li>
+              <li><kbd>⤒</kbd><span>Tombol lompat</span></li>
+              <li><kbd>🐾</kbd><span>Action Paw = skill</span></li>
+              <li><kbd>👆</kbd><span>Ketuk jawaban kuis</span></li>
+            </ul>
+          </div>
+        </div>
+        <p class="how-note">Kontrol otomatis menyesuaikan perangkatmu. Putar HP ke mode landscape.</p>`,
+    },
+    {
+      icon: "🔑",
+      title: "Misi: Kumpulkan 3 Kunci",
+      html: () => `
+        <ol class="how-steps">
+          <li><b>Sundul kotak ❓</b> dari bawah dengan melompat.</li>
+          <li><b>Jawab kuis</b> yang muncul. Jawaban benar memberi <b>🔑 Kunci Angka</b> dan koin.</li>
+          <li>Salah jawab? Tenang, kotaknya <b>bisa dicoba lagi</b>.</li>
+          <li>Kumpulkan <b>minimal 3 🔑</b>. Bendera finish baru menyala dan bisa disentuh.</li>
+        </ol>
+        <div class="how-demo">
+          <span class="chip">🔑 <b>2</b>/3</span><span class="arrow">➜</span>
+          <span class="chip ok">🔑 <b>3</b>/3</span><span class="arrow">➜</span><span class="big-ico">🏁</span>
+        </div>`,
+    },
+    {
+      icon: "🧠",
+      title: "Kuis yang Menyesuaikan Kamu",
+      html: () => `
+        <ul class="how-list">
+          <li>⏸️ Saat kuis muncul, <b>seluruh dunia game berhenti</b>. Kamu bebas berpikir.</li>
+          <li>✅ <b>3 jawaban benar</b> beruntun: soal naik tingkat.</li>
+          <li>❌ <b>2 jawaban salah</b> beruntun: soal dibuat lebih mudah dan muncul <b>💡 petunjuk visual</b>.</li>
+          <li>🪙 Setiap jawaban benar memberi <b>+5 koin edukasi</b>.</li>
+        </ul>
+        <div class="how-demo levels">
+          <span class="lv easy">Mudah</span><span class="arrow">⇄</span>
+          <span class="lv med">Sedang</span><span class="arrow">⇄</span>
+          <span class="lv hard">Sulit</span>
+        </div>`,
+    },
+    {
+      icon: "👾",
+      title: "Musuh, Bahaya & Checkpoint",
+      html: () => `
+        <ul class="how-list">
+          <li>🦶 <b>Injak musuh dari atas</b> untuk mengalahkannya, termasuk <b>Monster Angka 🔢</b>.</li>
+          <li>⚠️ Hindari <b>duri</b>, jangan tertabrak dari samping, dan jangan jatuh ke jurang.</li>
+          <li>🚩 Sentuh <b>bendera checkpoint</b> untuk menyimpan titik. Kalau terkena, kamu muncul lagi di sana.</li>
+          <li>♾️ <b>Nyawa tak terbatas</b>. Coba lagi sepuasnya!</li>
+        </ul>`,
+    },
+    {
+      icon: "⭐",
+      title: "Skill Hewan & Jalan Rahasia",
+      html: () => `
+        <p class="how-lead">Tekan ${kbd("E")} / tombol 🐾 untuk skill. Setelah dipakai ada <b>cooldown 8–12 detik</b> (lingkaran hitung mundur).</p>
+        <div class="skill-grid">
+          ${E.CHARACTER_ORDER.map((id) => {
+            const c = E.CHARACTERS[id];
+            return `<div class="skill"><span>${ABILITY_ICON[id]}</span><b>${c.name}</b><small>${c.ability}</small></div>`;
+          }).join("")}
+        </div>
+        <ul class="how-list tight">
+          <li>🔓 Bear membobol <b>blok retak</b>, Owl melayang melewati <b>jurang jauh</b>: ada jalur rahasia berisi bintang!</li>
+          <li>⬆️ Naikkan skill ke Lv1–3 di menu <b>Karakter</b>, beli aksesori di <b>Lemari</b>.</li>
+        </ul>`,
+    },
+    {
+      icon: "👑",
+      title: "Melawan Bos Raja Angka",
+      html: () => `
+        <div class="boss-bar"><span>👑</span><div><i></i></div><b>HP 5</b></div>
+        <div class="how-cols">
+          <div class="how-box">
+            <h4>🏃 Fase 1: Hindari</h4>
+            <p>Bos berjalan dan melompat sambil menembakkan bola angka. <b>Hindari selama 12 detik</b>.</p>
+          </div>
+          <div class="how-box">
+            <h4>⚡ Fase 2: Quiz Attack</h4>
+            <p>Bos berhenti dan muncul kuis. <b>Benar = bos terluka 💥 (-1 HP)</b>. Salah = bos menembak balik 3 bola.</p>
+          </div>
+        </div>
+        <p class="how-note">Ulangi sampai HP bos habis, lalu pastikan punya 3 🔑 dan sentuh bendera finish 🏁.</p>`,
+    },
+    {
+      icon: "👥",
+      title: "Main Bareng (LAN)",
+      html: () => `
+        <ul class="how-list">
+          <li>🏠 Satu pemain pilih <b>Buat Room</b> dan membagikan <b>kode 4 huruf</b>.</li>
+          <li>🚪 Teman di Wi-Fi yang sama pilih <b>Gabung</b> dan memasukkan kode.</li>
+          <li>🏁 <b>Balapan</b>: yang pertama sampai bendera menang.</li>
+          <li>⚡ <b>Adu Cepat Kuis</b>: jawab paling cepat dan benar untuk poin terbanyak.</li>
+        </ul>`,
+    },
+  ];
+
   const Menu = {
-    screen: "home",
+    screen: "title",
+    page: 0,
     lan: { mode: "race", level: 0, subject: "mixed", busy: false },
 
     show(screen) {
       if (screen) this.screen = screen;
-      if (!E.Save.data.starterChosen && this.screen === "home") this.screen = "starter";
+      if (!E.Save.data.starterChosen && this.screen === "home")
+        this.screen = "starter";
       $("#menu").classList.remove("hidden");
       this.render();
+      $("#menu").scrollTop = 0;
     },
 
     hide() {
@@ -350,7 +498,9 @@
 
     render() {
       const build = this["screen_" + this.screen] || this.screen_home;
-      $("#menu").innerHTML = `<div class="menu-body">${build.call(this)}</div>`;
+      const menu = $("#menu");
+      menu.dataset.screen = this.screen;
+      menu.innerHTML = `${E.scenery ? E.scenery() : ""}<div class="menu-body">${build.call(this)}</div>`;
     },
 
     header(title) {
@@ -364,47 +514,97 @@
     },
 
     /* ---------- Layar-layar ---------- */
+    screen_title() {
+      const d = E.Save.data;
+      const returning = d.starterChosen;
+      return `
+        <img class="logo-img hero" src="assets/logo.png" alt="EduPaw Adventure" />
+        <p class="tagline">Belajar sambil berpetualang!</p>
+        <form class="login-card" data-form="start" autocomplete="off">
+          <label for="player-name">${returning ? `Selamat datang kembali, ${esc(d.name)}!` : "Siapa namamu, petualang?"}</label>
+          <input id="player-name" maxlength="14" placeholder="Tulis namamu di sini..." value="${d.name === "Pemain" ? "" : esc(d.name)}" />
+          <button type="button" class="btn cta" data-act="start">▶ ${returning ? "LANJUTKAN" : "MULAI PETUALANGAN"}</button>
+          <div class="mini-row">
+            <button type="button" class="btn mini" data-act="howto">📖 Cara Bermain</button>
+            <button type="button" class="btn mini" data-act="settings">⚙️ Pengaturan</button>
+          </div>
+        </form>
+        <div class="mascot">${E.avatar(d.selected)}</div>
+                <div class="lfoot"><b>Edupaw Adventure</b><br>Dikembangkan oleh Kuslan Wawan © 2026</div>`;
+    },
+
     screen_home() {
       const d = E.Save.data;
       const c = E.CHARACTERS[d.selected];
       return `
-        <div class="logo">🐾</div>
-        <h1 class="title">EduPaw<br /><span>Adventure</span></h1>
-        <p class="sub">Petualangan belajar bersama hewan lucu!</p>
-        <div class="chips">
-          <span class="chip">🪙 ${d.coins}</span>
-          <span class="chip">⭐ ${d.stars}</span>
-          <span class="chip">${c.emoji} ${c.name} Lv${E.Save.lv(d.selected)}</span>
+        <img class="logo-img" src="assets/logo.png" alt="EduPaw Adventure" />
+        <div class="player-bar">
+          <div class="player-avatar">${E.avatar(d.selected)}</div>
+          <div class="player-info"><b>${esc(d.name)}</b><span>${c.name} · Lv${E.Save.lv(d.selected)}</span></div>
+          <span class="chip">🪙 ${d.coins}</span><span class="chip">⭐ ${d.stars}</span>
         </div>
         <div class="menu-buttons">
-          <button class="btn big" data-act="levels">▶ Main</button>
-          <button class="btn" data-act="chars">🐾 Karakter &amp; Upgrade</button>
-          <button class="btn" data-act="wardrobe">👒 Lemari Aksesori</button>
-          <button class="btn alt" data-act="lan">👥 Multiplayer LAN</button>
-          <button class="btn" data-act="settings">⚙️ Pengaturan</button>
-        </div>
-        <p class="hint">⌨️ A/D atau ◀▶ jalan · Spasi/W lompat · E/Shift skill · 1-4 jawab kuis</p>`;
+          <button class="btn cta" data-act="levels">▶ MAIN</button>
+          <div class="tile-grid">
+            <button class="tile t-blue" data-act="chars"><span>🐾</span>Karakter<br />&amp; Upgrade</button>
+            <button class="tile t-purple" data-act="wardrobe"><span>👒</span>Lemari<br />Aksesori</button>
+            <button class="tile t-green" data-act="howto"><span>📖</span>Cara<br />Bermain</button>
+            <button class="tile t-pink" data-act="lan"><span>👥</span>Multiplayer<br />LAN</button>
+          </div>
+          <div class="mini-row">
+            <button class="btn mini" data-act="settings">⚙️ Pengaturan</button>
+            <button class="btn mini" data-act="title">🏠 Layar Awal</button>
+          </div>
+        </div>`;
     },
 
     screen_starter() {
+      const d = E.Save.data;
       const cards = E.CHARACTER_ORDER.filter((id) => E.CHARACTERS[id].starter)
         .map((id) => {
           const c = E.CHARACTERS[id];
+          const dur = E.ABILITY_DURATION[id](1);
           return `
-          <div class="card">
-            <div class="em">${c.emoji}</div>
+          <article class="pick-card" style="--glow:${E.hex(c.aura)}">
+            <div class="pick-avatar">${E.avatar(id)}</div>
             <h3>${c.name}</h3>
-            <span class="tag">${c.ability}</span>
+            <span class="pill">${ABILITY_ICON[id]} ${c.ability}</span>
             <p>${c.desc}</p>
-            <div class="actions"><button class="btn small big" data-act="pickStarter" data-id="${id}">Pilih ${c.name}</button></div>
-          </div>`;
+            <ul class="mini-stats">
+              <li><span>Cooldown</span><b>${c.cooldown} dtk</b></li>
+              <li><span>Durasi</span><b>${dur.toFixed(1)} dtk</b></li>
+            </ul>
+            <button class="btn big" data-act="pickStarter" data-id="${id}">Pilih ${c.name}</button>
+          </article>`;
         })
         .join("");
       return `
-        <div class="logo">🐾</div>
-        <h1 class="title"><span>Pilih Teman Pertamamu!</span></h1>
-        <p class="sub">Pilih 1 dari 3 hewan starter. Yang lain bisa dibuka lewat achievement atau koin edukasi.</p>
-        <div class="grid">${cards}</div>`;
+        <img class="logo-img small" src="assets/logo.png" alt="EduPaw Adventure" />
+        <h1 class="heading">Pilih Teman Pertamamu!</h1>
+        <p class="sub">Halo, <b>${esc(d.name)}</b>! Pilih 1 dari 3 hewan starter. Lima hewan lain bisa dibuka lewat achievement dan koin edukasi.</p>
+        <div class="starter-row">${cards}</div>
+        <div class="mini-row"><button class="btn mini" data-act="title">⬅ Kembali</button></div>`;
+    },
+
+    screen_howto() {
+      const pg = HOWTO[this.page];
+      const last = this.page === HOWTO.length - 1;
+      const dots = HOWTO.map(
+        (h, i) =>
+          `<button class="dot ${i === this.page ? "on" : ""}" data-act="howGo" data-i="${i}" aria-label="Halaman ${i + 1}"></button>`,
+      ).join("");
+      return `
+        <h1 class="heading small">📖 Cara Bermain</h1>
+        <section class="how-card">
+          <header><span class="how-ico">${pg.icon}</span><h2>${pg.title}</h2><small>${this.page + 1}/${HOWTO.length}</small></header>
+          <div class="how-body">${pg.html()}</div>
+        </section>
+        <div class="dots">${dots}</div>
+        <div class="how-nav">
+          <button class="btn alt" data-act="howPrev" ${this.page === 0 ? "disabled" : ""}>◀ Kembali</button>
+          <button class="btn mini" data-act="howSkip">Lewati</button>
+          <button class="btn big" data-act="howNext">${last ? "Siap Main! ▶" : "Lanjut ▶"}</button>
+        </div>`;
     },
 
     screen_levels() {
@@ -412,7 +612,9 @@
       const cards = E.LEVELS.map((lv, i) => {
         const done = d.levels[i];
         const locked = i > 0 && !d.levels[i - 1];
-        const stars = done ? "⭐".repeat(done.stars) + "☆".repeat(3 - done.stars) : "☆☆☆";
+        const stars = done
+          ? "⭐".repeat(done.stars) + "☆".repeat(3 - done.stars)
+          : "☆☆☆";
         return `
         <div class="card ${locked ? "locked" : ""}">
           <div class="em">${lv.boss ? "👑" : i === 0 ? "🌳" : "💎"}</div>
@@ -447,13 +649,14 @@
             actions += `<button class="btn small alt" data-act="upgrade" data-id="${id}" ${d.coins < cost ? "disabled" : ""}>⬆ Lv${lv + 1} (🪙${cost})</button>`;
           }
         } else {
-          if (ach) req = `🏆 ${ach.title}: ${ach.desc} (${ach.progress(d.stats)})`;
+          if (ach)
+            req = `🏆 ${ach.title}: ${ach.desc} (${ach.progress(d.stats)})`;
           actions += `<button class="btn small alt" data-act="buyChar" data-id="${id}" ${d.coins < c.price ? "disabled" : ""}>Beli 🪙${c.price}</button>`;
         }
 
         return `
         <div class="card ${d.selected === id ? "sel" : ""} ${owned ? "" : "locked"}">
-          <div class="em">${owned ? c.emoji : "🔒"}</div>
+          <div class="em-avatar">${E.avatar(id, !owned)}</div>
           <h3>${c.name} ${owned ? `<small>Lv${lv}</small>` : ""}</h3>
           <span class="tag">${c.ability}</span>
           <p>${c.desc}</p>
@@ -491,7 +694,10 @@
 
     screen_settings() {
       const d = E.Save.data;
-      const subjects = [{ id: "mixed", name: "Campuran", emoji: "📚" }, ...(E.subjects || [])];
+      const subjects = [
+        { id: "mixed", name: "Campuran", emoji: "📚" },
+        ...(E.subjects || []),
+      ];
       return `
         ${this.header("Pengaturan")}
         <div class="panel">
@@ -534,7 +740,10 @@
     screen_lobby() {
       const net = E.net;
       const players = Object.values(net.players || {});
-      const subjects = [{ id: "mixed", name: "Campuran", emoji: "📚" }, ...(E.subjects || [])];
+      const subjects = [
+        { id: "mixed", name: "Campuran", emoji: "📚" },
+        ...(E.subjects || []),
+      ];
       const host = net.isHost;
       const l = this.lan;
       const controls = host
@@ -551,7 +760,7 @@
                  ${E.LEVELS.slice(0, 2)
                    .map(
                      (lv, i) =>
-                       `<option value="${i}" ${Number(l.level) === i ? "selected" : ""}>Level ${i + 1}: ${lv.name}</option>`
+                       `<option value="${i}" ${Number(l.level) === i ? "selected" : ""}>Level ${i + 1}: ${lv.name}</option>`,
                    )
                    .join("")}
                </select>`
@@ -599,12 +808,61 @@
           this.detectServer();
           break;
 
+        case "start": {
+          const input = $("#player-name");
+          d.name = ((input && input.value.trim()) || "Pemain").slice(0, 14);
+          E.Save.write();
+          this.show(d.starterChosen ? "home" : "starter");
+          break;
+        }
+
+        case "title":
+          this.show("title");
+          break;
+
+        case "howto":
+          this.page = 0;
+          this.show("howto");
+          break;
+
+        case "howPrev":
+          this.page = Math.max(0, this.page - 1);
+          this.render();
+          break;
+
+        case "howGo":
+          this.page = Number(el.dataset.i) || 0;
+          this.render();
+          break;
+
+        case "howNext":
+          if (this.page < HOWTO.length - 1) {
+            this.page++;
+            this.render();
+            break;
+          }
+          this.act("howDone");
+          break;
+
+        case "howSkip":
+        case "howDone":
+          d.seenHowto = true;
+          E.Save.write();
+          this.show(this.howBack || "home");
+          this.howBack = null;
+          break;
+
         case "pickStarter":
           d.starterChosen = true;
           d.selected = id;
           if (!d.unlocked.includes(id)) d.unlocked.push(id);
           E.Save.write();
-          this.show("home");
+          if (d.seenHowto) {
+            this.show("home");
+          } else {
+            this.page = 0;
+            this.show("howto");
+          }
           break;
 
         case "play":
@@ -684,7 +942,11 @@
           break;
 
         case "resetSave":
-          if (window.confirm("Hapus semua progres? Tindakan ini tidak bisa dibatalkan.")) {
+          if (
+            window.confirm(
+              "Hapus semua progres? Tindakan ini tidak bisa dibatalkan.",
+            )
+          ) {
             E.Save.reset();
             this.show("home");
           }
@@ -764,9 +1026,16 @@
       };
 
       if (l.mode === "duel") {
-        const pool = E.questions.filter((q) => l.subject === "mixed" || q.subject === l.subject);
-        const pick = (lv, n) => shuffle(pool.filter((q) => q.level === lv)).slice(0, n);
-        let chosen = [...pick("easy", 3), ...pick("medium", 3), ...pick("hard", 2)];
+        const pool = E.questions.filter(
+          (q) => l.subject === "mixed" || q.subject === l.subject,
+        );
+        const pick = (lv, n) =>
+          shuffle(pool.filter((q) => q.level === lv)).slice(0, n);
+        let chosen = [
+          ...pick("easy", 3),
+          ...pick("medium", 3),
+          ...pick("hard", 2),
+        ];
         if (chosen.length < 5) chosen = shuffle(pool).slice(0, 8);
         payload.qids = chosen.map((q) => q.id);
       }
@@ -780,14 +1049,20 @@
         this.hide();
         E.Duel.start(p);
       } else {
-        E.startGame({ level: p.level, mode: "race", seed: p.seed, subject: p.subject });
+        E.startGame({
+          level: p.level,
+          mode: "race",
+          seed: p.seed,
+          subject: p.subject,
+        });
       }
     },
 
     bindNetwork() {
       const net = E.net;
       net.on("lobby", () => {
-        if (this.screen === "lobby" && !$("#menu").classList.contains("hidden")) this.render();
+        if (this.screen === "lobby" && !$("#menu").classList.contains("hidden"))
+          this.render();
       });
       net.on("start", (p) => this.beginMatch(p));
       net.on("disconnected", () => {
@@ -795,7 +1070,9 @@
         if (E.game && E.game.scene.isActive("Game")) E.quitToMenu();
         this.show("lan");
       });
-      net.on("error", (err) => Toast.show(`Jaringan: ${err.type || err.message || err}`, 3000));
+      net.on("error", (err) =>
+        Toast.show(`Jaringan: ${err.type || err.message || err}`, 3000),
+      );
     },
   };
 
@@ -817,9 +1094,16 @@
       if (field === "mode") Menu.render();
     });
 
+    menuEl.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" && e.target.id === "player-name") {
+        e.preventDefault();
+        Menu.act("start");
+      }
+    });
+
     $("#btn-home").addEventListener("click", () => E.quitToMenu());
     Menu.bindNetwork();
-    Menu.show("home");
+    Menu.show("title");
   }
 
   E.UI = { Toast, HUD, QuizUI, Result, Menu, init };

@@ -7,19 +7,30 @@ Game edukasi 2D Action-Platformer (Phaser 3) dengan kuis adaptif (DDA), 8 karakt
 ```
 edupaw-adventure/
 ├── index.html            # Halaman utama (canvas + UI + CSS responsif)
+├── assets/               # logo.svg, logo.png, favicon.svg
 ├── css/style.css         # Layout PC & Mobile
 ├── js/
 │   ├── config.js         # Karakter, level, wardrobe, achievement, LocalStorage
+│   ├── art.js            # Potret hewan SVG + latar pemandangan menu
 │   ├── network.js        # Multiplayer LAN P2P (PeerJS)
-│   ├── ui.js             # Menu, HUD, kontrol sentuh, Quiz Board
+│   ├── ui.js             # Layar awal, pilih karakter, cara bermain, HUD, Quiz Board
 │   └── game.js           # Engine Phaser: fisika, ability, DDA, bos, balapan
 ├── data/questions.json   # Bank soal (edit sesuai kebutuhan)
 ├── libs/                 # (opsional) phaser.min.js & peerjs.min.js untuk mode offline
-├── lan-server.js         # Server lokal (static + signaling PeerJS) untuk LAN offline
+├── lan-server.js         # Server lokal port 3003 (static; + PeerJS jika npm install)
+├── jalankan.bat          # Windows: nyalakan server + buka game
+├── pasang-autostart.bat  # Windows: server menyala otomatis saat login
+├── hapus-autostart.bat
+├── jalankan-tersembunyi.vbs
 ├── package.json
 ├── .nojekyll
 └── .vscode/              # Pengaturan VS Code + Prettier
 ```
+
+## Alur Layar
+
+Layar awal (isi nama, **Mulai Petualangan**) → Pilih Teman Pertamamu (pertama kali saja) → Cara Bermain → Beranda.
+Panduan juga bisa dibuka kapan saja lewat tombol **Cara Bermain** di beranda.
 
 ## Kontrol
 
@@ -92,7 +103,7 @@ curl -L https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js -o libs/peerjs.min.js
    ```bash
    node lan-server.js
    ```
-   Terminal menampilkan alamat seperti `http://192.168.1.5:8080`.
+   Terminal menampilkan alamat seperti `http://192.168.1.5:3003`.
 2. Semua pemain membuka alamat tersebut di browser (HP / laptop).
 3. Menu **Multiplayer LAN**:
    - Host: **Buat Room** → bagikan kode 4 karakter.
@@ -102,7 +113,7 @@ curl -L https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js -o libs/peerjs.min.js
    - 🏁 **Balapan**: level sama (seed sama) untuk semua; yang mencapai bendera finish tercepat menang.
    - ⚡ **Adu Cepat Kuis**: soal sama, poin lebih besar bila lebih cepat menjawab.
 
-Jika perangkat tidak saling terhubung: pastikan di Wi-Fi yang sama, matikan "AP isolation" di router, dan izinkan port 8080 di firewall komputer host.
+Jika perangkat tidak saling terhubung: pastikan di Wi-Fi yang sama, matikan "AP isolation" di router, dan izinkan port 3003 di firewall komputer host.
 
 ## Mengganti Visual dengan Render 3D Chibi
 
